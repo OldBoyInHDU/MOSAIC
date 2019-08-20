@@ -3,7 +3,8 @@ package com.zzxx.music.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.zzxx.music.dao.impl.SongDao;
+import com.zzxx.music.beans.Song;
+import com.zzxx.music.dao.SongDao;
 import com.zzxx.music.service.SongService;
 import com.zzxx.music.utils.FactoryUtils;
 import com.zzxx.music.utils.PageBean;
@@ -34,7 +35,7 @@ public class SongServiceImpl implements SongService {
 	 * 将list存入PageBean
 	 * 返回PageBean
 	 */
-	public PageBean<Song> listSongsByTppe(String currentPageStr, String pageSizeStr, String type){
+	public PageBean<Song> listSongsByType(String currentPageStr, String pageSizeStr, String type){
 		int currentPage = 0;
 		int pageSize = 0;
 		if (currentPageStr == null) {
