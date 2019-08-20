@@ -35,7 +35,7 @@ public class SongServiceImpl implements SongService {
 	 * 将list存入PageBean
 	 * 返回PageBean
 	 */
-	public PageBean<Song> listSongsByTppe(String currentPageStr, String pageSizeStr, String type){
+	public PageBean<Song> listSongsByType(String currentPageStr, String pageSizeStr, String type){
 		int currentPage = 0;
 		int pageSize = 0;
 		if (currentPageStr == null) {

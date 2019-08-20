@@ -15,7 +15,7 @@ import com.zzxx.music.beans.Song;
 import com.zzxx.music.dao.SongDao;
 import com.zzxx.music.utils.DataSourceUtils;
 
-public class SongDaoImp implements SongDao {
+public class SongDaoImpl implements SongDao {
     private QueryRunner queryRunner = new QueryRunner(DataSourceUtils.getDataSource());
     @Override
     public Song addSong(Song song) {
@@ -75,10 +75,11 @@ public class SongDaoImp implements SongDao {
 
 
     @Override
-    public List<Song> findSongsByPage(int currentPage, int pageSize) {
-        String sql = "select * from song";
+    public List<Song> findSongsByPage(int currentPage, int pageSize,String type) {
+        String sql = "select * from song where type=? limit ?,?";
+        int startRow = (currentPage-1) * pageSize;
         try {
-            List<Song> list = queryRunner.query(sql, new BeanListHandler<Song>(Song.class));
+            List<Song> list = queryRunner.query(sql, new BeanListHandler<Song>(Song.class),type,startRow,pageSize);
             return list;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -134,20 +135,16 @@ public class SongDaoImp implements SongDao {
         return l;
     }
 
-    @Override
-    public List getAllSong() {
-        List<Song> list = new ArrayList<Song>();
-        String sql = "select * from song";
-        try {
-            list = queryRunner.query(sql,new BeanListHandler<Song>(Song.class));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return list;
-    }
 
     @Override
-    public List getSongByType() {
+    public List<Song> getSongByType(String type) {
+    	String sql = "select * from song where type=?";
+    	try {
+			return queryRunner.query(sql, new BeanListHandler<Song>(Song.class));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
         return null;
     }
+
 }

@@ -24,16 +24,17 @@ public interface SongDao {
 
     //根据歌手查歌曲
     List<Song> getSongByArtistName(String artistname);
+    
+    //根据类型查歌曲
+    List<Song> getSongByType(String type);
 
     //
-    List<Song> findSongsByPage(int currentPage, int pageSize);
+    List<Song> findSongsByPage(int currentPage, int pageSize,String type);
 
     //
     int getCount(String type);
 
     public List<Search> selectAllSource(String name);
     
-    public List getAllSong();
     
-    public List getSongByType();
 }
