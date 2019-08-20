@@ -3,7 +3,8 @@ package com.zzxx.music.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.zzxx.music.dao.impl.SongDao;
+import com.zzxx.music.beans.Song;
+import com.zzxx.music.dao.SongDao;
 import com.zzxx.music.service.SongService;
 import com.zzxx.music.utils.FactoryUtils;
 import com.zzxx.music.utils.PageBean;
