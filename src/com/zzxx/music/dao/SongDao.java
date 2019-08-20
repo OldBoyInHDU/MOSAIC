@@ -26,7 +26,7 @@ public interface SongDao {
     List<Song> getSongByArtistName(String artistname);
 
     //
-    List<Song> findSongsByPage(int currentPage, int pageSize);
+    List<Song> findSongsByPage(int currentPage, int pageSize,String type);
 
     //
     int getCount(String type);
