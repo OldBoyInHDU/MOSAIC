@@ -76,20 +76,35 @@ public class SongDaoImpl implements SongDao {
 
     @Override
     public List<Song> findSongsByPage(int currentPage, int pageSize,String type) {
+    	
         String sql = "select * from song where type=? limit ?,?";
+       
         int startRow = (currentPage-1) * pageSize;
+        if("All".equals(type)) {
+        	return findAllSongs();
+        }else {
         try {
             List<Song> list = queryRunner.query(sql, new BeanListHandler<Song>(Song.class),type,startRow,pageSize);
             return list;
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        }
         return null;
     }
 
     @Override
     public int getCount(String type) {
-        String sql = "select conut(1) from song where type=?";
+        String sql = "select count(1) from song where type=?";
+        if("All".equals(type)) {
+	         String nsql = "select count(1) from song";
+	         try {
+			    long ncount = (Long)queryRunner.query(nsql, new ScalarHandler());
+			    return (int)ncount;
+			 } catch (SQLException e) {
+			    e.printStackTrace();
+			 }
+        }
         try {
             long count = (Long) queryRunner.query(sql, new ScalarHandler(),type);
             return (int) count;

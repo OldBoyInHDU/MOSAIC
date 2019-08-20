@@ -18,8 +18,9 @@ public class SongServiceImpl implements SongService {
 	 * 或者8首新歌  num=8
 	 */
 	public List<Song> listHotSong(int num){
-		int a = (int) (Math.random()*7+1);
 		List<Song> allSong = sd.findAllSongs();
+		int m = allSong.size()/num;
+		int a = (int) (Math.random()*m);
 		List<Song> list = new ArrayList<Song>();
 		int number = a;
 		for(int i = 0; i < num; i++) {
@@ -43,7 +44,6 @@ public class SongServiceImpl implements SongService {
 		} else {
 			currentPage = Integer.valueOf(currentPageStr);
 		}
-		
 		if (pageSizeStr == null) {
 			pageSize = 18;
 		} else {
