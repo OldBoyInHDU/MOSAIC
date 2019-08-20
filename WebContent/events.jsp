@@ -10,20 +10,18 @@
 	content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="static/css/jplayer.flat.css"
+<link rel="stylesheet" href="js/jPlayer/jplayer.flat.css"
 	type="text/css" />
-<link rel="stylesheet" href="static/css/bootstrap.css" type="text/css" />
-<link rel="stylesheet" href="static/css/animate.css" type="text/css" />
-<link rel="stylesheet" href="static/css/font-awesome.min.css"
-	type="text/css" />
-<link rel="stylesheet" href="static/css/simple-line-icons.css"
-	type="text/css" />
-<link rel="stylesheet" href="static/css/font.css" type="text/css" />
-<link rel="stylesheet" href="static/css/app.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.css" type="text/css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+<link rel="stylesheet" href="css/font.css" type="text/css" />
+<link rel="stylesheet" href="css/app.css" type="text/css" />
 <!--[if lt IE 9]>
-    <script src="static/js/html5shiv.js"></script>
-    <script src="static/js/respond.min.js"></script>
-    <script src="static/js/excanvas.js"></script>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
   <![endif]-->
 </head>
 <body class="">
@@ -34,10 +32,9 @@
 				<a class="btn btn-link visible-xs"
 					data-toggle="class:nav-off-screen,open" data-target="#nav,html">
 					<i class="icon-list"></i>
-				</a> <a href="${pageContext.request.contextPath}/index.jsp"
-					class="navbar-brand text-lt"> <i class="icon-earphones"></i> <img
-					src="static/picture/logo.png" alt="." class="hide"> <span
-					class="hidden-nav-xs m-l-sm">Musik</span>
+				</a> <a href="index.html" class="navbar-brand text-lt"> <i
+					class="icon-earphones"></i> <img src="images/logo.png" alt="."
+					class="hide"> <span class="hidden-nav-xs m-l-sm">Musik</span>
 				</a> <a class="btn btn-link visible-xs" data-toggle="dropdown"
 					data-target=".user"> <i class="icon-settings"></i>
 				</a>
@@ -79,8 +76,8 @@
 								</div>
 								<div class="list-group list-group-alt">
 									<a href="#" class="media list-group-item"> <span
-										class="pull-left thumb-sm"> <img
-											src="static/picture/a0.png" alt="..." class="img-circle">
+										class="pull-left thumb-sm"> <img src="images/a0.png"
+											alt="..." class="img-circle">
 									</span> <span class="media-body block m-b-none"> Use awesome
 											animate.css<br> <small class="text-muted">10
 												minutes ago</small>
@@ -112,10 +109,10 @@
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
 					</c:if>
-					<%--<li class="dropdown">
+					<!--         <li class="dropdown">
             <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="static/picture/a0.png" alt="...">
+                <img src="images/a0.png" alt="...">
               </span>
               John.Smith <b class="caret"></b>
             </a>
@@ -141,7 +138,7 @@
                 <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
               </li>
             </ul>
-          </li>--%>
+          </li> -->
 				</ul>
 			</div>
 		</header>
@@ -162,303 +159,176 @@
 									<ul class="nav bg clearfix">
 										<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
 											Discover</li>
-										<li><a
-											href="${pageContext.request.contextPath}/index.jsp"> <i
+										<li><a href="${pageContext.request.contextPath}/index.jsp"> <i
 												class="icon-disc icon text-success"></i> <span
 												class="font-bold">What's new</span>
 										</a></li>
-										<li><a
-											href="${pageContext.request.contextPath}/genres.jsp"> <i
+										<li><a href="${pageContext.request.contextPath}/genres.jsp"> <i
 												class="icon-music-tone-alt icon text-info"></i> <span
 												class="font-bold">Genres</span>
 										</a></li>
-										<li><a
-											href="${pageContext.request.contextPath}/events.jsp"> <i
+										<li><a href="${pageContext.request.contextPath}/events.jsp"> <i
 												class="icon-drawer icon text-primary-lter"></i> <b
 												class="badge bg-primary pull-right">6</b> <span
 												class="font-bold">Events</span>
 										</a></li>
-										<li><a
-											href="${pageContext.request.contextPath}/listen.jsp"> <i
+										<li><a href="${pageContext.request.contextPath}/listen.jsp"> <i
 												class="icon-list icon  text-info-dker"></i> <span
 												class="font-bold">Listen</span>
 										</a></li>
-										<li><a
-											href="${pageContext.request.contextPath}/video.jsp"
-											data-target="#content" data-el="#bjax-el" data-replace="true">
-												<i class="icon-social-youtube icon  text-primary"></i> <span
+										<li><a href="${pageContext.request.contextPath}/video.jsp" data-target="#content"
+											data-el="#bjax-el" data-replace="true"> <i
+												class="icon-social-youtube icon  text-primary"></i> <span
 												class="font-bold">Video</span>
 										</a></li>
 										<li class="m-b hidden-nav-xs"></li>
 									</ul>
-									<!-- <ul class="nav" data-ride="collapse">
-                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      Interface
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-screen-desktop icon">
-                        </i>
-                        <span>Layouts</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="layout-color.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Color option</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="layout-boxed.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Boxed layout</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="layout-fluid.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Fluid layout</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-chemistry icon">
-                        </i>
-                        <span>UI Kit</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="buttons.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Buttons</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="icons.html" class="auto">                            
-                            <b class="badge bg-info pull-right">369</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Icons</span>
-                          </a>
-                        </li><li >
-                          <a href="http://www.cssmoban.com" class="auto">                            
-                            <b class="badge bg-info pull-right">369</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>More</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="grid.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Grid</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="widgets.html" class="auto">                            
-                            <b class="badge bg-dark pull-right">8</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Widgets</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="components.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Components</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="list.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>List group</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="#table" class="auto">                            
-                            <span class="pull-right text-muted">
-                              <i class="fa fa-angle-left text"></i>
-                              <i class="fa fa-angle-down text-active"></i>
-                            </span>                            
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Table</span>
-                          </a>
-                          <ul class="nav dker">
-                            <li >
-                              <a href="table-static.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Table static</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="table-datatable.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Datatable</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li >
-                          <a href="#form" class="auto">                            
-                            <span class="pull-right text-muted">
-                              <i class="fa fa-angle-left text"></i>
-                              <i class="fa fa-angle-down text-active"></i>
-                            </span>                            
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Form</span>
-                          </a>
-                          <ul class="nav dker">
-                            <li >
-                              <a href="form-elements.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form elements</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="form-validation.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form validation</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="form-wizard.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form wizard</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li >
-                          <a href="chart.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Chart</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="portlet.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Portlet</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="timeline.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Timeline</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-grid icon">
-                        </i>
-                        <span>Pages</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="profile.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Profile</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="blog.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Blog</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="invoice.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Invoice</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="gmap.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Google Map</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="jvectormap.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Vector Map</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="signin.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Signin</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="signup.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Signup</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="404.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>404</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul> -->
-									<!-- <ul class="nav text-sm">
-                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
-                      Playlist
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-music-tone icon"></i>
-                        <span>Hip-Pop</span>
-                      </a>
-                    </li> -->
-									<!-- <li>
-                      <a href="#">
-                        <i class="icon-playlist icon text-success-lter"></i>
-                        <b class="badge bg-success dker pull-right">9</b>
-                        <span>Jazz</span>
-                      </a>
-                    </li>
-                  </ul> -->
+							<!-- 		<ul class="nav" data-ride="collapse">
+										<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+											Interface</li>
+										<li><a href="#" class="auto"> <span
+												class="pull-right text-muted"> <i
+													class="fa fa-angle-left text"></i> <i
+													class="fa fa-angle-down text-active"></i>
+											</span> <i class="icon-screen-desktop icon"> </i> <span>Layouts</span>
+										</a>
+											<ul class="nav dk text-sm">
+												<li><a href="layout-color.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Color
+															option</span>
+												</a></li>
+												<li><a href="layout-boxed.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Boxed
+															layout</span>
+												</a></li>
+												<li><a href="layout-fluid.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Fluid
+															layout</span>
+												</a></li>
+											</ul></li>
+										<li><a href="#" class="auto"> <span
+												class="pull-right text-muted"> <i
+													class="fa fa-angle-left text"></i> <i
+													class="fa fa-angle-down text-active"></i>
+											</span> <i class="icon-chemistry icon"> </i> <span>UI Kit</span>
+										</a>
+											<ul class="nav dk text-sm">
+												<li><a href="buttons.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Buttons</span>
+												</a></li>
+												<li><a href="icons.html" class="auto"> <b
+														class="badge bg-info pull-right">369</b> <i
+														class="fa fa-angle-right text-xs"></i> <span>Icons</span>
+												</a></li>
+												<li><a href="http://www.weidea.net" class="auto"> <b
+														class="badge bg-info pull-right">369</b> <i
+														class="fa fa-angle-right text-xs"></i> <span>More</span>
+												</a></li>
+												<li><a href="grid.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Grid</span>
+												</a></li>
+												<li><a href="widgets.html" class="auto"> <b
+														class="badge bg-dark pull-right">8</b> <i
+														class="fa fa-angle-right text-xs"></i> <span>Widgets</span>
+												</a></li>
+												<li><a href="components.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Components</span>
+												</a></li>
+												<li><a href="list.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>List
+															group</span>
+												</a></li>
+												<li><a href="#table" class="auto"> <span
+														class="pull-right text-muted"> <i
+															class="fa fa-angle-left text"></i> <i
+															class="fa fa-angle-down text-active"></i>
+													</span> <i class="fa fa-angle-right text-xs"></i> <span>Table</span>
+												</a>
+													<ul class="nav dker">
+														<li><a href="table-static.html"> <i
+																class="fa fa-angle-right"></i> <span>Table static</span>
+														</a></li>
+														<li><a href="table-datatable.html"> <i
+																class="fa fa-angle-right"></i> <span>Datatable</span>
+														</a></li>
+													</ul></li>
+												<li><a href="#form" class="auto"> <span
+														class="pull-right text-muted"> <i
+															class="fa fa-angle-left text"></i> <i
+															class="fa fa-angle-down text-active"></i>
+													</span> <i class="fa fa-angle-right text-xs"></i> <span>Form</span>
+												</a>
+													<ul class="nav dker">
+														<li><a href="form-elements.html"> <i
+																class="fa fa-angle-right"></i> <span>Form
+																	elements</span>
+														</a></li>
+														<li><a href="form-validation.html"> <i
+																class="fa fa-angle-right"></i> <span>Form
+																	validation</span>
+														</a></li>
+														<li><a href="form-wizard.html"> <i
+																class="fa fa-angle-right"></i> <span>Form wizard</span>
+														</a></li>
+													</ul></li>
+												<li><a href="chart.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Chart</span>
+												</a></li>
+												<li><a href="portlet.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Portlet</span>
+												</a></li>
+												<li><a href="timeline.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Timeline</span>
+												</a></li>
+											</ul></li>
+										<li><a href="#" class="auto"> <span
+												class="pull-right text-muted"> <i
+													class="fa fa-angle-left text"></i> <i
+													class="fa fa-angle-down text-active"></i>
+											</span> <i class="icon-grid icon"> </i> <span>Pages</span>
+										</a>
+											<ul class="nav dk text-sm">
+												<li><a href="profile.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Profile</span>
+												</a></li>
+												<li><a href="blog.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Blog</span>
+												</a></li>
+												<li><a href="invoice.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Invoice</span>
+												</a></li>
+												<li><a href="gmap.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Google
+															Map</span>
+												</a></li>
+												<li><a href="jvectormap.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Vector
+															Map</span>
+												</a></li>
+												<li><a href="signin.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Signin</span>
+												</a></li>
+												<li><a href="signup.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Signup</span>
+												</a></li>
+												<li><a href="404.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>404</span>
+												</a></li>
+											</ul></li>
+									</ul>
+									<ul class="nav text-sm">
+										<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+											<span class="pull-right"><a href="#"><i
+													class="icon-plus i-lg"></i></a></span> Playlist
+										</li>
+										<li><a href="#"> <i class="icon-music-tone icon"></i>
+												<span>Hip-Pop</span>
+										</a></li>
+										<li><a href="#"> <i
+												class="icon-playlist icon text-success-lter"></i> <b
+												class="badge bg-success dker pull-right">9</b> <span>Jazz</span>
+										</a></li>
+									</ul> -->
 								</nav>
 								<!-- / nav -->
 							</div>
@@ -469,7 +339,7 @@
 								<div class="dropdown dropup wrapper-sm clearfix">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 										<span class="thumb-sm avatar pull-left m-l-xs"> <img
-											src="static/picture/a3.png" class="dker" alt="..."> <i
+											src="images/a3.png" class="dker" alt="..."> <i
 											class="on b-black"></i>
 									</span> <span class="hidden-nav-xs clear"> <span
 											class="block m-l"> <strong class="font-bold text-lt">John.Smith</strong>
@@ -520,7 +390,7 @@
 														egestas dui nec, fermentum diam. Vivamus vel tincidunt
 														libero, vitae elementum ligula</p>
 												</div>
-												<a href="#"><img src="static/picture/m20.jpg" alt=""
+												<a href="#"><img src="images/m20.jpg" alt=""
 													class="img-full"></a>
 											</div>
 											<div class="item">
@@ -539,7 +409,7 @@
 													<p class="hidden-xs">Gestas dui nec, fermentum diam.
 														Vivamus vel tincidunt libero, vitae ligula elementum</p>
 												</div>
-												<a href="#"><img src="static/picture/m22.jpg" alt=""
+												<a href="#"><img src="images/m22.jpg" alt=""
 													class="img-full"></a>
 											</div>
 										</div>
@@ -559,7 +429,7 @@
 										<p class="hidden-xs">Vivamus vel tincidunt libero,
 											lementum ligula vitae</p>
 									</div>
-									<a href="#"><img src="static/picture/m31.jpg" alt=""
+									<a href="#"><img src="images/m31.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -570,7 +440,7 @@
 										</div>
 										<p class="hidden-xs">Tincidunt libero vitae elementum</p>
 									</div>
-									<a href="#"><img src="static/picture/m10.jpg" alt=""
+									<a href="#"><img src="images/m10.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -590,7 +460,7 @@
 										</div>
 										<p class="hidden-xs">Con malesuada est, quis congue nibhs</p>
 									</div>
-									<a href="#"><img src="static/picture/m4.jpg" alt=""
+									<a href="#"><img src="images/m4.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -606,7 +476,7 @@
 													<p class="hidden-xs">Duis non malesuada est, quis
 														congue nibh</p>
 												</div>
-												<a href="#"><img src="static/picture/m4.jpg" alt=""
+												<a href="#"><img src="images/m4.jpg" alt=""
 													class="img-full"></a>
 											</div>
 											<div class="item">
@@ -618,7 +488,7 @@
 													<p class="hidden-xs">Aliquam sollicitudin venenatis
 														congue nibh</p>
 												</div>
-												<a href="#"><img src="static/picture/m4.jpg" alt=""
+												<a href="#"><img src="images/m4.jpg" alt=""
 													class="img-full"></a>
 											</div>
 										</div>
@@ -632,7 +502,7 @@
 										<p class="hidden-xs">Morbi id neque quam. Aliquam
 											sollicitudin venenatis ipsum</p>
 									</div>
-									<a href="#"><img src="static/picture/m13.jpg" alt=""
+									<a href="#"><img src="images/m13.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -643,7 +513,7 @@
 										</div>
 										<p class="hidden-xs">Aliquam sollicitudin venenatis ipsum</p>
 									</div>
-									<a href="#"><img src="static/picture/m30.jpg" alt=""
+									<a href="#"><img src="images/m30.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -654,7 +524,7 @@
 										<p class="hidden-xs">Vel tincidunt libero, vitae ligula
 											tristique</p>
 									</div>
-									<a href="#"><img src="static/picture/m19.jpg" alt=""
+									<a href="#"><img src="images/m19.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -675,7 +545,7 @@
 										<p class="hidden-xs">Pellentesque habitant morbi tristique
 											sodales</p>
 									</div>
-									<a href="#"><img src="static/picture/m7.jpg" alt=""
+									<a href="#"><img src="images/m7.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -685,7 +555,7 @@
 										</div>
 										<p class="hidden-xs">Vestibulum ullamcorper</p>
 									</div>
-									<a href="#"><img src="static/picture/m18.jpg" alt=""
+									<a href="#"><img src="images/m18.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -697,7 +567,7 @@
 										<p class="hidden-xs">Malesuada augue. Donec eleifend
 											condimentum</p>
 									</div>
-									<a href="#"><img src="static/picture/m32.jpg" alt=""
+									<a href="#"><img src="images/m32.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -709,7 +579,7 @@
 										<p class="hidden-xs">Mauris convallis mauris at
 											pellentesque volutpat</p>
 									</div>
-									<a href="#"><img src="static/picture/m40.jpg" alt=""
+									<a href="#"><img src="images/m40.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -722,7 +592,7 @@
 										<p class="hidden-xs">Fermentum diam. Vivamus vel tincidunt
 											libero, vitae elementum ligula</p>
 									</div>
-									<a href="#"><img src="static/picture/m21.jpg" alt=""
+									<a href="#"><img src="images/m21.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -732,7 +602,7 @@
 										</div>
 										<p class="hidden-xs">Senectus et netus et malesuada fames</p>
 									</div>
-									<a href="#"><img src="static/picture/m5.jpg" alt=""
+									<a href="#"><img src="images/m5.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -743,7 +613,7 @@
 										<p class="hidden-xs">Consectetur adipiscing elit. Morbi id
 											neque quam</p>
 									</div>
-									<a href="#"><img src="static/picture/a10.png" alt=""
+									<a href="#"><img src="images/a10.png" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -755,7 +625,7 @@
 										<p class="hidden-xs">Orbi tristique senectus et netus et
 											malesuada</p>
 									</div>
-									<a href="#"><img src="static/picture/m4.jpg" alt=""
+									<a href="#"><img src="images/m4.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -775,7 +645,7 @@
 										</div>
 										<p class="hidden-xs">Malesuada est, quis congue nibh</p>
 									</div>
-									<a href="#"><img src="static/picture/m6.jpg" alt=""
+									<a href="#"><img src="images/m6.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -795,7 +665,7 @@
 										<p class="hidden-xs">Adipiscing elit senectus et netus
 											mal.</p>
 									</div>
-									<a href="#"><img src="static/picture/m42.jpg" alt=""
+									<a href="#"><img src="images/m42.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -806,7 +676,7 @@
 										<p class="hidden-xs">Dolor sit amet, consectetur
 											adipiscing elit.</p>
 									</div>
-									<a href="#"><img src="static/picture/m9.jpg" alt=""
+									<a href="#"><img src="images/m9.jpg" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -816,7 +686,7 @@
 										</div>
 										<p class="hidden-xs">Adipiscing elituis congue</p>
 									</div>
-									<a href="#"><img src="static/picture/a7.png" alt=""
+									<a href="#"><img src="images/a7.png" alt=""
 										class="img-full"></a>
 								</div>
 								<div class="item">
@@ -827,7 +697,7 @@
 										<p class="hidden-xs">Malesuada est, congue nibh quis
 											elituis</p>
 									</div>
-									<a href="#"><img src="static/picture/m12.jpg" alt=""
+									<a href="#"><img src="images/m12.jpg" alt=""
 										class="img-full"></a>
 								</div>
 							</div>
@@ -839,17 +709,19 @@
 			</section>
 		</section>
 	</section>
-	<script src="static/js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="static/js/bootstrap.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<!-- App -->
-	<script src="static/js/app.js"></script>
-	<script src="static/js/jquery.slimscroll.min.js"></script>
-	<script src="static/js/tiles.min.js"></script>
-	<script src="static/js/demo.js"></script>
-	<script src="static/js/app.plugin.js"></script>
-	<script type="text/javascript" src="static/js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="static/js/jplayer.playlist.min.js"></script>
-	<script type="text/javascript" src="static/js/demo.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="js/masonry/tiles.min.js"></script>
+	<script src="js/masonry/demo.js"></script>
+	<script src="js/app.plugin.js"></script>
+	<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+	<script type="text/javascript"
+		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
+
 </body>
 </html>

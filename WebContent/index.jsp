@@ -10,24 +10,21 @@
 	content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="static/css/jplayer.flat.css"
+<link rel="stylesheet" href="js/jPlayer/jplayer.flat.css"
 	type="text/css" />
-<link rel="stylesheet" href="static/css/bootstrap.css" type="text/css" />
-<link rel="stylesheet" href="static/css/animate.css" type="text/css" />
-<link rel="stylesheet" href="static/css/font-awesome.min.css"
-	type="text/css" />
-<link rel="stylesheet" href="static/css/simple-line-icons.css"
-	type="text/css" />
-<link rel="stylesheet" href="static/css/font.css" type="text/css" />
-<link rel="stylesheet" href="static/css/app.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.css" type="text/css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+<link rel="stylesheet" href="css/font.css" type="text/css" />
+<link rel="stylesheet" href="css/app.css" type="text/css" />
 <!--[if lt IE 9]>
-    <script src="static/js/html5shiv.js"></script>
-    <script src="static/js/respond.min.js"></script>
-    <script src="static/js/excanvas.js"></script>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
   <![endif]-->
 </head>
 <body class="">
-	<!-- <div class="adcenter"><script src="static/js/ggad2_728x90.js"></script></div> -->
 	<section class="vbox">
 		<header
 			class="bg-white-only header header-md navbar navbar-fixed-top-xs">
@@ -35,10 +32,9 @@
 				<a class="btn btn-link visible-xs"
 					data-toggle="class:nav-off-screen,open" data-target="#nav,html">
 					<i class="icon-list"></i>
-				</a> <a href="${pageContext.request.contextPath}/index.jsp"
-					class="navbar-brand text-lt"> <i class="icon-earphones"></i> <img
-					src="static/picture/logo.png" alt="." class="hide"> <span
-					class="hidden-nav-xs m-l-sm">Musik</span>
+				</a> <a href="index.html" class="navbar-brand text-lt"> <i
+					class="icon-earphones"></i> <img src="images/logo.png" alt="."
+					class="hide"> <span class="hidden-nav-xs m-l-sm">Musik</span>
 				</a> <a class="btn btn-link visible-xs" data-toggle="dropdown"
 					data-target=".user"> <i class="icon-settings"></i>
 				</a>
@@ -80,8 +76,8 @@
 								</div>
 								<div class="list-group list-group-alt">
 									<a href="#" class="media list-group-item"> <span
-										class="pull-left thumb-sm"> <img
-											src="static/picture/a0.png" alt="..." class="img-circle">
+										class="pull-left thumb-sm"> <img src="images/a0.png"
+											alt="..." class="img-circle">
 									</span> <span class="media-body block m-b-none"> Use awesome
 											animate.css<br> <small class="text-muted">10
 												minutes ago</small>
@@ -113,14 +109,14 @@
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
 					</c:if>
-					<%--<li class="dropdown">
+					<!--  <li class="dropdown">
             <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="static/picture/a0.png" alt="...">
+                <img src="images/a0.png" alt="...">
               </span>
               John.Smith <b class="caret"></b>
             </a>
-            <ul class="dropdown-menu animated fadeInRight">
+            <ul class="dropdown-menu animated fadeInRight">            
               <li>
                 <span class="arrow top"></span>
                 <a href="#">Settings</a>
@@ -139,16 +135,13 @@
               </li>
               <li class="divider"></li>
               <li>
-                <a href="register.html"  >Logout</a>
+                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
               </li>
             </ul>
-          </li>--%>
+          </li> -->
 				</ul>
 			</div>
 		</header>
-		<div class="copyrights">
-			Collect from <a href="http://www.cssmoban.com/">免费模板</a>
-		</div>
 		<section>
 			<section class="hbox stretch">
 				<!-- .aside -->
@@ -179,7 +172,7 @@
 										<li><a
 											href="${pageContext.request.contextPath}/events.jsp"> <i
 												class="icon-drawer icon text-primary-lter"></i> <b
-												class="badge bg-primary pull-right"></b> <span
+												class="badge bg-primary pull-right">6</b> <span
 												class="font-bold">Events</span>
 										</a></li>
 										<li><a
@@ -195,10 +188,11 @@
 										</a></li>
 										<li class="m-b hidden-nav-xs"></li>
 									</ul>
-									<ul class="nav" data-ride="collapse">
-										<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-											Interface</li>
-										<!-- <li >
+									<!-- <ul class="nav" data-ride="collapse">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      Interface
+                    </li>
+                    <li >
                       <a href="#" class="auto">
                         <span class="pull-right text-muted">
                           <i class="fa fa-angle-left text"></i>
@@ -231,8 +225,8 @@
                           </a>
                         </li>
                       </ul>
-                    </li> -->
-										<!-- <li >
+                    </li>
+                    <li >
                       <a href="#" class="auto">
                         <span class="pull-right text-muted">
                           <i class="fa fa-angle-left text"></i>
@@ -258,7 +252,7 @@
                             <span>Icons</span>
                           </a>
                         </li><li >
-                          <a href="http://www.cssmoban.com" class="auto">                            
+                          <a href="http://www.weidea.net" class="auto">                            
                             <b class="badge bg-info pull-right">369</b>                                                        
                             <i class="fa fa-angle-right text-xs"></i>
 
@@ -441,27 +435,27 @@
                           </a>
                         </li>
                       </ul>
-                    </li> -->
-									</ul>
-									<ul class="nav text-sm">
-										<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-											<span class="pull-right"><a href="#"><i
-													class="icon-plus i-lg"></i></a></span> Playlist
-										</li>
-										<!-- <li>
+                    </li>
+                  </ul>
+                  <ul class="nav text-sm">
+                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
+                      Playlist
+                    </li>
+                    <li>
                       <a href="#">
                         <i class="icon-music-tone icon"></i>
                         <span>Hip-Pop</span>
                       </a>
-                    </li> -->
-										<!-- <li>
+                    </li>
+                    <li>
                       <a href="#">
                         <i class="icon-playlist icon text-success-lter"></i>
                         <b class="badge bg-success dker pull-right">9</b>
                         <span>Jazz</span>
                       </a>
-                    </li> -->
-									</ul>
+                    </li>
+                  </ul> -->
 								</nav>
 								<!-- / nav -->
 							</div>
@@ -472,7 +466,7 @@
 								<div class="dropdown dropup wrapper-sm clearfix">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 										<span class="thumb-sm avatar pull-left m-l-xs"> <img
-											src="static/picture/a3.png" class="dker" alt="..."> <i
+											src="images/a3.png" class="dker" alt="..."> <i
 											class="on b-black"></i>
 									</span> <span class="hidden-nav-xs clear"> <span
 											class="block m-l"> <strong class="font-bold text-lt">John.Smith</strong>
@@ -490,7 +484,7 @@
 										</a></li>
 										<li><a href="docs.html">Help</a></li>
 										<li class="divider"></li>
-										<li><a href="register.html">Logout</a> <!-- <a href="register.html" data-toggle="ajaxModal" >Logout</a> -->
+										<li><a href="modal.lockme.html" data-toggle="ajaxModal">Logout</a>
 										</li>
 									</ul>
 								</div>
@@ -508,7 +502,7 @@
 										data-toggle="class:fa-spin"><i
 										class="icon-refresh i-lg  inline" id="refresh"></i></a>
 									<h2 class="font-thin m-b">
-										发现音乐 <span class="musicbar animate inline m-l-sm"
+										Discover <span class="musicbar animate inline m-l-sm"
 											style="width: 20px; height: 20px"> <span
 											class="bar1 a1 bg-primary lter"></span> <span
 											class="bar2 a2 bg-info lt"></span> <span
@@ -540,7 +534,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p1.jpg" alt=""
+													<a href="#"><img src="images/p1.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -552,7 +546,7 @@
 										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
 											<div class="item">
 												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
+													<div class="item-overlay opacity r r-2x bg-black active">
 														<div class="text-info padder m-t-sm text-sm">
 															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 																class="fa fa-star"></i> <i
@@ -560,17 +554,22 @@
 																class="fa fa-star-o text-muted"></i>
 														</div>
 														<div class="center text-center m-t-n">
-															<a href="#"> <i class="icon-control-play i-2x"></i>
+															<a href="#" data-toggle="class"> <i
+																class="icon-control-play i-2x text"></i> <i
+																class="icon-control-pause i-2x text-active"></i>
 															</a>
 														</div>
 														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
+															<a href="#" class="pull-right active" data-toggle="class">
+																<i class="fa fa-heart-o text"></i> <i
+																class="fa fa-heart text-active text-danger"></i>
+															</a> <a href="#" data-toggle="class"> <i
+																class="fa fa-plus-circle text"></i> <i
+																class="fa fa-check-circle text-active text-info"></i>
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p2.jpg" alt=""
+													<a href="#"><img src="images/p2.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -600,7 +599,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p3.jpg" alt=""
+													<a href="#"><img src="images/p3.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -634,7 +633,7 @@
 															<i class="fa fa-bookmark i-lg"></i>
 														</span>
 													</div>
-													<a href="#"><img src="static/picture/p4.jpg" alt=""
+													<a href="#"><img src="images/p4.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -664,7 +663,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p5.jpg" alt=""
+													<a href="#"><img src="images/p5.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -696,7 +695,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p6.jpg" alt=""
+													<a href="#"><img src="images/p6.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -728,7 +727,7 @@
 													<div class="top">
 														<span class="pull-right m-t-sm m-r-sm badge bg-white">12</span>
 													</div>
-													<a href="#"><img src="static/picture/p7.jpg" alt=""
+													<a href="#"><img src="images/p7.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -757,7 +756,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p8.jpg" alt=""
+													<a href="#"><img src="images/p8.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -787,7 +786,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p9.jpg" alt=""
+													<a href="#"><img src="images/p9.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -800,24 +799,29 @@
 										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
 											<div class="item">
 												<div class="pos-rlt">
-													<div class="item-overlay r r-2x bg-light dker ">
+													<div class="item-overlay r r-2x bg-light dker active">
 														<div class="text-info padder m-t-sm text-sm">
 															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
 																class="fa fa-star-o text-muted"></i>
 														</div>
 														<div class="center text-center m-t-n">
-															<a href="#"> <i class="icon-control-play i-2x"></i>
+															<a href="#" data-toggle="class" class="active"> <i
+																class="icon-control-play i-2x text"></i> <i
+																class="icon-control-pause i-2x text-active"></i>
 															</a>
 														</div>
 														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
+															<a href="#" class="pull-right" data-toggle="class"> <i
+																class="fa fa-heart-o text"></i> <i
+																class="fa fa-heart text-active text-danger"></i>
+															</a> <a href="#" class="active" data-toggle="class"> <i
+																class="fa fa-plus-circle text"></i> <i
+																class="fa fa-check-circle text-active text-info"></i>
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p10.jpg" alt=""
+													<a href="#"><img src="images/p10.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -847,7 +851,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p11.jpg" alt=""
+													<a href="#"><img src="images/p11.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -876,7 +880,7 @@
 															</a>
 														</div>
 													</div>
-													<a href="#"><img src="static/picture/p12.jpg" alt=""
+													<a href="#"><img src="images/p12.jpg" alt=""
 														class="r r-2x img-full"></a>
 												</div>
 												<div class="padder-v">
@@ -889,7 +893,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-7">
-											<h3 class="font-thin">新歌速递</h3>
+											<h3 class="font-thin">New Songs</h3>
 											<div class="row row-sm">
 												<div class="col-xs-6 col-sm-3">
 													<div class="item">
@@ -899,7 +903,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a2.png" alt=""
+															<a href="#"><img src="images/a2.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -916,7 +920,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a3.png" alt=""
+															<a href="#"><img src="images/a3.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -933,7 +937,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a8.png" alt=""
+															<a href="#"><img src="images/a8.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -951,7 +955,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a9.png" alt=""
+															<a href="#"><img src="images/a9.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -969,7 +973,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a1.png" alt=""
+															<a href="#"><img src="images/a1.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -986,7 +990,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a6.png" alt=""
+															<a href="#"><img src="images/a6.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -1003,7 +1007,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a7.png" alt=""
+															<a href="#"><img src="images/a7.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -1020,7 +1024,7 @@
 																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="#"><img src="static/picture/a5.png" alt=""
+															<a href="#"><img src="images/a5.png" alt=""
 																class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
@@ -1032,12 +1036,12 @@
 											</div>
 										</div>
 										<div class="col-md-5">
-											<h3 class="font-thin">最热歌曲</h3>
+											<h3 class="font-thin">Top Songs</h3>
 											<div class="list-group bg-white list-group-lg no-bg auto">
 												<a href="#" class="list-group-item clearfix"> <span
 													class="pull-right h2 text-muted m-l">1</span> <span
 													class="pull-left thumb-sm avatar m-r"> <img
-														src="static/picture/a4.png" alt="...">
+														src="images/a4.png" alt="...">
 												</span> <span class="clear"> <span>Little Town</span> <small
 														class="text-muted clear text-ellipsis">by Chris
 															Fox</small>
@@ -1045,7 +1049,7 @@
 												</a> <a href="#" class="list-group-item clearfix"> <span
 													class="pull-right h2 text-muted m-l">2</span> <span
 													class="pull-left thumb-sm avatar m-r"> <img
-														src="static/picture/a5.png" alt="...">
+														src="images/a5.png" alt="...">
 												</span> <span class="clear"> <span>Lementum ligula
 															vitae</span> <small class="text-muted clear text-ellipsis">by
 															Amanda Conlan</small>
@@ -1053,7 +1057,7 @@
 												</a> <a href="#" class="list-group-item clearfix"> <span
 													class="pull-right h2 text-muted m-l">3</span> <span
 													class="pull-left thumb-sm avatar m-r"> <img
-														src="static/picture/a6.png" alt="...">
+														src="images/a6.png" alt="...">
 												</span> <span class="clear"> <span>Aliquam
 															sollicitudin venenatis</span> <small
 														class="text-muted clear text-ellipsis">by Dan
@@ -1062,7 +1066,7 @@
 												</a> <a href="#" class="list-group-item clearfix"> <span
 													class="pull-right h2 text-muted m-l">4</span> <span
 													class="pull-left thumb-sm avatar m-r"> <img
-														src="static/picture/a7.png" alt="...">
+														src="images/a7.png" alt="...">
 												</span> <span class="clear"> <span>Aliquam
 															sollicitudin venenatis ipsum</span> <small
 														class="text-muted clear text-ellipsis">by Lauren
@@ -1071,7 +1075,7 @@
 												</a> <a href="#" class="list-group-item clearfix"> <span
 													class="pull-right h2 text-muted m-l">5</span> <span
 													class="pull-left thumb-sm avatar m-r"> <img
-														src="static/picture/a8.png" alt="...">
+														src="images/a8.png" alt="...">
 												</span> <span class="clear"> <span>Vestibulum
 															ullamcorper</span> <small class="text-muted clear text-ellipsis">by
 															Dan Doorack</small>
@@ -1080,24 +1084,27 @@
 											</div>
 										</div>
 									</div>
-									<!-- <div class="row m-t-lg m-b-lg">
-                    <div class="col-sm-6">
-                      <div class="bg-primary wrapper-md r">
-                        <a href="#">
-                          <span class="h4 m-b-xs block"><i class=" icon-user-follow i-lg"></i> Login or Create account</span>
-                          <span class="text-muted">Save and share your playlist with your friends when you log in or create an account.</span>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="bg-black wrapper-md r">
-                        <a href="#">
-                          <span class="h4 m-b-xs block"><i class="icon-cloud-download i-lg"></i> Download our app</span>
-                          <span class="text-muted">More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>.</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div> -->
+									<div class="row m-t-lg m-b-lg">
+										<div class="col-sm-6">
+											<div class="bg-primary wrapper-md r">
+												<a href="#"> <span class="h4 m-b-xs block"><i
+														class=" icon-user-follow i-lg"></i> Login or Create
+														account</span> <span class="text-muted">Save and share
+														your playlist with your friends when you log in or create
+														an account.</span>
+												</a>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="bg-black wrapper-md r">
+												<a href="#"> <span class="h4 m-b-xs block"><i
+														class="icon-cloud-download i-lg"></i> Download our app</span> <span
+													class="text-muted">Get the apps for desktop and
+														mobile to start listening music at anywhere and anytime.</span>
+												</a>
+											</div>
+										</div>
+									</div>
 								</section>
 								<footer class="footer bg-dark">
 									<div id="jp_container_N">
@@ -1199,8 +1206,8 @@
 									<ul class="list-group no-bg no-borders auto m-t-n-xxs">
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a1.png" alt="..."
-												class="img-circle"> <i class="on b-light right sm"></i>
+												<img src="images/a1.png" alt="..." class="img-circle">
+												<i class="on b-light right sm"></i>
 										</span>
 											<div class="clear">
 												<div>
@@ -1210,7 +1217,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a2.png" alt="..."> <i
+												<img src="images/a2.png" alt="..."> <i
 												class="on b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1221,7 +1228,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a3.png" alt="..."> <i
+												<img src="images/a3.png" alt="..."> <i
 												class="busy b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1232,7 +1239,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a4.png" alt="..."> <i
+												<img src="images/a4.png" alt="..."> <i
 												class="away b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1243,8 +1250,8 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a5.png" alt="..."
-												class="img-circle"> <i class="on b-light right sm"></i>
+												<img src="images/a5.png" alt="..." class="img-circle">
+												<i class="on b-light right sm"></i>
 										</span>
 											<div class="clear">
 												<div>
@@ -1254,7 +1261,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a6.png" alt="..."> <i
+												<img src="images/a6.png" alt="..."> <i
 												class="on b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1265,7 +1272,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a7.png" alt="..."> <i
+												<img src="images/a7.png" alt="..."> <i
 												class="busy b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1276,7 +1283,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a8.png" alt="..."> <i
+												<img src="images/a8.png" alt="..."> <i
 												class="away b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1287,8 +1294,8 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a9.png" alt="..."
-												class="img-circle"> <i class="on b-light right sm"></i>
+												<img src="images/a9.png" alt="..." class="img-circle">
+												<i class="on b-light right sm"></i>
 										</span>
 											<div class="clear">
 												<div>
@@ -1298,7 +1305,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a1.png" alt="..."> <i
+												<img src="images/a1.png" alt="..."> <i
 												class="on b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1309,7 +1316,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a2.png" alt="..."> <i
+												<img src="images/a2.png" alt="..."> <i
 												class="busy b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1320,7 +1327,7 @@
 											</div></li>
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="static/picture/a3.png" alt="..."> <i
+												<img src="images/a3.png" alt="..."> <i
 												class="away b-light right sm"></i>
 										</span>
 											<div class="clear">
@@ -1357,15 +1364,17 @@
 			</section>
 		</section>
 	</section>
-	<script src="static/js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="static/js/bootstrap.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<!-- App -->
-	<script src="static/js/app.js"></script>
-	<script src="static/js/jquery.slimscroll.min.js"></script>
-	<script src="static/js/app.plugin.js"></script>
-	<script type="text/javascript" src="static/js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="static/js/jplayer.playlist.min.js"></script>
-	<script type="text/javascript" src="static/js/demo.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="js/app.plugin.js"></script>
+	<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+	<script type="text/javascript"
+		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
+
 </body>
 </html>

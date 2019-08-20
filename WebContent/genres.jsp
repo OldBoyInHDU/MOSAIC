@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en" class="app">
@@ -10,27 +10,19 @@
 	content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="static/css/jplayer.flat.css"
+<link rel="stylesheet" href="js/jPlayer/jplayer.flat.css"
 	type="text/css" />
-<link rel="stylesheet" href="static/css/bootstrap.css" type="text/css" />
-<link rel="stylesheet" href="static/css/animate.css" type="text/css" />
-<link rel="stylesheet" href="static/css/font-awesome.min.css"
-	type="text/css" />
-<link rel="stylesheet" href="static/css/simple-line-icons.css"
-	type="text/css" />
-<link rel="stylesheet" href="static/css/font.css" type="text/css" />
-<link rel="stylesheet" href="static/css/app.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.css" type="text/css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+<link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+<link rel="stylesheet" href="css/font.css" type="text/css" />
+<link rel="stylesheet" href="css/app.css" type="text/css" />
 <!--[if lt IE 9]>
-    <script src="static/js/html5shiv.js"></script>
-    <script src="static/js/respond.min.js"></script>
-    <script src="static/js/excanvas.js"></script>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
   <![endif]-->
-  	<script>
-	function go(val) {
-        $("#currentPage").val(parseInt($("#currentPage").val())+val);
-        $("#page").submit();
-    }
-	</script>
 </head>
 <body class="">
 	<section class="vbox">
@@ -40,10 +32,9 @@
 				<a class="btn btn-link visible-xs"
 					data-toggle="class:nav-off-screen,open" data-target="#nav,html">
 					<i class="icon-list"></i>
-				</a> <a href="${pageContext.request.contextPath}/index.jsp"
-					class="navbar-brand text-lt"> <i class="icon-earphones"></i> <img
-					src="static/picture/logo.png" alt="." class="hide"> <span
-					class="hidden-nav-xs m-l-sm">Musik</span>
+				</a> <a href="index.html" class="navbar-brand text-lt"> <i
+					class="icon-earphones"></i> <img src="images/logo.png" alt="."
+					class="hide"> <span class="hidden-nav-xs m-l-sm">Musik</span>
 				</a> <a class="btn btn-link visible-xs" data-toggle="dropdown"
 					data-target=".user"> <i class="icon-settings"></i>
 				</a>
@@ -85,8 +76,8 @@
 								</div>
 								<div class="list-group list-group-alt">
 									<a href="#" class="media list-group-item"> <span
-										class="pull-left thumb-sm"> <img
-											src="static/picture/a0.png" alt="..." class="img-circle">
+										class="pull-left thumb-sm"> <img src="images/a0.png"
+											alt="..." class="img-circle">
 									</span> <span class="media-body block m-b-none"> Use awesome
 											animate.css<br> <small class="text-muted">10
 												minutes ago</small>
@@ -118,14 +109,14 @@
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
 					</c:if>
-					<%--<li class="dropdown">
+					<!--  <li class="dropdown">
             <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
               <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="static/picture/a0.png" alt="...">
+                <img src="images/a0.png" alt="...">
               </span>
               John.Smith <b class="caret"></b>
             </a>
-            <ul class="dropdown-menu animated fadeInRight">
+            <ul class="dropdown-menu animated fadeInRight">            
               <li>
                 <span class="arrow top"></span>
                 <a href="#">Settings</a>
@@ -147,7 +138,7 @@
                 <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
               </li>
             </ul>
-          </li>--%>
+          </li> -->
 				</ul>
 			</div>
 		</header>
@@ -170,300 +161,179 @@
 											Discover</li>
 										<li><a
 											href="${pageContext.request.contextPath}/index.jsp"> <i
-												class="icon-disc icon  "></i> <span class="font-bold">What's
-													new</span>
+												class="icon-disc icon text-success"></i> <span
+												class="font-bold">What's new</span>
 										</a></li>
 										<li><a
 											href="${pageContext.request.contextPath}/genres.jsp"> <i
-												class="icon-music-tone-alt icon  "></i> <span
+												class="icon-music-tone-alt icon text-info"></i> <span
 												class="font-bold">Genres</span>
 										</a></li>
 										<li><a
 											href="${pageContext.request.contextPath}/events.jsp"> <i
-												class="icon-drawer icon  "></i> <b
+												class="icon-drawer icon text-primary-lter"></i> <b
 												class="badge bg-primary pull-right">6</b> <span
 												class="font-bold">Events</span>
 										</a></li>
 										<li><a
 											href="${pageContext.request.contextPath}/listen.jsp"> <i
-												class="icon-list icon   "></i> <span class="font-bold">Listen</span>
+												class="icon-list icon  text-info-dker"></i> <span
+												class="font-bold">Listen</span>
 										</a></li>
 										<li><a
 											href="${pageContext.request.contextPath}/video.jsp"
 											data-target="#content" data-el="#bjax-el" data-replace="true">
-												<i class="icon-social-youtube icon   "></i> <span
+												<i class="icon-social-youtube icon  text-primary"></i> <span
 												class="font-bold">Video</span>
 										</a></li>
 										<li class="m-b hidden-nav-xs"></li>
 									</ul>
 									<!-- <ul class="nav" data-ride="collapse">
-                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      Interface
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-screen-desktop icon">
-                        </i>
-                        <span>Layouts</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="layout-color.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Color option</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="layout-boxed.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Boxed layout</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="layout-fluid.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Fluid layout</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-chemistry icon">
-                        </i>
-                        <span>UI Kit</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="buttons.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Buttons</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="icons.html" class="auto">                            
-                            <b class="badge bg-info pull-right">369</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Icons</span>
-                          </a>
-                        </li><li >
-                          <a href="http://www.cssmoban.com" class="auto">                            
-                            <b class="badge bg-info pull-right">369</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>More</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="grid.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Grid</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="widgets.html" class="auto">                            
-                            <b class="badge bg-dark pull-right">8</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Widgets</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="components.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Components</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="list.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>List group</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="#table" class="auto">                            
-                            <span class="pull-right text-muted">
-                              <i class="fa fa-angle-left text"></i>
-                              <i class="fa fa-angle-down text-active"></i>
-                            </span>                            
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Table</span>
-                          </a>
-                          <ul class="nav dker">
-                            <li >
-                              <a href="table-static.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Table static</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="table-datatable.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Datatable</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li >
-                          <a href="#form" class="auto">                            
-                            <span class="pull-right text-muted">
-                              <i class="fa fa-angle-left text"></i>
-                              <i class="fa fa-angle-down text-active"></i>
-                            </span>                            
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Form</span>
-                          </a>
-                          <ul class="nav dker">
-                            <li >
-                              <a href="form-elements.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form elements</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="form-validation.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form validation</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="form-wizard.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form wizard</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li >
-                          <a href="chart.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Chart</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="portlet.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Portlet</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="timeline.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Timeline</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-grid icon">
-                        </i>
-                        <span>Pages</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="profile.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Profile</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="blog.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Blog</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="invoice.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Invoice</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="gmap.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Google Map</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="jvectormap.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Vector Map</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="signin.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Signin</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="signup.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Signup</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="404.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>404</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul class="nav text-sm">
-                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
-                      Playlist
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-music-tone icon"></i>
-                        <span>Hip-Pop</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-playlist icon text-success-lter"></i>
-                        <b class="badge bg-success dker pull-right">9</b>
-                        <span>Jazz</span>
-                      </a>
-                    </li>
-                  </ul> -->
+										<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+											Interface</li>
+										<li><a href="#" class="auto"> <span
+												class="pull-right text-muted"> <i
+													class="fa fa-angle-left text"></i> <i
+													class="fa fa-angle-down text-active"></i>
+											</span> <i class="icon-screen-desktop icon"> </i> <span>Layouts</span>
+										</a>
+											<ul class="nav dk text-sm">
+												<li><a href="layout-color.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Color
+															option</span>
+												</a></li>
+												<li><a href="layout-boxed.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Boxed
+															layout</span>
+												</a></li>
+												<li><a href="layout-fluid.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Fluid
+															layout</span>
+												</a></li>
+											</ul></li>
+										<li><a href="#" class="auto"> <span
+												class="pull-right text-muted"> <i
+													class="fa fa-angle-left text"></i> <i
+													class="fa fa-angle-down text-active"></i>
+											</span> <i class="icon-chemistry icon"> </i> <span>UI Kit</span>
+										</a>
+											<ul class="nav dk text-sm">
+												<li><a href="buttons.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Buttons</span>
+												</a></li>
+												<li><a href="icons.html" class="auto"> <b
+														class="badge bg-info pull-right">369</b> <i
+														class="fa fa-angle-right text-xs"></i> <span>Icons</span>
+												</a></li>
+												<li><a href="http://www.weidea.net" class="auto">
+														<b class="badge bg-info pull-right">369</b> <i
+														class="fa fa-angle-right text-xs"></i> <span>More</span>
+												</a></li>
+												<li><a href="grid.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Grid</span>
+												</a></li>
+												<li><a href="widgets.html" class="auto"> <b
+														class="badge bg-dark pull-right">8</b> <i
+														class="fa fa-angle-right text-xs"></i> <span>Widgets</span>
+												</a></li>
+												<li><a href="components.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Components</span>
+												</a></li>
+												<li><a href="list.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>List
+															group</span>
+												</a></li>
+												<li><a href="#table" class="auto"> <span
+														class="pull-right text-muted"> <i
+															class="fa fa-angle-left text"></i> <i
+															class="fa fa-angle-down text-active"></i>
+													</span> <i class="fa fa-angle-right text-xs"></i> <span>Table</span>
+												</a>
+													<ul class="nav dker">
+														<li><a href="table-static.html"> <i
+																class="fa fa-angle-right"></i> <span>Table static</span>
+														</a></li>
+														<li><a href="table-datatable.html"> <i
+																class="fa fa-angle-right"></i> <span>Datatable</span>
+														</a></li>
+													</ul></li>
+												<li><a href="#form" class="auto"> <span
+														class="pull-right text-muted"> <i
+															class="fa fa-angle-left text"></i> <i
+															class="fa fa-angle-down text-active"></i>
+													</span> <i class="fa fa-angle-right text-xs"></i> <span>Form</span>
+												</a>
+													<ul class="nav dker">
+														<li><a href="form-elements.html"> <i
+																class="fa fa-angle-right"></i> <span>Form
+																	elements</span>
+														</a></li>
+														<li><a href="form-validation.html"> <i
+																class="fa fa-angle-right"></i> <span>Form
+																	validation</span>
+														</a></li>
+														<li><a href="form-wizard.html"> <i
+																class="fa fa-angle-right"></i> <span>Form wizard</span>
+														</a></li>
+													</ul></li>
+												<li><a href="chart.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Chart</span>
+												</a></li>
+												<li><a href="portlet.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Portlet</span>
+												</a></li>
+												<li><a href="timeline.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Timeline</span>
+												</a></li>
+											</ul></li>
+										<li><a href="#" class="auto"> <span
+												class="pull-right text-muted"> <i
+													class="fa fa-angle-left text"></i> <i
+													class="fa fa-angle-down text-active"></i>
+											</span> <i class="icon-grid icon"> </i> <span>Pages</span>
+										</a>
+											<ul class="nav dk text-sm">
+												<li><a href="profile.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Profile</span>
+												</a></li>
+												<li><a href="blog.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Blog</span>
+												</a></li>
+												<li><a href="invoice.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Invoice</span>
+												</a></li>
+												<li><a href="gmap.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Google
+															Map</span>
+												</a></li>
+												<li><a href="jvectormap.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Vector
+															Map</span>
+												</a></li>
+												<li><a href="signin.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Signin</span>
+												</a></li>
+												<li><a href="signup.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>Signup</span>
+												</a></li>
+												<li><a href="404.html" class="auto"> <i
+														class="fa fa-angle-right text-xs"></i> <span>404</span>
+												</a></li>
+											</ul></li>
+									</ul>
+									<ul class="nav text-sm">
+										<li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+											<span class="pull-right"><a href="#"><i
+													class="icon-plus i-lg"></i></a></span> Playlist
+										</li>
+										<li><a href="#"> <i class="icon-music-tone icon"></i>
+												<span>Hip-Pop</span>
+										</a></li>
+										<li><a href="#"> <i
+												class="icon-playlist icon text-success-lter"></i> <b
+												class="badge bg-success dker pull-right">9</b> <span>Jazz</span>
+										</a></li>
+									</ul> -->
 								</nav>
 								<!-- / nav -->
 							</div>
@@ -474,7 +344,7 @@
 								<div class="dropdown dropup wrapper-sm clearfix">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 										<span class="thumb-sm avatar pull-left m-l-xs"> <img
-											src="static/picture/a3.png" class="dker" alt="..."> <i
+											src="images/a3.png" class="dker" alt="..."> <i
 											class="on b-black"></i>
 									</span> <span class="hidden-nav-xs clear"> <span
 											class="block m-l"> <strong class="font-bold text-lt">John.Smith</strong>
@@ -503,7 +373,7 @@
 				<!-- /.aside -->
 				<section id="content">
 					<section class="vbox">
-					<section class="w-f-md" id="bjax-target">
+						<section class="w-f-md" id="bjax-target">
 							<section class="hbox stretch">
 								<!-- side content -->
 								<aside class="aside bg-light dk" id="sidebar">
@@ -511,30 +381,30 @@
 										<section class="scrollable hover">
 											<div
 												class="list-group no-radius no-border no-bg m-t-n-xxs m-b-none auto">
-												<form action="${pageContext.request.contextPath }/SongServlet" >
-												<input type="hidden" name="method" value="songsType" >
-												<a href="genres.jsp" >
-													<button class="list-group-item" name="type" value="All" style="width:200px">
-													All
-													</button>
-												</a> 
-												<a href="genres.jsp">
-													<button class="list-group-item" name="type" value="情歌" style="width:200px">
-													1
-													</button>
-												</a> 
-												<a href="genres.jsp" >
-													<button class="list-group-item" name="type" value="欢快" style="width:200px">
-													2
-													</button>
-												</a> 
-												<a href="genres.jsp" >
-													<button class="list-group-item" name="type" value="激情" style="width:200px">
-													3
-													</button>
-												</a> 
-												
-												</form>
+												<a href="genres.html" class="list-group-item"> All </a> <a
+													href="genres.html" class="list-group-item active">
+													acoustic </a> <a href="genres.html" class="list-group-item">
+													ambient </a> <a href="genres.html" class="list-group-item">
+													blues </a> <a href="genres.html" class="list-group-item">
+													classical </a> <a href="genres.html" class="list-group-item">
+													country </a> <a href="genres.html" class="list-group-item">
+													electronic </a> <a href="genres.html" class="list-group-item">
+													emo </a> <a href="genres.html" class="list-group-item">
+													folk </a> <a href="genres.html" class="list-group-item">
+													hardcore </a> <a href="genres.html" class="list-group-item">
+													hip hop </a> <a href="genres.html" class="list-group-item">
+													indie </a> <a href="genres.html" class="list-group-item">
+													jazz </a> <a href="genres.html" class="list-group-item">
+													latin </a> <a href="genres.html" class="list-group-item">
+													metal </a> <a href="genres.html" class="list-group-item">
+													pop </a> <a href="genres.html" class="list-group-item"> pop
+													punk </a> <a href="genres.html" class="list-group-item">
+													punk </a> <a href="genres.html" class="list-group-item">
+													reggae </a> <a href="genres.html" class="list-group-item">
+													rnb </a> <a href="genres.html" class="list-group-item">
+													rock </a> <a href="genres.html" class="list-group-item">
+													soul </a> <a href="genres.html" class="list-group-item">
+													world </a>
 											</div>
 										</section>
 									</section>
@@ -544,44 +414,421 @@
 									<section class="vbox">
 										<section class="scrollable padder-lg">
 											<h2 class="font-thin m-b">Acoustic</h2>
-											<c:forEach items="${pageBean.list}" var="song">
 											<div class="row row-sm">
 												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
 													<div class="item">
 														<div class="pos-rlt">
 															<div class="item-overlay opacity r r-2x bg-black">
 																<div class="center text-center m-t-n">
-																	<a href="${song.songurl}"><i class="fa fa-play-circle i-2x"></i></a>
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
 																</div>
 															</div>
-															<a href="track-detail.html"><img
-																src="${song.imgurl}" alt=""
-																class="r r-2x img-full"></a>
+															<a href="track-detail.html"><img src="images/m1.jpg"
+																alt="" class="r r-2x img-full"></a>
 														</div>
 														<div class="padder-v">
 															<a href="track-detail.html" data-bjax
 																data-target="#bjax-target" data-el="#bjax-el"
-																data-replace="true" class="text-ellipsis">${song.name}</a> 
-															<a href="track-detail.html" data-bjax
+																data-replace="true" class="text-ellipsis">Tempered
+																Song</a> <a href="track-detail.html" data-bjax
 																data-target="#bjax-target" data-el="#bjax-el"
 																data-replace="true"
-																class="text-ellipsis text-xs text-muted">${song.artist}</a>
+																class="text-ellipsis text-xs text-muted">Miaow</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m2.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Morbi id
+																neque quam</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Phasellus</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/a10.png"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Aliquam
+																sollicitudin venenatis ipsum</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Malesuada</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m4.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Citudin
+																venenatis ipsum ac</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Volutpat</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m5.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Vestibulum
+																ullamcorper sodales nisi</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Mauris
+																Qiaos</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m6.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Mauris
+																convallis mauris at</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Neque</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m0.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Sodales
+																nisi nec condimentum</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Augue</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m8.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Nisi nec
+																condimentum</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Miaow</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m9.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Phasellus
+																at ultricies nequ</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Volutpat</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m10.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Quis
+																malesuada augue</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Feugiat</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m11.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Ipsum ac
+																feugiat</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Quam AC</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m12.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Ullamcorper
+																sodales nisi nec condimentu</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Convallis</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m13.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Tudin
+																venenatis ulum ullamcorper</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Pellent
+																Esque</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m14.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Sodales
+																nisi nec condimentum</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Utricies</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m15.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Sec
+																condimentum augue</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Quis Fox</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/a9.png"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Dimentum
+																at pellentesque volutpat</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Suada</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m16.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Natis
+																ipsum ac feugiat</a> <a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Monvallis</a>
+														</div>
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+													<div class="item">
+														<div class="pos-rlt">
+															<div class="item-overlay opacity r r-2x bg-black">
+																<div class="center text-center m-t-n">
+																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																</div>
+															</div>
+															<a href="track-detail.html"><img src="images/m17.jpg"
+																alt="" class="r r-2x img-full"></a>
+														</div>
+														<div class="padder-v">
+															<a href="track-detail.html" data-bjax
+																data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true" class="text-ellipsis">Dimentum
+																tesque volut icies neque</a> <a href="track-detail.html"
+																data-bjax data-target="#bjax-target" data-el="#bjax-el"
+																data-replace="true"
+																class="text-ellipsis text-xs text-muted">Londi
+																Mentum</a>
 														</div>
 													</div>
 												</div>
 											</div>
-											</c:forEach>
 											<ul class="pagination pagination">
-												<li><a href="javascript:void(0)" onclick="go(-1)"><i class="fa fa-chevron-left" ></i></a></li>
-												<li><B>${pageBean.currentPage}</B></li>
-												<li><a href="javascript:void(0)" onclick="go(1)"><i class="fa fa-chevron-right" ></i></a></li>
+												<li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+												<li class="active"><a href="#">1</a></li>
+												<li><a href="#">2</a></li>
+												<li><a href="#">3</a></li>
+												<li><a href="#">4</a></li>
+												<li><a href="#">5</a></li>
+												<li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
 											</ul>
 										</section>
 									</section>
 								</section>
 							</section>
 						</section>
-						
 						<footer class="footer bg-info dker">
 							<div id="jp_container_N">
 								<div class="jp-type-playlist">
@@ -678,16 +925,17 @@
 			</section>
 		</section>
 	</section>
-	<script src="static/js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="static/js/bootstrap.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<!-- App -->
-	<script src="static/js/app.js"></script>
-	<script src="static/js/jquery.slimscroll.min.js"></script>
-	<script src="static/js/app.plugin.js"></script>
-	<script type="text/javascript" src="static/js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="static/js/jplayer.playlist.min.js"></script>
-	<script type="text/javascript" src="static/js/demo.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="js/app.plugin.js"></script>
+	<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+	<script type="text/javascript"
+		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
 
 </body>
 </html>
