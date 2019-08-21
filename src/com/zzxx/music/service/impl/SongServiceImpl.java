@@ -67,4 +67,22 @@ public class SongServiceImpl implements SongService {
 		Song song = sd.getSongBySongId(songId);
 		return song;
 	}
+
+	/**
+	 * 搜索框根据歌名搜索歌曲
+	 */
+	@Override
+	public List<Song> searchSongBySongName(String songName) {
+		List<Song> list = sd.getSongBySongName(songName);
+		return list;
+	}
+
+	/**
+	 * 搜索框根据歌手名搜索歌曲
+	 */
+	@Override
+	public List<Song> searchSongByArtistName(String artistName) {
+		List<Song> list = sd.getSongByArtistName(artistName);
+		return list;
+	}
 }
