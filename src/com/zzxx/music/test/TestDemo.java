@@ -66,11 +66,11 @@ public class TestDemo {
 	@Test
 	public void testGetHotSongs() {
 		List<Song> listHotSong = ss.listHotSong(12);
-		List<Song> listNewSong = ss.listHotSong(8);
+//		List<Song> listNewSong = ss.listHotSong(8);
 		System.out.println("热歌：" + listHotSong.size());
-		System.out.println("新歌：" + listNewSong.size());
+//		System.out.println("新歌：" + listNewSong.size());
 		System.out.println("热歌：" + listHotSong);
-		System.out.println("新歌：" + listNewSong);
+//		System.out.println("新歌：" + listNewSong);
 	}
 	
 	// 测试分页显示

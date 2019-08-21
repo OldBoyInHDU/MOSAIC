@@ -35,6 +35,7 @@ public interface SongDao {
     int getCount(String type);
 
     public List<Search> selectAllSource(String name);
+	Song getSongBySongId(int num);
     
     
 }
