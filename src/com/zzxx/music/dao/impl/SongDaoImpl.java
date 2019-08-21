@@ -117,7 +117,6 @@ public class SongDaoImpl implements SongDao {
         		long count = (Long) queryRunner.query(sql, new ScalarHandler(),type);
         		return (int) count;
         	} catch (SQLException e) {
-            e.printStackTrace();
         	}
         }
         return 0;
