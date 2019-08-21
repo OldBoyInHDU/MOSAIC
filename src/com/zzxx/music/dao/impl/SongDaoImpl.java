@@ -89,10 +89,11 @@ public class SongDaoImpl implements SongDao {
 				e.printStackTrace();
 			}
         	return list;
-        }else {
+        }
+        else {
 	        try {
-	            List<Song> list = queryRunner.query(sql, new BeanListHandler<Song>(Song.class),type,startRow,pageSize);
-	            return list;
+	            List<Song> list1 = queryRunner.query(sql, new BeanListHandler<Song>(Song.class),type,startRow,pageSize);
+	            return list1;
 	        } catch (SQLException e) {
 	            e.printStackTrace();
 	        }
@@ -112,6 +113,15 @@ public class SongDaoImpl implements SongDao {
 				e.printStackTrace();
 			}
         }else {
+        if("All".equals(type)) {
+	         String nsql = "select count(1) from song";
+	         try {
+			    long ncount = (Long)queryRunner.query(nsql, new ScalarHandler());
+			    return (int)ncount;
+			 } catch (SQLException e) {
+			    e.printStackTrace();
+			 }
+        }
         try {
             long count = (Long) queryRunner.query(sql, new ScalarHandler(),type);
             return (int) count;
