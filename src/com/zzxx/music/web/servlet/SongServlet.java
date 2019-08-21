@@ -1,22 +1,29 @@
 package com.zzxx.music.web.servlet;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.util.List;
 
 import javax.servlet.ServletException;
+=======
+>>>>>>> refs/remotes/origin/master
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 import com.google.gson.Gson;
 import com.zzxx.music.beans.Song;
 import com.zzxx.music.service.SongService;
 import com.zzxx.music.utils.FactoryUtils;
 import com.zzxx.music.utils.PageBean;
 
+=======
+>>>>>>> refs/remotes/origin/master
 
 @WebServlet("/SongServlet")
 public class SongServlet extends BaseServlet {
+<<<<<<< HEAD
 	SongService ss = (SongService) FactoryUtils.getInstance("SongService");
 	public void songType(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String type = request.getParameter("type");
@@ -31,6 +38,11 @@ public class SongServlet extends BaseServlet {
 //        response.setContentType("text/plain;charset=utf-8");
 //		response.getWriter().write("{\"PageBean\":"+pb+"}");
         response.sendRedirect(request.getContextPath()+"/genres.jsp");
+=======
+
+	public void songsType(HttpServletRequest request, HttpServletResponse response) {
+		
+>>>>>>> refs/remotes/origin/master
 	}
 	
 	public void hotSong(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
