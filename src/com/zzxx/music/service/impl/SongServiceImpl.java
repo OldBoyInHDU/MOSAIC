@@ -25,7 +25,7 @@ public class SongServiceImpl implements SongService {
 		int number = a;
 		for(int i = 0; i < num; i++) {
 			list.add(allSong.get(number));
-			number = number + a;
+			number = number + m;
 		}
 		return list;
 	}
@@ -55,5 +55,15 @@ public class SongServiceImpl implements SongService {
 		PageBean<Song> pb = new PageBean<Song>(totalCount, currentPage, pageSize);
 		pb.setList(list);
 		return pb;
+	}
+
+	/**
+	 * 根据歌的id搜索歌
+	 */
+	@Override
+	public Song findSongBySongId(String id) {
+		int num = Integer.valueOf(id);
+		Song song = sd.getSongBySongId(num);
+		return song;
 	}
 }

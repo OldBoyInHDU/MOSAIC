@@ -8,5 +8,6 @@ import com.zzxx.music.utils.PageBean;
 public interface SongService {
 	List<Song> listHotSong(int num);
 	PageBean<Song> listSongsByType(String currentPageStr, String pageSizeStr, String type);
+	Song findSongBySongId(String id);
 	
 }
