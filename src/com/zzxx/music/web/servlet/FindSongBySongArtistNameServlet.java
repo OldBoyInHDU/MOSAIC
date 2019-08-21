@@ -14,7 +14,7 @@ import com.zzxx.music.beans.Song;
 import com.zzxx.music.service.SongService;
 import com.zzxx.music.service.impl.SongServiceImpl;
 
-@WebServlet("/FindSongBySongNameServlet")
+@WebServlet("/FindSongBySongArtistNameServlet")
 public class FindSongBySongArtistNameServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

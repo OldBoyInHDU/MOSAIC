@@ -590,6 +590,7 @@
 	<script type="text/javascript"
 		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
 	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
+	<script type="text/javascript" src="js/select.js"></script>
 	<script>
 		$(function() {
 			$.ajax({

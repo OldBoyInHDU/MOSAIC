@@ -42,9 +42,9 @@ public class SongDaoImpl implements SongDao {
 
     @Override
     public List<Song> getSongBySongName(String songname) {
-        String sql = "select * from song where name=?";
+        String sql = "select * from song where name like ?";
         try {
-            return queryRunner.query(sql, new BeanListHandler<Song>(Song.class),songname);
+            return queryRunner.query(sql, new BeanListHandler<Song>(Song.class),"%"+songname+"%");
         } catch (SQLException e) {
             e.printStackTrace();
         }
