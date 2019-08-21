@@ -113,21 +113,12 @@ public class SongDaoImpl implements SongDao {
 				e.printStackTrace();
 			}
         }else {
-        if("All".equals(type)) {
-	         String nsql = "select count(1) from song";
-	         try {
-			    long ncount = (Long)queryRunner.query(nsql, new ScalarHandler());
-			    return (int)ncount;
-			 } catch (SQLException e) {
-			    e.printStackTrace();
-			 }
-        }
-        try {
-            long count = (Long) queryRunner.query(sql, new ScalarHandler(),type);
-            return (int) count;
-        } catch (SQLException e) {
+        	try {
+        		long count = (Long) queryRunner.query(sql, new ScalarHandler(),type);
+        		return (int) count;
+        	} catch (SQLException e) {
             e.printStackTrace();
-        }
+        	}
         }
         return 0;
     }
