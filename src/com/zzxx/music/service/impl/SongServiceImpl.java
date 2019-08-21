@@ -25,7 +25,7 @@ public class SongServiceImpl implements SongService {
 		int number = a;
 		for(int i = 0; i < num; i++) {
 			list.add(allSong.get(number));
-			number = number + a;
+			number = number + m;
 		}
 		return list;
 	}

@@ -166,7 +166,7 @@
 												class="font-bold">What's new</span>
 										</a></li>
 										<li><a
-											href="${pageContext.request.contextPath}/genres.jsp"> <i
+											href="${pageContext.request.contextPath}/SongServlet?method=songType&type=%E6%89%80%E6%9C%89%E6%AD%8C%E6%9B%B2"> <i
 												class="icon-music-tone-alt icon text-info"></i> <span
 												class="font-bold">Genres</span>
 										</a></li>

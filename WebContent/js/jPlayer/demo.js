@@ -5,9 +5,9 @@ $(document).ready(function(){
     cssSelectorAncestor: "#jp_container_N"
   }, [
     {
-      title:"Busted Chump",
-      artist:"ADG3",
-      mp3:"http://flatfull.com/themes/assets/musics/adg3com_bustedchump.mp3",
+      title:"不是你的错",
+      artist:"丁当",
+      mp3:"music/丁当 - 不是你的错.mp3",
       poster: "images/m0.jpg"
     },
     {

@@ -1,4 +1,4 @@
-﻿html {
+html {
   background-color: #f2f4f8;
   overflow-x: hidden;
 }
@@ -408,7 +408,6 @@ a.list-group-item:focus {
   color: #999;
   text-shadow: none;
 }
-.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 .carousel-control:hover,
 .carousel-control:focus {
   color: #ccc;

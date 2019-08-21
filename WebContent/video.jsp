@@ -32,7 +32,7 @@
 				<a class="btn btn-link visible-xs"
 					data-toggle="class:nav-off-screen,open" data-target="#nav,html">
 					<i class="icon-list"></i>
-				</a> <a href="index.html" class="navbar-brand text-lt"> <i
+				</a> <a href="index.jsp" class="navbar-brand text-lt"> <i
 					class="icon-earphones"></i> <img src="images/logo.png" alt="."
 					class="hide"> <span class="hidden-nav-xs m-l-sm">Musik</span>
 				</a> <a class="btn btn-link visible-xs" data-toggle="dropdown"
@@ -165,7 +165,7 @@
 												class="font-bold">What's new</span>
 										</a></li>
 										<li><a
-											href="${pageContext.request.contextPath}/genres.jsp"> <i
+											href="${pageContext.request.contextPath}/SongServlet?method=songType&type=%E6%89%80%E6%9C%89%E6%AD%8C%E6%9B%B2"> <i
 												class="icon-music-tone-alt icon text-info"></i> <span
 												class="font-bold">Genres</span>
 										</a></li>
