@@ -23,6 +23,40 @@
     <script src="js/ie/respond.min.js"></script>
     <script src="js/ie/excanvas.js"></script>
   <![endif]-->
+  <script src="js/jquery.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.js"></script>
+	<!-- App -->
+	<script src="js/app.js"></script>
+	<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="js/app.plugin.js"></script>
+	<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+	<script type="text/javascript"
+		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
+	<script>
+		$(function() {
+			$.ajax({
+				url : "${pageContext.request.contextPath}/SongServlet",
+				data : {
+					"method" : "hotSong",
+					"num":"12"
+				},
+				dataType : "json"
+			});
+			$.ajax({
+				url : "${pageContext.request.contextPath}/SongServlet",
+				data : {
+					"method" : "newSong",
+					"num":"8"
+				},
+				success:function(data){
+					location.reload(true);
+				},
+				dataType : "json"
+			});
+		});
+	</script>
 </head>
 <body class="">
 	<section class="vbox">
@@ -579,37 +613,6 @@
 			</section>
 		</section>
 	</section>
-	<script src="js/jquery.min.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.js"></script>
-	<!-- App -->
-	<script src="js/app.js"></script>
-	<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="js/app.plugin.js"></script>
-	<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
-	<script type="text/javascript"
-		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
-	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
-	<script type="text/javascript" src="js/select.js"></script>
-	<script>
-		$(function() {
-			$.ajax({
-				url : "${pageContext.request.contextPath}/SongServlet",
-				data : {
-					"method" : "hotSong",
-					"num":"12"
-				},
-				dataType : "json"
-			});
-			$.ajax({
-				url : "${pageContext.request.contextPath}/SongServlet",
-				data : {
-					"method" : "newSong",
-					"num":"8"
-				},
-				dataType : "json"
-			});
-		});
-	</script>
+	
 </body>
 </html>
