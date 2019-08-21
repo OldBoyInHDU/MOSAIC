@@ -24,17 +24,16 @@ public class UserServlet extends BaseServlet {
 		System.out.println(password);
 		try{
 			User user = us.login(username, password);
-			System.out.println(user.getEmail());
+			System.out.println(user.getUsername());
 			System.out.println(user.getPassword());
-			if(user.getEmail().equals(username) && user.getPassword().equals(password)){
-				request.getSession().setAttribute("user", user);
-				response.sendRedirect(request.getContextPath()+"/index.jsp");
+			if(user.getUsername().equals(username) && user.getPassword().equals(password)){
+				response.sendRedirect("/index.jsp");
 			} else {
 
 			}
 		} catch (Exception e){
 			request.setAttribute("exception", e);
-			request.getRequestDispatcher(request.getContextPath()+"/register.jsp").forward(request, response);
+			request.getRequestDispatcher("/register.jsp").forward(request, response);
 		}
 
 	}
@@ -50,7 +49,7 @@ public class UserServlet extends BaseServlet {
 			e.printStackTrace();
 		}
 
-		response.sendRedirect(request.getContextPath()+"/index.jsp");
+		response.sendRedirect("/index.jsp");
 	}
 	
 	public void userCheck(HttpServletRequest request, HttpServletResponse response) throws IOException {

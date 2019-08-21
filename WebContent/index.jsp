@@ -109,36 +109,6 @@
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
 					</c:if>
-					<!--  <li class="dropdown">
-            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
-              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="images/a0.png" alt="...">
-              </span>
-              John.Smith <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu animated fadeInRight">            
-              <li>
-                <span class="arrow top"></span>
-                <a href="#">Settings</a>
-              </li>
-              <li>
-                <a href="profile.html">Profile</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="badge bg-danger pull-right">3</span>
-                  Notifications
-                </a>
-              </li>
-              <li>
-                <a href="docs.html">Help</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-              </li>
-            </ul>
-          </li> -->
 				</ul>
 			</div>
 		</header>
@@ -165,14 +135,14 @@
 												class="font-bold">What's new</span>
 										</a></li>
 										<li><a
-											href="${pageContext.request.contextPath}/genres.jsp"> <i
-												class="icon-music-tone-alt icon text-info"></i> <span
+											href="${pageContext.request.contextPath}/SongServlet?method=songType&type=%E6%89%80%E6%9C%89%E6%AD%8C%E6%9B%B2">
+												<i class="icon-music-tone-alt icon text-info"></i> <span
 												class="font-bold">Genres</span>
 										</a></li>
 										<li><a
 											href="${pageContext.request.contextPath}/events.jsp"> <i
 												class="icon-drawer icon text-primary-lter"></i> <b
-												class="badge bg-primary pull-right">6</b> <span
+												class="badge bg-primary pull-right"></b> <span
 												class="font-bold">Events</span>
 										</a></li>
 										<li><a
@@ -188,274 +158,7 @@
 										</a></li>
 										<li class="m-b hidden-nav-xs"></li>
 									</ul>
-									<!-- <ul class="nav" data-ride="collapse">
-                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      Interface
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-screen-desktop icon">
-                        </i>
-                        <span>Layouts</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="layout-color.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
 
-                            <span>Color option</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="layout-boxed.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Boxed layout</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="layout-fluid.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Fluid layout</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-chemistry icon">
-                        </i>
-                        <span>UI Kit</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="buttons.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Buttons</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="icons.html" class="auto">                            
-                            <b class="badge bg-info pull-right">369</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Icons</span>
-                          </a>
-                        </li><li >
-                          <a href="http://www.weidea.net" class="auto">                            
-                            <b class="badge bg-info pull-right">369</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>More</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="grid.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Grid</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="widgets.html" class="auto">                            
-                            <b class="badge bg-dark pull-right">8</b>                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Widgets</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="components.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Components</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="list.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>List group</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="#table" class="auto">                            
-                            <span class="pull-right text-muted">
-                              <i class="fa fa-angle-left text"></i>
-                              <i class="fa fa-angle-down text-active"></i>
-                            </span>                            
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Table</span>
-                          </a>
-                          <ul class="nav dker">
-                            <li >
-                              <a href="table-static.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Table static</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="table-datatable.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Datatable</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li >
-                          <a href="#form" class="auto">                            
-                            <span class="pull-right text-muted">
-                              <i class="fa fa-angle-left text"></i>
-                              <i class="fa fa-angle-down text-active"></i>
-                            </span>                            
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Form</span>
-                          </a>
-                          <ul class="nav dker">
-                            <li >
-                              <a href="form-elements.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form elements</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="form-validation.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form validation</span>
-                              </a>
-                            </li>
-                            <li >
-                              <a href="form-wizard.html">
-                                <i class="fa fa-angle-right"></i>
-                                <span>Form wizard</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li >
-                          <a href="chart.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Chart</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="portlet.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Portlet</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="timeline.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Timeline</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li >
-                      <a href="#" class="auto">
-                        <span class="pull-right text-muted">
-                          <i class="fa fa-angle-left text"></i>
-                          <i class="fa fa-angle-down text-active"></i>
-                        </span>
-                        <i class="icon-grid icon">
-                        </i>
-                        <span>Pages</span>
-                      </a>
-                      <ul class="nav dk text-sm">
-                        <li >
-                          <a href="profile.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Profile</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="blog.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Blog</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="invoice.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Invoice</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="gmap.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Google Map</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="jvectormap.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Vector Map</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="signin.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Signin</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="signup.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>Signup</span>
-                          </a>
-                        </li>
-                        <li >
-                          <a href="404.html" class="auto">                                                        
-                            <i class="fa fa-angle-right text-xs"></i>
-
-                            <span>404</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <ul class="nav text-sm">
-                    <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
-                      <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
-                      Playlist
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-music-tone icon"></i>
-                        <span>Hip-Pop</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-playlist icon text-success-lter"></i>
-                        <b class="badge bg-success dker pull-right">9</b>
-                        <span>Jazz</span>
-                      </a>
-                    </li>
-                  </ul> -->
 								</nav>
 								<!-- / nav -->
 							</div>
@@ -511,576 +214,88 @@
 											class="bar5 a5 bg-danger dker"></span>
 										</span>
 									</h2>
-									<div class="row row-sm">
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="bottom">
-														<span class="badge bg-info m-l-sm m-b-sm">03:20</span>
+									<div class="row row-sm" id="hotSong">
+										<!-- <span id="test"></span> -->
+										<c:forEach items="${hotSongList }" var="hotSong">
+											<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+												<div class="item">
+													<div class="pos-rlt">
+														<div class="item-overlay opacity r r-2x bg-black">
+															<div class="text-info padder m-t-sm text-sm">
+																<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+																	class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+																	class="fa fa-star-o text-muted"></i>
+															</div>
+															<div class="center text-center m-t-n">
+																<a href="#"><i class="icon-control-play i-2x"></i></a>
+															</div>
+															<div class="bottom padder m-b-sm">
+																<a href="#" class="pull-right"> <i
+																	class="fa fa-heart-o"></i>
+																</a> <a href="#"> <i class="fa fa-plus-circle"></i>
+																</a>
+															</div>
+														</div>
+														<a href="#"><img
+															src="${pageContext.request.contextPath }${hotSong.imgurl }"
+															alt="" class="r r-2x img-full" style="height: 300px"></a>
 													</div>
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
+													<div class="padder-v">
+														<a href="#" class="text-ellipsis">${hotSong.name }</a> <a
+															href="#" class="text-ellipsis text-xs text-muted">${hotSong.artist }</a>
 													</div>
-													<a href="#"><img src="images/p1.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Tempered Song</a> <a
-														href="#" class="text-ellipsis text-xs text-muted">Miaow</a>
+
 												</div>
 											</div>
-										</div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black active">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#" data-toggle="class"> <i
-																class="icon-control-play i-2x text"></i> <i
-																class="icon-control-pause i-2x text-active"></i>
-															</a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right active" data-toggle="class">
-																<i class="fa fa-heart-o text"></i> <i
-																class="fa fa-heart text-active text-danger"></i>
-															</a> <a href="#" data-toggle="class"> <i
-																class="fa fa-plus-circle text"></i> <i
-																class="fa fa-check-circle text-active text-info"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p2.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Vivamus vel tincidunt
-														libero</a> <a href="#"
-														class="text-ellipsis text-xs text-muted">Lauren Taylor</a>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix visible-xs"></div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p3.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Morbi id neque quam
-														liquam sollicitudin</a> <a href="#"
-														class="text-ellipsis text-xs text-muted">Allen JH</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<div class="top">
-														<span class="pull-right m-t-n-xs m-r-sm text-white">
-															<i class="fa fa-bookmark i-lg"></i>
-														</span>
-													</div>
-													<a href="#"><img src="images/p4.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Tincidunt libero</a> <a
-														href="#" class="text-ellipsis text-xs text-muted">Amanda
-														Conlan</a>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix visible-xs"></div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p5.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Fermentum diam</a> <a
-														href="#" class="text-ellipsis text-xs text-muted">Nisa
-														Colen</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="top">
-														<span class="pull-right m-t-sm m-r-sm badge bg-info">6</span>
-													</div>
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p6.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Habitant</a> <a href="#"
-														class="text-ellipsis text-xs text-muted">Dan Doorack</a>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix visible-xs"></div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<div class="top">
-														<span class="pull-right m-t-sm m-r-sm badge bg-white">12</span>
-													</div>
-													<a href="#"><img src="images/p7.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Vivamus vel tincidunt
-														libero</a> <a href="#"
-														class="text-ellipsis text-xs text-muted">Ligula H</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p8.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Aliquam sollicitudin
-														venenati</a> <a href="#"
-														class="text-ellipsis text-xs text-muted">James East</a>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix visible-xs"></div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p9.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Lementum ligula vitae</a>
-													<a href="#" class="text-ellipsis text-xs text-muted">Lauren
-														Taylor</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay r r-2x bg-light dker active">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#" data-toggle="class" class="active"> <i
-																class="icon-control-play i-2x text"></i> <i
-																class="icon-control-pause i-2x text-active"></i>
-															</a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right" data-toggle="class"> <i
-																class="fa fa-heart-o text"></i> <i
-																class="fa fa-heart text-active text-danger"></i>
-															</a> <a href="#" class="active" data-toggle="class"> <i
-																class="fa fa-plus-circle text"></i> <i
-																class="fa fa-check-circle text-active text-info"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p10.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Egestas dui nec
-														fermentum </a> <a href="#"
-														class="text-ellipsis text-xs text-muted">Chris Fox</a>
-												</div>
-											</div>
-										</div>
-										<div class="clearfix visible-xs"></div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p11.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Aliquam sollicitudin
-														venenatis ipsum</a> <a href="#"
-														class="text-ellipsis text-xs text-muted">Jack Jason</a>
-												</div>
-											</div>
-										</div>
-										<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-											<div class="item">
-												<div class="pos-rlt">
-													<div class="item-overlay opacity r r-2x bg-black">
-														<div class="text-info padder m-t-sm text-sm">
-															<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-																class="fa fa-star-o text-muted"></i>
-														</div>
-														<div class="center text-center m-t-n">
-															<a href="#"><i class="icon-control-play i-2x"></i></a>
-														</div>
-														<div class="bottom padder m-b-sm">
-															<a href="#" class="pull-right"> <i
-																class="fa fa-heart-o"></i>
-															</a> <a href="#"> <i class="fa fa-plus-circle"></i>
-															</a>
-														</div>
-													</div>
-													<a href="#"><img src="images/p12.jpg" alt=""
-														class="r r-2x img-full"></a>
-												</div>
-												<div class="padder-v">
-													<a href="#" class="text-ellipsis">Vestibulum
-														ullamcorper</a> <a href="#"
-														class="text-ellipsis text-xs text-muted">MM &amp; DD</a>
-												</div>
-											</div>
-										</div>
+
+										</c:forEach>
 									</div>
 									<div class="row">
 										<div class="col-md-7">
 											<h3 class="font-thin">New Songs</h3>
 											<div class="row row-sm">
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+												<c:forEach items="${newSongList }" var="newSong">
+
+													<div class="col-xs-6 col-sm-3">
+														<div class="item">
+															<div class="pos-rlt">
+																<div class="item-overlay opacity r r-2x bg-black">
+																	<div class="center text-center m-t-n">
+																		<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
+																	</div>
 																</div>
+																<a href="#"><img
+																	src="${pageContext.request.contextPath }${newSong.imgurl }"
+																	alt="" class="r r-2x img-full" style="height: 200px"></a>
 															</div>
-															<a href="#"><img src="images/a2.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Spring rain</a> <a
-																href="#" class="text-ellipsis text-xs text-muted">Miaow</a>
+
+															<div class="padder-v">
+																<a href="#" class="text-ellipsis">${newSong.name }</a> <a
+																	href="#" class="text-ellipsis text-xs text-muted">${newSong.artist }</a>
+															</div>
+
 														</div>
 													</div>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
-																</div>
-															</div>
-															<a href="#"><img src="images/a3.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Hope</a> <a href="#"
-																class="text-ellipsis text-xs text-muted">Miya</a>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
-																</div>
-															</div>
-															<a href="#"><img src="images/a8.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Listen wind</a> <a
-																href="#" class="text-ellipsis text-xs text-muted">Soyia
-																Jess</a>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
-																</div>
-															</div>
-															<a href="#"><img src="images/a9.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Breaking me</a> <a
-																href="#" class="text-ellipsis text-xs text-muted">Pett
-																JA</a>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
-																</div>
-															</div>
-															<a href="#"><img src="images/a1.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Nothing</a> <a href="#"
-																class="text-ellipsis text-xs text-muted">Willion</a>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
-																</div>
-															</div>
-															<a href="#"><img src="images/a6.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Panda Style</a> <a
-																href="#" class="text-ellipsis text-xs text-muted">Lionie</a>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
-																</div>
-															</div>
-															<a href="#"><img src="images/a7.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Hook Me</a> <a href="#"
-																class="text-ellipsis text-xs text-muted">Gossi</a>
-														</div>
-													</div>
-												</div>
-												<div class="col-xs-6 col-sm-3">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="#"><i class="fa fa-play-circle i-2x"></i></a>
-																</div>
-															</div>
-															<a href="#"><img src="images/a5.png" alt=""
-																class="r r-2x img-full"></a>
-														</div>
-														<div class="padder-v">
-															<a href="#" class="text-ellipsis">Tempered Song</a> <a
-																href="#" class="text-ellipsis text-xs text-muted">Miaow</a>
-														</div>
-													</div>
-												</div>
+												</c:forEach>
 											</div>
 										</div>
 										<div class="col-md-5">
 											<h3 class="font-thin">Top Songs</h3>
-											<div class="list-group bg-white list-group-lg no-bg auto">
-												<a href="#" class="list-group-item clearfix"> <span
-													class="pull-right h2 text-muted m-l">1</span> <span
-													class="pull-left thumb-sm avatar m-r"> <img
-														src="images/a4.png" alt="...">
-												</span> <span class="clear"> <span>Little Town</span> <small
-														class="text-muted clear text-ellipsis">by Chris
-															Fox</small>
-												</span>
-												</a> <a href="#" class="list-group-item clearfix"> <span
-													class="pull-right h2 text-muted m-l">2</span> <span
-													class="pull-left thumb-sm avatar m-r"> <img
-														src="images/a5.png" alt="...">
-												</span> <span class="clear"> <span>Lementum ligula
-															vitae</span> <small class="text-muted clear text-ellipsis">by
-															Amanda Conlan</small>
-												</span>
-												</a> <a href="#" class="list-group-item clearfix"> <span
-													class="pull-right h2 text-muted m-l">3</span> <span
-													class="pull-left thumb-sm avatar m-r"> <img
-														src="images/a6.png" alt="...">
-												</span> <span class="clear"> <span>Aliquam
-															sollicitudin venenatis</span> <small
-														class="text-muted clear text-ellipsis">by Dan
-															Doorack</small>
-												</span>
-												</a> <a href="#" class="list-group-item clearfix"> <span
-													class="pull-right h2 text-muted m-l">4</span> <span
-													class="pull-left thumb-sm avatar m-r"> <img
-														src="images/a7.png" alt="...">
-												</span> <span class="clear"> <span>Aliquam
-															sollicitudin venenatis ipsum</span> <small
-														class="text-muted clear text-ellipsis">by Lauren
-															Taylor</small>
-												</span>
-												</a> <a href="#" class="list-group-item clearfix"> <span
-													class="pull-right h2 text-muted m-l">5</span> <span
-													class="pull-left thumb-sm avatar m-r"> <img
-														src="images/a8.png" alt="...">
-												</span> <span class="clear"> <span>Vestibulum
-															ullamcorper</span> <small class="text-muted clear text-ellipsis">by
-															Dan Doorack</small>
-												</span>
-												</a>
+											<div id="newSong"
+												class="list-group bg-white list-group-lg no-bg auto">
+
+												<c:forEach items="${newSongList }" var="newSong"
+													varStatus="s">
+													<a href="#" class="list-group-item clearfix"> <span
+														class="pull-right h2 text-muted m-l">${s.index+1}</span> <span
+														class="pull-left thumb-sm avatar m-r"> <img
+															src="${pageContext.request.contextPath }${newSong.imgurl }"
+															alt="...">
+													</span> <span class="clear"> <span>${newSong.name }</span>
+															<small class="text-muted clear text-ellipsis">${newSong.artist }</small>
+													</span>
+													</a>
+												</c:forEach>
 											</div>
 										</div>
 									</div>
@@ -1375,6 +590,25 @@
 	<script type="text/javascript"
 		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
 	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
-
+	<script>
+		$(function() {
+			$.ajax({
+				url : "${pageContext.request.contextPath}/SongServlet",
+				data : {
+					"method" : "hotSong",
+					"num":"12"
+				},
+				dataType : "json"
+			});
+			$.ajax({
+				url : "${pageContext.request.contextPath}/SongServlet",
+				data : {
+					"method" : "newSong",
+					"num":"8"
+				},
+				dataType : "json"
+			});
+		});
+	</script>
 </body>
 </html>

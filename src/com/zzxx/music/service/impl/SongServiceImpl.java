@@ -20,7 +20,7 @@ public class SongServiceImpl implements SongService {
 	public List<Song> listHotSong(int num){
 		List<Song> allSong = sd.findAllSongs();
 		int m = allSong.size()/num;
-		int a = (int) (Math.random()*m);
+		int a = (int) (Math.random()*m+1);
 		List<Song> list = new ArrayList<Song>();
 		int number = a;
 		for(int i = 0; i < num; i++) {
@@ -44,6 +44,7 @@ public class SongServiceImpl implements SongService {
 		} else {
 			currentPage = Integer.valueOf(currentPageStr);
 		}
+		
 		if (pageSizeStr == null) {
 			pageSize = 18;
 		} else {
@@ -58,12 +59,12 @@ public class SongServiceImpl implements SongService {
 	}
 
 	/**
-	 * 根据歌的id搜索歌
+	 * 通过歌曲id查找歌曲
 	 */
 	@Override
 	public Song findSongBySongId(String id) {
-		int num = Integer.valueOf(id);
-		Song song = sd.getSongBySongId(num);
+		int songId = Integer.valueOf(id);
+		Song song = sd.getSongBySongId(songId);
 		return song;
 	}
 }

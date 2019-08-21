@@ -19,7 +19,6 @@ public class TestDemo {
 	UserService us = (UserService) FactoryUtils.getInstance("UserService");
 	SongService ss = (SongService) FactoryUtils.getInstance("SongService");
 	
-	// 测试数据库连接
 	@Test
 	public void test01() {
 		QueryRunner qu = new QueryRunner(DataSourceUtils.getDataSource());
@@ -81,5 +80,6 @@ public class TestDemo {
 		System.out.println(bean.getList().size());
 		System.out.println(bean.getList());
 	}
+
 
 }

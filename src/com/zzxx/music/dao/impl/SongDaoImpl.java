@@ -76,27 +76,28 @@ public class SongDaoImpl implements SongDao {
 
     @Override
     public List<Song> findSongsByPage(int currentPage, int pageSize,String type) {
-     
+    	
         String sql = "select * from song where type=? limit ?,?";
        
         int startRow = (currentPage-1) * pageSize;
         if("所有歌曲".equals(type)) {
-	         String allsql = "select * from song limit ?,?";
-	         List<Song> list = null;
-	         try {
-				 list = queryRunner.query(allsql, new BeanListHandler<Song>(Song.class),startRow,pageSize);
-	         } catch (SQLException e) {
-				 e.printStackTrace();
-	         }
-	         return list;
-        }else {
-         try {
-             List<Song> list = queryRunner.query(sql, new BeanListHandler<Song>(Song.class),type,startRow,pageSize);
-             return list;
-         } catch (SQLException e) {
-             e.printStackTrace();
-         }
+        	String allsql = "select * from song limit ?,?";
+        	List<Song> list = null;
+        	try {
+				list = queryRunner.query(allsql, new BeanListHandler<Song>(Song.class),startRow,pageSize);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+        	return list;
         }
+        else {
+	        try {
+	            List<Song> list1 = queryRunner.query(sql, new BeanListHandler<Song>(Song.class),type,startRow,pageSize);
+	            return list1;
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	       }
         return null;
     }
 
@@ -104,19 +105,19 @@ public class SongDaoImpl implements SongDao {
     public int getCount(String type) {
         String sql = "select count(1) from song where type=?";
         if("所有歌曲".equals(type)) {
-	         String nsql = "select count(1) from song";
-	         try {
-			    long ncount = (Long)queryRunner.query(nsql, new ScalarHandler());
-			    return (int)ncount;
-			 } catch (SQLException e) {
-			    e.printStackTrace();
-			 }
-        }
-        try {
-            long count = (Long) queryRunner.query(sql, new ScalarHandler(),type);
-            return (int) count;
-        } catch (SQLException e) {
-            e.printStackTrace();
+        	String nsql = "select count(1) from song";
+        	try {
+				long ncount = (Long)queryRunner.query(nsql, new ScalarHandler());
+				return (int)ncount;
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+        }else {
+        	try {
+        		long count = (Long) queryRunner.query(sql, new ScalarHandler(),type);
+        		return (int) count;
+        	} catch (SQLException e) {
+        	}
         }
         return 0;
     }
@@ -168,5 +169,16 @@ public class SongDaoImpl implements SongDao {
 		}
         return null;
     }
+
+	@Override
+	public Song getSongBySongId(int songid) {
+		String sql = "select * from song where songid=?";
+		try {
+			return queryRunner.query(sql, new BeanHandler<Song>(Song.class),songid);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 
 }
