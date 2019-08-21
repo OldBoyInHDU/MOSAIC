@@ -9,4 +9,13 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <filter>
+  <filter-name>GenericEncodingFilter</filter-name>
+  <filter-class>com.zzxx.music.web.filter.GenericEncodingFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>GenericEncodingFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

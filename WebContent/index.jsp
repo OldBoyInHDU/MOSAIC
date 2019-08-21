@@ -57,6 +57,40 @@
 			});
 		});
 	</script>
+	<script type="text/javascript">
+        $(function(){
+         $("#word").keyup(function(){
+          // 局部刷新，想要获得商品名，显示到input下面添加新的列表
+          $.get(
+           "${pageContext.request.contextPath}/FindSongBySongNameServlet",
+           {
+            "word": $("#word").val()
+           },
+           function(data){
+            $("#list").empty();
+            for (var i = 0 ;i < data.length; i++) {
+             if ( i > 7) {
+              break;
+             }
+             $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>");
+            }
+            $("#list").css("display", "block");
+           },
+           "json"
+          );
+         });
+        });
+        function over(obj) {
+         $(obj).css("background-color", "gray");
+         }
+         function out(obj) {
+          $(obj).css("background-color", "white");
+         }
+         function go(obj) {
+          $("#word").val($(obj).html());
+          $("#list").css("display", "none");
+         }
+       </script>
 </head>
 <body class="">
 	<section class="vbox">
@@ -89,9 +123,9 @@
 								class="btn btn-sm bg-white btn-icon rounded">
 								<i class="fa fa-search"></i>
 							</button>
-						</span> <input type="text"
-							class="form-control input-sm no-border rounded"
-							placeholder="Search songs, albums...">
+						</span> 
+						<input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums..."  id="word" name="word">
+						<div id="list" style="width:179px; heigth: 100px; border:1px solid gray; background-color: white; position: absolute; z-index: 1000; display: none"></div>
 					</div>
 				</div>
 			</form>
