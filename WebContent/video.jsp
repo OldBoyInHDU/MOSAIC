@@ -10,21 +10,17 @@
 	content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="static/css/jplayer.flat.css"
+<link rel="stylesheet" href="css/jplayer.flat.css"
 	type="text/css" />
-<link rel="stylesheet" href="static/css/bootstrap.css" type="text/css" />
-<link rel="stylesheet" href="static/css/animate.css" type="text/css" />
-<link rel="stylesheet" href="static/css/font-awesome.min.css"
+<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="css/animate.css" type="text/css" />
+<link rel="stylesheet" href="css/font-awesome.min.css"
 	type="text/css" />
-<link rel="stylesheet" href="static/css/simple-line-icons.css"
+<link rel="stylesheet" href="css/simple-line-icons.css"
 	type="text/css" />
-<link rel="stylesheet" href="static/css/font.css" type="text/css" />
-<link rel="stylesheet" href="static/css/app.css" type="text/css" />
-<!--[if lt IE 9]>
-    <script src="static/js/html5shiv.js"></script>
-    <script src="static/js/respond.min.js"></script>
-    <script src="static/js/excanvas.js"></script>
-  <![endif]-->
+<link rel="stylesheet" href="css/font.css" type="text/css" />
+<link rel="stylesheet" href="css/app.css" type="text/css" />
+
 </head>
 <body class="">
 	<section class="vbox">
@@ -37,7 +33,7 @@
 
 				</a> <a href="${pageContext.request.contextPath}/index.jsp"
 					class="navbar-brand text-lt"> <i class="icon-earphones"></i> <img
-					src="static/picture/logo.png" alt="." class="hide"> <span
+					src="picture/logo.png" alt="." class="hide"> <span
 					class="hidden-nav-xs m-l-sm">Musik</span>
 				</a> <a class="btn btn-link visible-xs" data-toggle="dropdown"
 					data-target=".user"> <i class="icon-settings"></i>
@@ -81,7 +77,7 @@
 								<div class="list-group list-group-alt">
 									<a href="#" class="media list-group-item"> <span
 										class="pull-left thumb-sm"> <img
-											src="static/picture/a0.png" alt="..." class="img-circle">
+											src="picture/a0.png" alt="..." class="img-circle">
 									</span> <span class="media-body block m-b-none"> Use awesome
 											animate.css<br> <small class="text-muted">10
 												minutes ago</small>
@@ -113,36 +109,6 @@
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
 					</c:if>
-					<!-- <li class="dropdown">
-            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
-              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="static/picture/a0.png" alt="...">
-              </span>
-              John.Smith <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu animated fadeInRight">            
-              <li>
-                <span class="arrow top"></span>
-                <a href="#">Settings</a>
-              </li>
-              <li>
-                <a href="profile.html">Profile</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="badge bg-danger pull-right">3</span>
-                  Notifications
-                </a>
-              </li>
-              <li>
-                <a href="docs.html">Help</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-              </li>
-            </ul>
-          </li> -->
 				</ul>
 			</div>
 		</header>
@@ -202,7 +168,7 @@
 								<div class="dropdown dropup wrapper-sm clearfix">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 										<span class="thumb-sm avatar pull-left m-l-xs"> <img
-											src="static/picture/a3.png" class="dker" alt="..."> <i
+											src="picture/a3.png" class="dker" alt="..."> <i
 											class="on b-black"></i>
 									</span> <span class="hidden-nav-xs clear"> <span
 											class="block m-l"> <strong class="font-bold text-lt">John.Smith</strong>
@@ -247,7 +213,7 @@
 												<span class="badge bg-dark m-l-sm m-t-sm">03:20</span>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m40.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m40.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Tempered
@@ -269,7 +235,7 @@
 												<span class="badge bg-dark m-l-sm m-t-sm">02:10</span>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m41.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m41.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Morbi
@@ -291,7 +257,7 @@
 												<span class="badge bg-dark m-l-sm m-t-sm">05:40</span>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m42.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m42.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Aliquam
@@ -313,7 +279,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m40.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m40.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Tempered
@@ -332,7 +298,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m41.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m41.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Morbi
@@ -351,7 +317,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m42.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m42.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Aliquam
@@ -370,7 +336,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m43.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m43.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Citudin
@@ -389,7 +355,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m44.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m44.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Vestibulum
@@ -408,7 +374,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m40.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m40.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Mauris
@@ -427,7 +393,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m45.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m45.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Sodales
@@ -446,7 +412,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m44.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m44.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Nisi
@@ -465,7 +431,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m43.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m43.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Phasellus
@@ -484,7 +450,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m42.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m42.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Quis
@@ -503,7 +469,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m41.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m41.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Ipsum
@@ -522,7 +488,7 @@
 												</div>
 											</div>
 											<a href="video-detail.html"><img
-												src="static/picture/m40.jpg" alt="" class="r r-2x img-full"></a>
+												src="picture/m40.jpg" alt="" class="r r-2x img-full"></a>
 										</div>
 										<div class="padder-v">
 											<a href="video-detail.html" class="text-ellipsis">Ullamcorper
@@ -549,15 +515,15 @@
 			</section>
 		</section>
 	</section>
-	<script src="static/js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="static/js/bootstrap.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<!-- App -->
-	<script src="static/js/app.js"></script>
-	<script src="static/js/jquery.slimscroll.min.js"></script>
-	<script src="static/js/app.plugin.js"></script>
-	<script type="text/javascript" src="static/js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="static/js/jplayer.playlist.min.js"></script>
-	<script type="text/javascript" src="static/js/demo.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/jquery.slimscroll.min.js"></script>
+	<script src="js/app.plugin.js"></script>
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="js/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="js/demo.js"></script>
 </body>
 </html>
