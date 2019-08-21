@@ -38,9 +38,9 @@ public class SongServlet extends BaseServlet {
 
 
 	public void hotSong(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int num = Integer.parseInt(request.getParameter("num"));
+//		String  num =request.getParameter("num");
 //		int num=12;
-		List<Song> hotSongList = ss.listHotSong(num);
+		List<Song> hotSongList = ss.listHotSong();
 		System.out.println(hotSongList);
 //		Gson gs = new Gson();
 //		String hsl= gs.toJson(hotSongList);
@@ -51,9 +51,9 @@ public class SongServlet extends BaseServlet {
 //		response.sendRedirect(request.getContextPath()+"/index.jsp");
 	}
 	public void newSong(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int num = Integer.parseInt(request.getParameter("num"));
+//		String num = request.getParameter("num");
 //		int num=8;
-		List<Song> newSongList = ss.listHotSong(num);
+		List<Song> newSongList = ss.listNewSong();
 		System.out.println(newSongList);
 		request.getSession().setAttribute("newSongList", newSongList);
 		//{"newSongList":newSongList}

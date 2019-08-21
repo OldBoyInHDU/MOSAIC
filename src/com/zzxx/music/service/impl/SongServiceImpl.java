@@ -14,18 +14,25 @@ public class SongServiceImpl implements SongService {
 	SongDao sd = (SongDao)FactoryUtils.getInstance("SongDao");
 	
 	/**
-	 * 随机获得12首热歌  num=12
-	 * 或者8首新歌  num=8
+	 * 获得12首热歌 
 	 */
-	public List<Song> listHotSong(int num){
+	public List<Song> listHotSong(){
 		List<Song> allSong = sd.findAllSongs();
-		int m = allSong.size()/num;
-		int a = (int) (Math.random()*m+1);
 		List<Song> list = new ArrayList<Song>();
-		int number = a;
-		for(int i = 0; i < num; i++) {
-			list.add(allSong.get(number));
-			number = number + m;
+		for(int i = 0; i < 12; i++) {
+			list.add(allSong.get(i));
+		}
+		return list;
+	}
+	
+	/**
+	 * 获得8首新歌
+	 */
+	public List<Song> listNewSong(){
+		List<Song> allSong = sd.findAllSongs();
+		List<Song> list = new ArrayList<Song>();
+		for(int i = allSong.size()-1; i > allSong.size()-9; i--) {
+			list.add(allSong.get(i));
 		}
 		return list;
 	}

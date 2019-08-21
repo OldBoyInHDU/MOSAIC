@@ -229,7 +229,7 @@
                               <i class="fa fa-star-o text-muted"></i>
                             </div>
                             <div class="center text-center m-t-n">
-                              <a href="${pageContext.request.contextPath }/AddSongServlet?songid=${song.songid}"><i class="icon-control-play i-2x"></i></a>
+                              <a href="${pageContext.request.contextPath }/AddSongServlet?songid=${hotSong.songid}"><i class="icon-control-play i-2x"></i></a>
                             </div>
                             <div class="bottom padder m-b-sm">
                               <a href="#" class="pull-right">
@@ -243,7 +243,7 @@
                           <a href="#"><img src="${pageContext.request.contextPath }${hotSong.imgurl }" alt="" class="r r-2x img-full" style="height:300px"></a>
                         </div>
                         <div class="padder-v">
-                          <a href="#" class="text-ellipsis">${hotSong.name }</a>
+                          <a href="${pageContext.request.contextPath }/AddSongServlet?songid=${hotSong.songid}" class="text-ellipsis">${hotSong.name }</a>
                           <a href="#" class="text-ellipsis text-xs text-muted">${hotSong.artist }</a>
                         </div>
                       </div>
@@ -539,22 +539,112 @@
     <script src="js/app.plugin.js"></script>
   <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
-  <script type="text/javascript" src="js/jPlayer/demo.js"></script>
+ <!--  <script type="text/javascript" src="js/jPlayer/demo.js"></script> -->
+  <script type="text/javascript">	
+	$(document).ready(function(){
+		/* var song = ${song}; */
+  myPlaylist = new jPlayerPlaylist({
+    jPlayer: "#jplayer_N",
+    cssSelectorAncestor: "#jp_container_N"
+  }, [
+    {
+      title:"I'm Yours.mp3",
+      artist:"Jason Mraz",
+      mp3:"music/Jason Mraz - I'm Yours.mp3",
+      poster: "images/m0.jpg"
+    },
+    {
+      title:"${song.name}",
+      artist:"${song.artist}",
+      mp3:"${pageContext.request.contextPath}${song.songurl}",
+      poster: "${pageContext.request.contextPath}${song.imgurl}"
+    },
+    {
+      title:"Cloudless Days",
+      artist:"ADG3 Studios",
+      mp3:"http://flatfull.com/themes/assets/musics/adg3com_cloudlessdays.mp3",
+      poster: "images/m0.jpg"
+    },
+    {
+      title:"Core Issues",
+      artist:"Studios",
+      mp3:"http://flatfull.com/themes/assets/musics/adg3com_coreissues.mp3",
+      poster: "images/m0.jpg"
+    },
+    {
+      title:"Cryptic Psyche",
+      artist:"ADG3",
+      mp3:"http://flatfull.com/themes/assets/musics/adg3com_crypticpsyche.mp3",
+      poster: "images/m0.jpg"
+    },
+    {
+      title:"Electro Freak",
+      artist:"Studios",
+      mp3:"http://flatfull.com/themes/assets/musics/adg3com_electrofreak.mp3",
+      poster: "images/m0.jpg"
+    },
+    {
+      title:"Freeform",
+      artist:"ADG",
+      mp3:"http://flatfull.com/themes/assets/musics/adg3com_freeform.mp3",
+      poster: "images/m0.jpg"
+    }
+  ], {
+    playlistOptions: {
+      enableRemoveControls: true,
+      autoPlay: true
+    },
+    swfPath: "js/jPlayer",
+    supplied: "webmv, ogv, m4v, oga, mp3",
+    smoothPlayBar: true,
+    keyEnabled: true,
+    audioFullScreen: false
+  });
+  
+  $(document).on($.jPlayer.event.pause, myPlaylist.cssSelector.jPlayer,  function(){
+    $('.musicbar').removeClass('animate');
+    $('.jp-play-me').removeClass('active');
+    $('.jp-play-me').parent('li').removeClass('active');
+  });
+
+  $(document).on($.jPlayer.event.play, myPlaylist.cssSelector.jPlayer,  function(){
+    $('.musicbar').addClass('animate');
+  });
+
+  $(document).on('click', '.jp-play-me', function(e){
+    e && e.preventDefault();
+    var $this = $(e.target);
+    if (!$this.is('a')) $this = $this.closest('a');
+
+    $('.jp-play-me').not($this).removeClass('active');
+    $('.jp-play-me').parent('li').not($this.parent('li')).removeClass('active');
+
+    $this.toggleClass('active');
+    $this.parent('li').toggleClass('active');
+    if( !$this.hasClass('active') ){
+      myPlaylist.pause();
+    }else{
+      var i = Math.floor(Math.random() * (1 + 7 - 1));
+      myPlaylist.play(i);
+    }
+    
+  });
+
+});
+	</script>
 	<script>
 		$(function() {
 			$.ajax({
 				url : "${pageContext.request.contextPath}/SongServlet",
 				data : {
-					"method" : "hotSong",
-					"num":"12"
+					"method" : "hotSong"
 				},
 				dataType : "json"
 			});
 			$.ajax({
 				url : "${pageContext.request.contextPath}/SongServlet",
 				data : {
-					"method" : "newSong",
-					"num":"8"
+					"method" : "newSong"
 				},
 				success:function(data){
 					location.reload(true);
