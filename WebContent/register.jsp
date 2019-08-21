@@ -23,14 +23,14 @@
 <!-- Google fonts -->
 
 <!-- css files -->
-<link href="static/css/style.css" type="text/css" rel="stylesheet"
+<link href="css/style.css" type="text/css" rel="stylesheet"
 	media="all">
 <!-- //css files -->
 
-<link rel="stylesheet" href="static/css/font-awesome.css">
+<link rel="stylesheet" href="css/font-awesome.css">
 <!-- Font-Awesome-Icons-CSS -->
 
-<link href="static/css/popup-box.css" rel="stylesheet" type="text/css"
+<link href="css/popup-box.css" rel="stylesheet" type="text/css"
 	media="all" />
 <!-- popup box css -->
 
@@ -158,12 +158,12 @@
 	<!-- //register form popup-->
 
 	<!-- js -->
-	<script type="text/javascript" src="static/js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<!-- //js -->
 
 	<!--popup-js-->
-	<script src="static/js/jquery.magnific-popup.js" type="text/javascript"></script>
-	<script src="static/js/jquery.validate.min.js"></script>
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({

@@ -10,7 +10,7 @@
 	content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1" />
-<link rel="stylesheet" href="css/jplayer.flat.css"
+<link rel="stylesheet" href="js/jPlayer/jplayer.flat.css"
 	type="text/css" />
 <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 <link rel="stylesheet" href="css/animate.css" type="text/css" />
@@ -18,13 +18,11 @@
 <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
 <link rel="stylesheet" href="css/font.css" type="text/css" />
 <link rel="stylesheet" href="css/app.css" type="text/css" />
-
 <!--[if lt IE 9]>
-    <script src="static/js/html5shiv.js"></script>
-    <script src="static/js/respond.min.js"></script>
-    <script src="static/js/excanvas.js"></script>
+    <script src="js/ie/html5shiv.js"></script>
+    <script src="js/ie/respond.min.js"></script>
+    <script src="js/ie/excanvas.js"></script>
   <![endif]-->
-
 </head>
 <body class="">
 	<section class="vbox">
@@ -34,10 +32,9 @@
 				<a class="btn btn-link visible-xs"
 					data-toggle="class:nav-off-screen,open" data-target="#nav,html">
 					<i class="icon-list"></i>
-
 				</a> <a href="${pageContext.request.contextPath}/index.jsp"
 					class="navbar-brand text-lt"> <i class="icon-earphones"></i> <img
-					src="static/picture/logo.png" alt="." class="hide"> <span
+					src="images/logo.png" alt="." class="hide"> <span
 					class="hidden-nav-xs m-l-sm">Musik</span>
 				</a> <a class="btn btn-link visible-xs" data-toggle="dropdown"
 					data-target=".user"> <i class="icon-settings"></i>
@@ -59,10 +56,12 @@
 								class="btn btn-sm bg-white btn-icon rounded">
 								<i class="fa fa-search"></i>
 							</button>
-						</span> <input type="text"
-							class="form-control input-sm no-border rounded"
-							placeholder="Search songs, albums...">
-					</div>
+						</span> 
+						 <input type="text" class="form-control input-sm no-border rounded" placeholder="Search songs, albums..." id="word" name="word">
+						 <div id="list" style="width:131px; border:1px solid gray; 
+         background-color: white; position: absolute;top:28px; z-index: 1000; display: none">
+      </div>
+            		</div>
 				</div>
 			</form>
 			<div class="navbar-right ">
@@ -80,8 +79,8 @@
 								</div>
 								<div class="list-group list-group-alt">
 									<a href="#" class="media list-group-item"> <span
-										class="pull-left thumb-sm"> <img
-											src="static/picture/a0.png" alt="..." class="img-circle">
+										class="pull-left thumb-sm"> <img src="images/a0.png"
+											alt="..." class="img-circle">
 									</span> <span class="media-body block m-b-none"> Use awesome
 											animate.css<br> <small class="text-muted">10
 												minutes ago</small>
@@ -113,36 +112,6 @@
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
 					</c:if>
-					<%--<li class="dropdown">
-            <a href="#" class="dropdown-toggle bg clear" data-toggle="dropdown">
-              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
-                <img src="static/picture/a0.png" alt="...">
-              </span>
-              John.Smith <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu animated fadeInRight">
-              <li>
-                <span class="arrow top"></span>
-                <a href="#">Settings</a>
-              </li>
-              <li>
-                <a href="profile.html">Profile</a>
-              </li>
-              <li>
-                <a href="#">
-                  <span class="badge bg-danger pull-right">3</span>
-                  Notifications
-                </a>
-              </li>
-              <li>
-                <a href="docs.html">Help</a>
-              </li>
-              <li class="divider"></li>
-              <li>
-                <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-              </li>
-            </ul>
-          </li>--%>
 				</ul>
 			</div>
 		</header>
@@ -169,9 +138,8 @@
 													new</span>
 										</a></li>
 										<li><a
-											href="${pageContext.request.contextPath}/SongServlet?method=songType&type=%E6%89%80%E6%9C%89%E6%AD%8C%E6%9B%B2"> <i
-												class="icon-music-tone-alt icon text-info"></i> <span
-
+											href="${pageContext.request.contextPath}/SongServlet?method=songType&type=%E6%89%80%E6%9C%89%E6%AD%8C%E6%9B%B2">
+												<i class="icon-music-tone-alt icon text-info"></i> <span
 												class="font-bold">Genres</span>
 										</a></li>
 										<li><a
@@ -202,7 +170,7 @@
 								<div class="dropdown dropup wrapper-sm clearfix">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 										<span class="thumb-sm avatar pull-left m-l-xs"> <img
-											src="static/picture/a3.png" class="dker" alt="..."> <i
+											src="images/a3.png" class="dker" alt="..."> <i
 											class="on b-black"></i>
 									</span> <span class="hidden-nav-xs clear"> <span
 											class="block m-l"> <strong class="font-bold text-lt">John.Smith</strong>
@@ -231,29 +199,33 @@
 				<!-- /.aside -->
 				<section id="content">
 					<section class="vbox">
-					<section class="w-f-md" id="bjax-target">
+						<section class="w-f-md" id="bjax-target">
 							<section class="hbox stretch">
 								<!-- side content -->
 								<aside class="aside bg-light dk" id="sidebar">
 									<section class="vbox animated fadeInUp">
 										<section class="scrollable hover">
-											<div class="list-group no-radius no-border no-bg m-t-n-xxs m-b-none auto">
-											<form action="${pageContext.request.contextPath }/SongServlet" id="songType">
-												<input type="hidden" name="method" value="songType">
-												<a href="genres.html"> 
-												<button name="type" value="所有歌曲" class="list-group-item" style="width:100%">全部</button>
-												</a> 
-												<a href="genres.html">
-												<button name="type" value="为情所困" class="list-group-item" style="width:100%">为情所困</button>
-												</a> 
-												<a href="genres.html">
-												<button name="type" value="欢乐颂歌" class="list-group-item" style="width:100%">欢乐颂歌</button>
-												</a> 
-												<a href="genres.html" >
-												<button name="type" value="心潮澎湃" class="list-group-item" style="width:100%">心潮澎湃</button>
-												</a>  
-											
-											</form>
+											<div
+												class="list-group no-radius no-border no-bg m-t-n-xxs m-b-none auto">
+												<form
+													action="${pageContext.request.contextPath }/SongServlet"
+													id="songType">
+													<input type="hidden" name="method" value="songType">
+													<a href="genres.html">
+														<button name="type" value="所有歌曲" class="list-group-item"
+															style="width: 100%">全部</button>
+													</a> <a href="genres.html">
+														<button name="type" value="为情所困" class="list-group-item"
+															style="width: 100%">为情所困</button>
+													</a> <a href="genres.html">
+														<button name="type" value="欢乐颂歌" class="list-group-item"
+															style="width: 100%">欢乐颂歌</button>
+													</a> <a href="genres.html">
+														<button name="type" value="心潮澎湃" class="list-group-item"
+															style="width: 100%">心潮澎湃</button>
+													</a>
+
+												</form>
 
 											</div>
 										</section>
@@ -263,48 +235,54 @@
 								<section>
 									<section class="vbox">
 										<section class="scrollable padder-lg">
-											<h2 class="font-thin m-b">${type }</h2>
-											<div class="row row-sm" id="songType">
-											<c:forEach items="${pageBean.list }" var="song">
-												<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-													<div class="item">
-														<div class="pos-rlt">
-															<div class="item-overlay opacity r r-2x bg-black">
-																<div class="center text-center m-t-n">
-																	<a href="${pageContext.request.contextPath }/AddSongServlet?songid=${song.songid}"><i class="fa fa-play-circle i-2x"></i></a>
+											<h2 class="font-thin m-b">${type}</h2>
+											<div class="row row-sm">
+												<c:forEach items="${pageBean.list }" var="song">
+													<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+														<div class="item">
+															<div class="pos-rlt">
+																<div class="item-overlay opacity r r-2x bg-black">
+																	<div class="center text-center m-t-n">
+																		<a
+																			href="${pageContext.request.contextPath }/AddSongServlet?songid=${song.songid}"><i
+																			class="fa fa-play-circle i-2x"></i></a>
+																	</div>
 																</div>
+																<a href="track-detail.html"><img
+																	src="${pageContext.request.contextPath }${song.imgurl }"
+																	alt="" class="r r-2x img-full" style="height: 300px"></a>
 															</div>
-															<a href="track-detail.html"><img src="${pageContext.request.contextPath }${song.imgurl }"
-																alt="" class="r r-2x img-full" style="height:250px"></a>
-														</div>
-														<div class="padder-v">
-															<a href="track-detail.html" data-bjax
-																data-target="#bjax-target" data-el="#bjax-el"
-																data-replace="true" class="text-ellipsis">${song.name }</a> <a href="track-detail.html" data-bjax
-																data-target="#bjax-target" data-el="#bjax-el"
-																data-replace="true"
-																class="text-ellipsis text-xs text-muted">${song.artist }</a>
+															<div class="padder-v">
+																<a href="track-detail.html" data-bjax
+																	data-target="#bjax-target" data-el="#bjax-el"
+																	data-replace="true" class="text-ellipsis">${song.name }</a>
+																<a href="track-detail.html" data-bjax
+																	data-target="#bjax-target" data-el="#bjax-el"
+																	data-replace="true"
+																	class="text-ellipsis text-xs text-muted">${song.artist }</a>
+															</div>
 														</div>
 													</div>
-												</div>
-											
-											</c:forEach>
+												</c:forEach>
 											</div>
 											<ul class="pagination pagination">
-												<li><a href="javascript:void(0)" onclick="go(-1)"><i class="fa fa-chevron-left"></i></a></li>
-												<c:forEach begin="1" end="${pageBean.totalPage }" step="1" var="i">
-												<li><a href="javascript:void(0)"><input type="submit" id="currentPage" name="currentPage" value="${i }"></a></li>
+												<li><a href="javascript:void(0)" onclick="go(-1)"><i
+														class="fa fa-chevron-left"></i></a></li>
+												<c:forEach begin="1" end="${pageBean.totalPage }" step="1"
+													var="i">
+													<li><a href="javascript:void(0)" onclick="go()"><input
+															type="submit" id="currentPage" name="currentPage"
+															value="${i }"></a></li>
 												</c:forEach>
-												<li><a href="javascript:void(0)"  onclick="go(1)"><i class="fa fa-chevron-right"></i></a></li>
+												<li><a href="javascript:void(0)" onclick="go(1)"><i
+														class="fa fa-chevron-right"></i></a></li>
 
 											</ul>
-											</form>
 										</section>
 									</section>
 								</section>
 							</section>
 						</section>
-						
 						<footer class="footer bg-info dker">
 							<div id="jp_container_N">
 								<div class="jp-type-playlist">
@@ -401,16 +379,54 @@
 			</section>
 		</section>
 	</section>
-	<script src="static/js/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 	<!-- Bootstrap -->
-	<script src="static/js/bootstrap.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<!-- App -->
-	<script src="static/js/app.js"></script>
-	<script src="static/js/jquery.slimscroll.min.js"></script>
-	<script src="static/js/app.plugin.js"></script>
-	<script type="text/javascript" src="static/js/jquery.jplayer.min.js"></script>
-	<script type="text/javascript" src="static/js/jplayer.playlist.min.js"></script>
-	<script type="text/javascript" src="static/js/demo.js"></script>
-
+	<script src="js/app.js"></script>
+	<script src="js/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="js/app.plugin.js"></script>
+	<script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
+	<script type="text/javascript"
+		src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="js/jPlayer/demo.js"></script>
+	<script type="text/javascript">
+        $(function(){
+         $("#word").keyup(function(){
+          // 局部刷新，想要获得商品名，显示到input下面添加新的列表
+          $.get(
+           "${pageContext.request.contextPath}/FindSongBySongNameServlet",
+           {
+            "word": $("#word").val()
+           },
+           function(data){
+            $("#list").empty();
+            for (var i = 0 ;i < data.length; i++) {
+             if ( i > 7) {
+              break;
+             }
+             $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>");
+            }
+            $("#list").css("display", "block");
+           },
+           "json"
+          );
+         });
+        });
+        function over(obj) {
+         $(obj).css("background-color", "gray");
+         }
+         function out(obj) {
+          $(obj).css("background-color", "white");
+         }
+         function go(obj) {
+          $("#word").val($(obj).html());
+          $("#list").css("display", "none");
+         }
+         function go(val) {
+             $("#currentPage").val(parseInt($("#currentPage").val())+val);
+             $("#page").submit();
+         }
+       </script>
 </body>
 </html>
