@@ -92,4 +92,18 @@ public class SongServiceImpl implements SongService {
 		List<Song> list = sd.getSongByArtistName(artistName);
 		return list;
 	}
+
+	@Override
+	/**
+	 * 判断歌是否存在在播放列表中
+	 * 若不存在，则加入歌单
+	 */
+	public List<Song> AddSongToPlayerList(List<Song> list, String id) {
+		int songId = Integer.valueOf(id);
+		Song song = sd.getSongBySongId(songId);
+		if(!list.contains(song)) {
+			list.add(song);
+		}
+		return list;
+	}
 }

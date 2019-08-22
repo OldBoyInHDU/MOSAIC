@@ -24,10 +24,11 @@ public class UserServlet extends BaseServlet {
 		System.out.println(password);
 		try{
 			User user = us.login(username, password);
-			System.out.println(user.getUsername());
+			System.out.println(user.getEmail());
 			System.out.println(user.getPassword());
-			if(user.getUsername().equals(username) && user.getPassword().equals(password)){
-				response.sendRedirect("/index.jsp");
+			if(user.getEmail().equals(username) && user.getPassword().equals(password)){
+				request.getSession().setAttribute("user", user);
+				response.sendRedirect(request.getContextPath()+"/index.jsp");
 			} else {
 
 			}

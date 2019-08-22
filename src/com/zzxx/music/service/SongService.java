@@ -12,5 +12,6 @@ public interface SongService {
 	Song findSongBySongId(String id);
 	List<Song> searchSongBySongName(String songName);
 	List<Song> searchSongByArtistName(String artistName);
+	List<Song> AddSongToPlayerList(List<Song> list, String id);
 	
 }
