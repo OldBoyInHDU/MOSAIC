@@ -378,25 +378,32 @@
 						<aside class="aside-md bg-light dk" id="sidebar">
 							<section class="vbox animated fadeInRight">
 								<section class="w-f-md scrollable hover">
-									<h4 class="font-thin m-l-md m-t">Connected</h4>
+									<h4 class="font-thin m-l-md m-t">好友列表</h4>
 									<ul class="list-group no-bg no-borders auto m-t-n-xxs">
-									<c:forEach items="" var="user">
+									<c:if test="${empty user}">
+									<li class="list-group-item"><span
+											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+												登陆后获得好友列表
+										</span>
+										</li>
+								</c:if>
+								<c:if test="${!empty user}">
+								<c:forEach items="${AllUsers}" var="users">
 									
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a3.png" alt="..."> <i
+												<img src="images/zzxx.png" alt="..."> <i
 												class="away b-light right sm"></i>
 										</span>
 											<div class="clear">
 												<div>
-													<a href="#">${user.name }</a>
+													<a href="#">${users.username }</a>
 												</div>
-												<small class="text-muted">${user.email }</small>
+												<small class="text-muted">${users.email }</small>
 											</div></li>
 									
 									</c:forEach>
-											
-											
+									</c:if>		
 									</ul>
 								</section>
 								

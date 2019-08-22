@@ -135,13 +135,10 @@
 						<form action="${pageContext.request.contextPath}/UserServlet"
 							method="post" id="regForm">
 							<input type="hidden" name="method" value="register" >
-							<input type="text" class="username" name="username"
-								Placeholder="Full Name" required="" /> <input type="email"
-								class="email" name="email" Placeholder="Email" required=""
-								id="email" /> <input type="text" class="mobilenumber"
-								name="mobilenumber" Placeholder="Phone Number" required="" /> <input
-								type="password" class="password" name="password"
-								Placeholder="Password" required="" />
+							<input type="text" class="username" name="username" Placeholder="Full Name" required=""  id="username"/> 
+							<input type="email" class="email" name="email" Placeholder="Email" required="" id="email" /> 
+							<input type="text" class="mobilenumber" name="mobilenumber" Placeholder="Phone Number" required="" id="mobilenumber"/>
+							<input type="password" class="password" name="password" Placeholder="Password" required="" id="password"/>
 							<div class="login-check">
 								<label class="checkbox"><input type="checkbox"
 									name="checkbox" checked=""><i> </i> I Accept to the <a
@@ -190,8 +187,9 @@
 						var pass = false;
 						// value：输入内容，需要给数据库对比
 						$.ajax({
-							url : "/CheckUserServlet",
+							url : "${pageContext.request.contextPath}/UserServlet",
 							data : {
+								"method":"userCheck",
 								"email" : value
 							},
 							success : function(data) {
@@ -213,6 +211,16 @@
 						maxlength : 20,
 						checkUser : true
 					},
+					username : {
+						required : true,
+						minlength : 3,
+						maxlength : 12
+					},
+					mobilenumber : {
+						required : true,
+						minlength : 6,
+						maxlength : 12
+					},
 					password : {
 						required : true,
 						minlength : 6,
@@ -225,6 +233,16 @@
 						minlength : "email长度不能小于6",
 						maxlength : "email长度不能大于20",
 						checkUser : "email已存在"
+					},
+					username : {
+						required : "用户名不能为空",
+						minlength : "用户名长度不能小于3",
+						maxlength : "用户名长度不能大于12"
+					},
+					mobilenumber : {
+						required : "电话号码不能为空",
+						minlength : "电话号码长度不能小于6",
+						maxlength : "电话号码长度不能大于12"
 					},
 					password : {
 						required : "密码不能为空",

@@ -2,6 +2,7 @@ package com.zzxx.music.web.servlet;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,6 +28,9 @@ public class UserServlet extends BaseServlet {
 			System.out.println(user.getEmail());
 			System.out.println(user.getPassword());
 			if(user.getEmail().equals(username) && user.getPassword().equals(password)){
+				List<User> allUsers = us.findAllUser();
+				System.out.println(allUsers.toString());
+				request.getSession().setAttribute("AllUsers", allUsers);
 				request.getSession().setAttribute("user", user);
 				response.sendRedirect(request.getContextPath()+"/index.jsp");
 			} else {
@@ -43,14 +47,18 @@ public class UserServlet extends BaseServlet {
 		try {
 			BeanUtils.populate(user, request.getParameterMap());
 			boolean flag = us.checkUserIsExists(user.getEmail());
-
+			if(flag) {
+				User u = us.register(user);
+				System.out.println(u.toString());
+				request.getSession().setAttribute("User", u);
+			}
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
 			e.printStackTrace();
 		}
 
-		response.sendRedirect("/index.jsp");
+		response.sendRedirect(request.getContextPath()+"/index.jsp");
 	}
 	
 	public void userCheck(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -58,6 +66,7 @@ public class UserServlet extends BaseServlet {
 
         UserService us = (UserService)FactoryUtils.getInstance("UserService");
         boolean isExists = us.checkUserIsExists(email);
+        System.out.println(isExists);
 //        boolean isExists =false;
         response.setContentType("text/plain;charset=utf-8");
         //{"isExists":}
