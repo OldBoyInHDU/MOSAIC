@@ -196,8 +196,8 @@
                       												<c:forEach items="${javaSongList}" var="song">
 												<li class="list-group-item">
 													<div class="pull-right m-l">
-														<a href="#" class="m-r-sm"><i
-															class="icon-cloud-download"></i></a> <a href="#"
+														<a href="${pageContext.request.contextPath}/DownloadServlet?filename=${song.mp3}" class="m-r-sm">
+														<i class="icon-cloud-download"></i></a> <a href="#"
 															class="m-r-sm"><i class="icon-plus"></i></a> <a href="#"><i
 															class="icon-close"></i></a>
 													</div> <a href="#" class="jp-play-me m-r-sm pull-left"> <i

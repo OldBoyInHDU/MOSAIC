@@ -1,5 +1,7 @@
 package com.zzxx.music.service;
 
+import java.util.List;
+
 import com.zzxx.music.beans.User;
 
 public interface UserService {
@@ -22,5 +24,10 @@ public interface UserService {
 	 * 注册成功后将user返回
 	 */
 	User register(User user);
+	
+	/**
+	 * 查找所有的用户
+	 */
+	List<User> findAllUser();
 	
 }

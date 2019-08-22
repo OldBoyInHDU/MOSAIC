@@ -1,5 +1,7 @@
 package com.zzxx.music.dao;
 
+import java.util.List;
+
 import com.zzxx.music.beans.User;
 
 public interface UserDao {
@@ -12,6 +14,6 @@ public interface UserDao {
 
         User addUser(User user);
 
-
+        List<User> getAllUsers();
 
 }

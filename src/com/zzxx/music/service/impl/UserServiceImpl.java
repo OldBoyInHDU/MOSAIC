@@ -1,5 +1,6 @@
 package com.zzxx.music.service.impl;
 
+import java.util.List;
 import java.util.UUID;
 
 import com.zzxx.music.beans.User;
@@ -49,6 +50,15 @@ public class UserServiceImpl implements UserService {
 		user.setUuid(uid.replace("-", "")); 
 		User u = ud.addUser(user);
 		return u;
+	}
+
+	@Override
+	/**
+	 * 查找所有的用户
+	 */
+	public List<User> findAllUser() {
+		List<User> allUser = ud.getAllUsers();
+		return allUser;
 	}
 	
 	

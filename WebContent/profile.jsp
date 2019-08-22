@@ -29,7 +29,7 @@
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
-        <a href="index.html" class="navbar-brand text-lt">
+        <a href="${pageContext.request.contextPath}/index.jsp" class="navbar-brand text-lt">
           <i class="icon-earphones"></i>
           <img src="images/logo.png" alt="." class="hide">
           <span class="hidden-nav-xs m-l-sm">Musik</span>
@@ -70,7 +70,7 @@
                 <div class="list-group list-group-alt">
                   <a href="#" class="media list-group-item">
                     <span class="pull-left thumb-sm">
-                      <img src="images/a0.png" alt="..." class="img-circle">
+                      <img src="images/head.jpg" alt="..." class="img-circle">
                     </span>
                     <span class="media-body block m-b-none">
                       Use awesome animate.css<br>
@@ -130,7 +130,7 @@
 													new</span>
 										</a></li>
 										<li><a
-											href="${pageContext.request.contextPath}/SongServlet?method=songType&type=%E6%89%80%E6%9C%89%E6%AD%8C%E6%9B%B2">
+											href="${pageContext.request.contextPath}/genres.jsp">
 												<i class="icon-music-tone-alt icon text-info"></i> <span
 												class="font-bold">Genres</span>
 										</a></li>
@@ -173,11 +173,11 @@
                       <div class="wrapper">
                         <div class="text-center m-b m-t">
                           <a href="#" class="thumb-lg">
-                            <img src="images/a0.png" class="img-circle">
+                            <img src="images/head.jpg" class="img-circle">
                           </a>
                           <div>
-                            <div class="h3 m-t-xs m-b-xs">John.Smith</div>
-                            <small class="text-muted"><i class="fa fa-map-marker"></i> London, UK</small>
+                            <div class="h3 m-t-xs m-b-xs">David</div>
+                            <small class="text-muted"><i class="fa fa-map-marker"></i> Hangzhou, China</small>
                           </div>                
                         </div>
                         <div class="panel wrapper">
@@ -211,11 +211,11 @@
                         </div>
                         <div>
                           <small class="text-uc text-xs text-muted">about me</small>
-                          <p>Artist</p>
+                          <p>在读学生</p>
                           <small class="text-uc text-xs text-muted">info</small>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis ipsum ac feugiat.</p>
+                          <p>来自南部的一个小城市，个性不张扬，讨厌随波逐流。</p>
                           <div class="line"></div>
-                          <small class="text-uc text-xs text-muted">connection</small>
+                          <small class="text-uc text-xs text-muted">联系方式</small>
                           <p class="m-t-sm">
                             <a href="#" class="btn btn-rounded btn-twitter btn-icon"><i class="fa fa-twitter"></i></a>
                             <a href="#" class="btn btn-rounded btn-facebook btn-icon"><i class="fa fa-facebook"></i></a>
@@ -230,9 +230,9 @@
                   <section class="vbox">
                     <header class="header bg-light lt">
                       <ul class="nav nav-tabs nav-white">
-                        <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
-                        <li class=""><a href="#events" data-toggle="tab">Events</a></li>
-                        <li class=""><a href="#interaction" data-toggle="tab">Interaction</a></li>
+                        <li class="active"><a href="#activity" data-toggle="tab">动态</a></li>
+                        <li class=""><a href="#events" data-toggle="tab">事件</a></li>
+                        <li class=""><a href="#interaction" data-toggle="tab">交流</a></li>
                       </ul>
                     </header>
                     <section class="scrollable">
@@ -241,104 +241,55 @@
                           <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
                             <li class="list-group-item">
                               <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a0.png" class="img-circle">
+                                <img src="images/huang.jpg" class="img-circle">
                               </a>
                               <a href="#" class="clear">
                                 <small class="pull-right">3 minuts ago</small>
-                                <strong class="block">Drew Wllon</strong>
-                                <small>Wellcome and play this web application template ... </small>
+                                <strong class="block">文泽路小男孩</strong>
+                                <small>做前端真是太累了哇！！！ </small>
                               </a>
                             </li>
                             <li class="list-group-item">
                               <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a1.png" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">1 hour ago</small>
-                                <strong class="block">Jonathan George</strong>
-                                <small>Morbi nec nunc condimentum...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a2.png" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">2 hours ago</small>
-                                <strong class="block">Josh Long</strong>
-                                <small>Vestibulum ullamcorper sodales nisi nec...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a3.png" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">1 day ago</small>
-                                <strong class="block">Jack Dorsty</strong>
-                                <small>Morbi nec nunc condimentum...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a4.png" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">3 days ago</small>
-                                <strong class="block">Morgen Kntooh</strong>
-                                <small>Mobile first web app for startup...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a5.png" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">Jun 21</small>
-                                <strong class="block">Yoha Omish</strong>
-                                <small>Morbi nec nunc condimentum...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a6.png" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">May 10</small>
-                                <strong class="block">Gole Lido</strong>
-                                <small>Vestibulum ullamcorper sodales nisi nec...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a7.png" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">Jan 2</small>
-                                <strong class="block">Jonthan Snow</strong>
-                                <small>Morbi nec nunc condimentum...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item" href="#email-content" data-toggle="class:show">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a8.png" class="img-circle">
+                                <img src="images/sun.jpg" class="img-circle">
                               </a>
                               <a href="#" class="clear">
                                 <small class="pull-right">3 minuts ago</small>
-                                <strong class="block">Drew Wllon</strong>
-                                <small>Vestibulum ullamcorper sodales nisi nec sodales nisi nec sodales nisi nec...</small>
+                                <strong class="block">Hao。</strong>
+                                <small>黄桁好帅！</small>
                               </a>
                             </li>
                             <li class="list-group-item">
                               <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/a9.png" class="img-circle">
+                                <img src="images/chen.jpg" class="img-circle">
                               </a>
                               <a href="#" class="clear">
-                                <small class="pull-right">1 hour ago</small>
-                                <strong class="block">Jonathan George</strong>
-                                <small>Morbi nec nunc condimentum...</small>
+                                <small class="pull-right">3 minuts ago</small>
+                                <strong class="block">不知明日吹起何处之风</strong>
+                                <small>这个世界危在旦夕...</small>
                               </a>
                             </li>
+                            <li class="list-group-item">
+                              <a href="#" class="thumb-sm pull-left m-r-sm">
+                                <img src="images/dai.jpg" class="img-circle">
+                              </a>
+                              <a href="#" class="clear">
+                                <small class="pull-right">3 minuts ago</small>
+                                <strong class="block">豆拉米</strong>
+                                <small>凯浩真帅！桥本环奈在等你~ </small>
+                              </a>
+                            </li>
+                            <li class="list-group-item">
+                              <a href="#" class="thumb-sm pull-left m-r-sm">
+                                <img src="images/jiang.jpg" class="img-circle">
+                              </a>
+                              <a href="#" class="clear">
+                                <small class="pull-right">3 minuts ago</small>
+                                <strong class="block">Ssuuppeerr</strong>
+                                <small>前端牛逼！ </small>
+                              </a>
+                            </li>
+                            	
                           </ul>
                         </div>
                         <div class="tab-pane" id="events">
@@ -359,18 +310,18 @@
                   <section class="vbox">
                     <section class="scrollable padder-v">
                       <div class="panel">
-                        <h4 class="font-thin padder">Latest Tweets</h4>
+                        <h4 class="font-thin padder">最新动态</h4>
                         <ul class="list-group">
                           <li class="list-group-item">
-                              <p>Wellcome <a href="#" class="text-info">@Drew Wllon</a> and play this web application template, have fun1 </p>
+                              <p>感谢 <a href="#" class="text-info">@蒋文超</a> 和<a href="#" class="text-info">@陈孝伟</a> 在数据库方面的付出 </p>
                               <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
                           </li>
                           <li class="list-group-item">
-                              <p>Morbi nec <a href="#" class="text-info">@Jonathan George</a> nunc condimentum ipsum dolor sit amet, consectetur</p>
+                              <p>感谢 <a href="#" class="text-info">@戴思颖</a>  在Service中间层的付出 </p>
                               <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
                           </li>
                           <li class="list-group-item">                     
-                              <p><a href="#" class="text-info">@Josh Long</a> Vestibulum ullamcorper sodales nisi nec adipiscing elit. Morbi id neque quam. Aliquam sollicitudin venenatis</p>
+                              <p>感谢 <a href="#" class="text-info">@孙凯浩</a> 和<a href="#" class="text-info">@黄桁</a> 在前端页面展示方面的付出 </p>
                               <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 hours ago</small>
                           </li>
                         </ul>
@@ -378,12 +329,12 @@
                       <div class="panel clearfix">
                         <div class="panel-body">
                           <a href="#" class="thumb pull-left m-r">
-                            <img src="images/a0.png" class="img-circle">
+                            <img src="images/huang.jpg" class="img-circle">
                           </a>
                           <div class="clear">
-                            <a href="#" class="text-info">@Mike Mcalidek <i class="fa fa-twitter"></i></a>
-                            <small class="block text-muted">2,415 followers / 225 tweets</small>
-                            <a href="#" class="btn btn-xs btn-success m-t-xs">Follow</a>
+                            <a href="http://rukihuang.xyz/" class="text-info">广告位招租 </i></a>
+                            <small class="block text-muted">非诚勿扰</small>
+                            <a href="https://blog.csdn.net/weixin_43508544" class="btn btn-xs btn-success m-t-xs">赶紧点击</a>
                           </div>
                         </div>
                       </div>

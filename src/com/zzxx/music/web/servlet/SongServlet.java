@@ -33,7 +33,7 @@ public class SongServlet extends BaseServlet {
         request.getSession().setAttribute("pageBean", pb);
 //        response.setContentType("text/plain;charset=utf-8");
 //		response.getWriter().write("{\"PageBean\":"+pb+"}");
-        response.sendRedirect(request.getContextPath()+"/genres.jsp");
+        request.getRequestDispatcher("/genres.jsp").forward(request, response);
 }
 
 

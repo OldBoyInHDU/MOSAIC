@@ -15,7 +15,7 @@ import com.zzxx.music.service.SongService;
 import com.zzxx.music.utils.FactoryUtils;
 import com.zzxx.music.utils.PageBean;
 
-/*@WebFilter("/genres.jsp")*/
+@WebFilter("/genres.jsp")
 public class GenresFilter implements Filter {
 	SongService ss = (SongService) FactoryUtils.getInstance("SongService");
     public GenresFilter() {

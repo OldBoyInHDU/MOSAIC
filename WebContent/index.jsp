@@ -184,7 +184,7 @@
 										data-toggle="class:fa-spin"><i
 										class="icon-refresh i-lg  inline" id="refresh"></i></a>
 									<h2 class="font-thin m-b">
-										Discover <span class="musicbar animate inline m-l-sm"
+										热门歌曲 <span class="musicbar animate inline m-l-sm"
 											style="width: 20px; height: 20px"> <span
 											class="bar1 a1 bg-primary lter"></span> <span
 											class="bar2 a2 bg-info lt"></span> <span
@@ -231,7 +231,7 @@
 									</div>
 									<div class="row">
 										<div class="col-md-7">
-											<h3 class="font-thin">New Songs</h3>
+											<h3 class="font-thin">新歌速递</h3>
 											<div class="row row-sm">
 												<c:forEach items="${newSongList }" var="newSong">
 
@@ -259,7 +259,7 @@
 											</div>
 										</div>
 										<div class="col-md-5">
-											<h3 class="font-thin">Top Songs</h3>
+											<h3 class="font-thin">歌曲榜单</h3>
 											<div id="newSong"
 												class="list-group bg-white list-group-lg no-bg auto">
 
@@ -269,7 +269,7 @@
 														class="pull-right h2 text-muted m-l">${s.index+1}</span> <span
 														class="pull-left thumb-sm avatar m-r"> <img
 															src="${pageContext.request.contextPath }${newSong.imgurl }"
-															alt="...">
+															alt="..." style="height:35px">
 													</span> <span class="clear"> <span>${newSong.name }</span>
 															<small class="text-muted clear text-ellipsis">${newSong.artist }</small>
 													</span>
@@ -279,25 +279,7 @@
 										</div>
 									</div>
 									<div class="row m-t-lg m-b-lg">
-										<div class="col-sm-6">
-											<div class="bg-primary wrapper-md r">
-												<a href="#"> <span class="h4 m-b-xs block"><i
-														class=" icon-user-follow i-lg"></i> Login or Create
-														account</span> <span class="text-muted">Save and share
-														your playlist with your friends when you log in or create
-														an account.</span>
-												</a>
-											</div>
-										</div>
-										<div class="col-sm-6">
-											<div class="bg-black wrapper-md r">
-												<a href="#"> <span class="h4 m-b-xs block"><i
-														class="icon-cloud-download i-lg"></i> Download our app</span> <span
-													class="text-muted">Get the apps for desktop and
-														mobile to start listening music at anywhere and anytime.</span>
-												</a>
-											</div>
-										</div>
+										
 									</div>
 								</section>
 								<footer class="footer bg-dark">
@@ -398,127 +380,8 @@
 								<section class="w-f-md scrollable hover">
 									<h4 class="font-thin m-l-md m-t">Connected</h4>
 									<ul class="list-group no-bg no-borders auto m-t-n-xxs">
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a1.png" alt="..." class="img-circle">
-												<i class="on b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Chris Fox</a>
-												</div>
-												<small class="text-muted">New York</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a2.png" alt="..."> <i
-												class="on b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Amanda Conlan</a>
-												</div>
-												<small class="text-muted">France</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a3.png" alt="..."> <i
-												class="busy b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Dan Doorack</a>
-												</div>
-												<small class="text-muted">Hamburg</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a4.png" alt="..."> <i
-												class="away b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Lauren Taylor</a>
-												</div>
-												<small class="text-muted">London</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a5.png" alt="..." class="img-circle">
-												<i class="on b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Chris Fox</a>
-												</div>
-												<small class="text-muted">Milan</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a6.png" alt="..."> <i
-												class="on b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Amanda Conlan</a>
-												</div>
-												<small class="text-muted">Copenhagen</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a7.png" alt="..."> <i
-												class="busy b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Dan Doorack</a>
-												</div>
-												<small class="text-muted">Barcelona</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a8.png" alt="..."> <i
-												class="away b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Lauren Taylor</a>
-												</div>
-												<small class="text-muted">Tokyo</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a9.png" alt="..." class="img-circle">
-												<i class="on b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Chris Fox</a>
-												</div>
-												<small class="text-muted">UK</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a1.png" alt="..."> <i
-												class="on b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Amanda Conlan</a>
-												</div>
-												<small class="text-muted">Africa</small>
-											</div></li>
-										<li class="list-group-item"><span
-											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												<img src="images/a2.png" alt="..."> <i
-												class="busy b-light right sm"></i>
-										</span>
-											<div class="clear">
-												<div>
-													<a href="#">Dan Doorack</a>
-												</div>
-												<small class="text-muted">Paris</small>
-											</div></li>
+									<c:forEach items="" var="user">
+									
 										<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
 												<img src="images/a3.png" alt="..."> <i
@@ -526,30 +389,17 @@
 										</span>
 											<div class="clear">
 												<div>
-													<a href="#">Lauren Taylor</a>
+													<a href="#">${user.name }</a>
 												</div>
-												<small class="text-muted">Brussels</small>
+												<small class="text-muted">${user.email }</small>
 											</div></li>
+									
+									</c:forEach>
+											
+											
 									</ul>
 								</section>
-								<footer class="footer footer-md bg-black">
-									<form class="" role="search">
-										<div class="form-group clearfix m-b-none">
-											<div class="input-group m-t m-b">
-												<span class="input-group-btn">
-													<button type="submit"
-														class="btn btn-sm bg-empty text-muted btn-icon">
-														<i class="fa fa-search"></i>
-													</button>
-												</span> 
-												<input type="text"
-													class="form-control input-sm text-white bg-empty b-b b-dark no-border"
-													placeholder="Search members">
-												<div id="list" style="width:179px; heigth: 100px; border:1px solid gray; background-color: white; position: absolute; z-index: 1000; display: none"></div>
-											</div>
-										</div>
-									</form>
-								</footer>
+								
 							</section>
 						</aside>
 						<!-- / side content -->

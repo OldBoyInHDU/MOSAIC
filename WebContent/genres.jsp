@@ -240,19 +240,18 @@
 													</div>
 												</c:forEach>
 											</div>
-											<ul class="pagination pagination">
-												<li><a href="javascript:void(0)" onclick="go(-1)"><i
-														class="fa fa-chevron-left"></i></a></li>
-												<c:forEach begin="1" end="${pageBean.totalPage }" step="1"
-													var="i">
-													<li><a href="javascript:void(0)" onclick="go()"><input
-															type="submit" id="currentPage" name="currentPage"
-															value="${i }"></a></li>
-												</c:forEach>
-												<li><a href="javascript:void(0)" onclick="go(1)"><i
-														class="fa fa-chevron-right"></i></a></li>
-
-											</ul>
+											<form id="page" action="${pageContext.request.contextPath}/SongServlet">
+											<input type="hidden" name="method" value="songType">
+											<input type="hidden" name="type" value="${type }">
+											<input type="hidden" name="type" id="currentPage">
+											<tr align="center" style="font-size: 10pt">
+                								<td >
+                    							共[<B>${pageBean.totalCount}</B>]条记录,[<B>${pageBean.totalPage}</B>]页 ,
+                    								
+                    								[<A href="javascript:void(0)" onclick="to(-1)">前一页</A>] <B>${pageBean.currentPage}</B> [<A href="javascript:void(0)" onclick="to(1)">后一页</A>]
+                											</td>
+            												</tr>
+											</form>
 										</section>
 									</section>
 								</section>
@@ -500,6 +499,10 @@
 										$("#word").val($(obj).html());
 										$("#list").css("display", "none");
 									}
+									function to(val) {
+								            $("#currentPage").val(parseInt($("#currentPage").val())+val);
+								            $("#page").submit();
+							        }
 							</script>
 </body>
 </html>
