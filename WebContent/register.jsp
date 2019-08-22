@@ -107,7 +107,7 @@
 							method="post">
 							<input type="hidden" name="method" value="login" >
 							<input type="text" class="name" name="username"
-								Placeholder="Username" required="" /> <input type="password"
+								Placeholder="Email" required="" /> <input type="password"
 								class="password" name="password" Placeholder="Password"
 								required="" /> <input type="submit" value="Login">
 						</form>

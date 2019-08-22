@@ -176,7 +176,7 @@
                             <img src="images/head.jpg" class="img-circle">
                           </a>
                           <div>
-                            <div class="h3 m-t-xs m-b-xs">David</div>
+                            <div class="h3 m-t-xs m-b-xs">${user.username }</div>
                             <small class="text-muted"><i class="fa fa-map-marker"></i> Hangzhou, China</small>
                           </div>                
                         </div>

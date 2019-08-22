@@ -35,7 +35,7 @@
 				</a> <a href="${pageContext.request.contextPath}/index.jsp"
 					class="navbar-brand text-lt"> <i class="icon-earphones"></i> <img
 					src="images/logo.png" alt="." class="hide"> <span
-					class="hidden-nav-xs m-l-sm">Musik</span>
+					class="hidden-nav-xs m-l-sm">MOSAIC</span>
 				</a> <a class="btn btn-link visible-xs" data-toggle="dropdown"
 					data-target=".user"> <i class="icon-settings"></i>
 				</a>
@@ -239,19 +239,17 @@
 														</div>
 													</div>
 												</c:forEach>
-											</div>
-											<form id="page" action="${pageContext.request.contextPath}/SongServlet">
-											<input type="hidden" name="method" value="songType">
-											<input type="hidden" name="type" value="${type }">
-											<input type="hidden" name="type" id="currentPage">
-											<tr align="center" style="font-size: 10pt">
-                								<td >
-                    							共[<B>${pageBean.totalCount}</B>]条记录,[<B>${pageBean.totalPage}</B>]页 ,
-                    								
-                    								[<A href="javascript:void(0)" onclick="to(-1)">前一页</A>] <B>${pageBean.currentPage}</B> [<A href="javascript:void(0)" onclick="to(1)">后一页</A>]
-                											</td>
-            												</tr>
-											</form>
+												<div style="float:none;width:500px"  class="col-xs-6 col-sm-4 col-md-3 col-lg-2" >
+												
+											<ul class="pagination pagination">
+						                        <li><a href="${pageContext.request.contextPath }/SongServlet?method=formerPage&currentPage=${currentPage}&type=${type}"><i class="fa fa-chevron-left"></i></a></li>
+						                        <c:forEach begin="1" end="${pageBean.totalPage }" step="1" var="i">
+						                        <li><a href="${pageContext.request.contextPath }/SongServlet?method=songType&currentPage=${i}&type=${type}">${i }</a></li>
+												</c:forEach>
+						                        <li><a href="${pageContext.request.contextPath }/SongServlet?method=nextPage&currentPage=${currentPage}&type=${type}"><i class="fa fa-chevron-right"></i></a></li>
+						                      </ul>
+												
+												</div>
 										</section>
 									</section>
 								</section>
@@ -462,14 +460,13 @@
 													if ( i > 7) {
 														break;
 													}
-													/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
 													$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
 												}
 												$("#list").css("display", "block");
 											},
 											"json"
 										);
-										$.get(
+										/* $.get(
 												"${pageContext.request.contextPath}/FindSongBySongArtistNameServlet",
 												{
 													"word": $("#word").val()
@@ -481,13 +478,12 @@
 															break;
 														}
 														$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
-														/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
 													}
 													$("#list").css("display", "block");
 												},
 												"json"
-											);
-									});
+											);*/
+									}); 
 								});
 								function over(obj) {
 									$(obj).css("background-color", "gray");

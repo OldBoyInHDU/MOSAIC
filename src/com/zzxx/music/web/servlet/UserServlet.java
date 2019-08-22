@@ -46,11 +46,14 @@ public class UserServlet extends BaseServlet {
 		User user = new User();
 		try {
 			BeanUtils.populate(user, request.getParameterMap());
+			System.out.println(user.toString());
+			System.out.println(user.getEmail());
 			boolean flag = us.checkUserIsExists(user.getEmail());
-			if(flag) {
+			System.out.println(flag);
+			if(!flag) {
 				User u = us.register(user);
 				System.out.println(u.toString());
-				request.getSession().setAttribute("User", u);
+				request.getSession().setAttribute("user", u);
 			}
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();

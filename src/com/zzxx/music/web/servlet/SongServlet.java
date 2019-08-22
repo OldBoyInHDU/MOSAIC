@@ -29,14 +29,51 @@ public class SongServlet extends BaseServlet {
         String pageSize = "18";
         PageBean pb = ss.listSongsByType(currentPage, pageSize, type);
 //        System.out.println(pb);
+        if(currentPage==null) {
+        	currentPage="1";
+        }
+        request.getSession().setAttribute("currentPage", currentPage);
         request.getSession().setAttribute("type", type);
         request.getSession().setAttribute("pageBean", pb);
 //        response.setContentType("text/plain;charset=utf-8");
 //		response.getWriter().write("{\"PageBean\":"+pb+"}");
         request.getRequestDispatcher("/genres.jsp").forward(request, response);
 }
-
-
+	public void formerPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String type = request.getParameter("type");
+		String nowcurrentPage = request.getParameter("currentPage");
+		int intcurrentPage = Integer.parseInt(nowcurrentPage);
+		
+		String currentPage = Integer.toString(intcurrentPage-1);
+        String pageSize = "18";
+        PageBean pb = ss.listSongsByType(currentPage, pageSize, type);
+        if(intcurrentPage==1) {
+        	request.getRequestDispatcher("/genres.jsp").forward(request, response);
+        }else{
+        	 request.getSession().setAttribute("currentPage", currentPage);
+             request.getSession().setAttribute("type", type);
+             request.getSession().setAttribute("pageBean", pb);
+             request.getRequestDispatcher("/genres.jsp").forward(request, response);
+     }
+}
+       
+	public void nextPage(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String type = request.getParameter("type");
+		String nowcurrentPage = request.getParameter("currentPage");
+		int intcurrentPage = Integer.parseInt(nowcurrentPage);
+		
+		String currentPage = Integer.toString(intcurrentPage+1);
+        String pageSize = "18";
+        PageBean pb = ss.listSongsByType(currentPage, pageSize, type);
+        if(intcurrentPage==pb.getTotalPage()) {
+        	request.getRequestDispatcher("/genres.jsp").forward(request, response);
+        }else{
+        	 request.getSession().setAttribute("currentPage", currentPage);
+             request.getSession().setAttribute("type", type);
+             request.getSession().setAttribute("pageBean", pb);
+             request.getRequestDispatcher("/genres.jsp").forward(request, response);
+     }
+}
 	public void hotSong(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		String  num =request.getParameter("num");
 //		int num=12;

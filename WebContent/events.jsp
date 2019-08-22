@@ -31,7 +31,7 @@
         <a href="${pageContext.request.contextPath}/index.jsp" class="navbar-brand text-lt">
           <i class="icon-earphones"></i>
           <img src="images/logo.png" alt="." class="hide">
-          <span class="hidden-nav-xs m-l-sm">Musik</span>
+          <span class="hidden-nav-xs m-l-sm">MOSAIC</span>
         </a>
         <a class="btn btn-link visible-xs" data-toggle="dropdown" data-target=".user">
           <i class="icon-settings"></i>
@@ -509,7 +509,7 @@
 											},
 											"json"
 										);
-										$.get(
+										/* $.get(
 												"${pageContext.request.contextPath}/FindSongBySongArtistNameServlet",
 												{
 													"word": $("#word").val()
@@ -522,11 +522,11 @@
 														}
 														$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
 														/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
-													}
+													/*}
 													$("#list").css("display", "block");
 												},
 												"json"
-											);
+											); */
 									});
 								});
 								function over(obj) {
