@@ -28,7 +28,7 @@
         <a class="btn btn-link visible-xs" data-toggle="class:nav-off-screen,open" data-target="#nav,html">
           <i class="icon-list"></i>
         </a>
-        <a href="index.html" class="navbar-brand text-lt">
+        <a href="${pageContext.request.contextPath}/index.jsp" class="navbar-brand text-lt">
           <i class="icon-earphones"></i>
           <img src="images/logo.png" alt="." class="hide">
           <span class="hidden-nav-xs m-l-sm">Musik</span>
@@ -102,7 +102,7 @@
 						</a></li>
 					</c:if>
 					<c:if test="${!empty user}">
-						<li class="hidden-xs"><a href="#"> <span>${user.username}</span>
+						<li class="hidden-xs"><a href="${pageContext.request.contextPath}/profile.jsp"> <span>${user.username}</span>
 						</a></li>
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
@@ -164,43 +164,6 @@
             
             <footer class="footer hidden-xs no-padder text-center-nav-xs">
               <div class="bg hidden-xs ">
-                  <div class="dropdown dropup wrapper-sm clearfix">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <span class="thumb-sm avatar pull-left m-l-xs">                        
-                        <img src="images/a3.png" class="dker" alt="...">
-                        <i class="on b-black"></i>
-                      </span>
-                      <span class="hidden-nav-xs clear">
-                        <span class="block m-l">
-                          <strong class="font-bold text-lt">John.Smith</strong> 
-                          <b class="caret"></b>
-                        </span>
-                        <span class="text-muted text-xs block m-l">Art Director</span>
-                      </span>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
-                      <li>
-                        <span class="arrow bottom hidden-nav-xs"></span>
-                        <a href="#">Settings</a>
-                      </li>
-                      <li>
-                        <a href="profile.html">Profile</a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span class="badge bg-danger pull-right">3</span>
-                          Notifications
-                        </a>
-                      </li>
-                      <li>
-                        <a href="docs.html">Help</a>
-                      </li>
-                      <li class="divider"></li>
-                      <li>
-                        <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-                      </li>
-                    </ul>
-                  </div>
                 </div>            </footer>
           </section>
         </aside>
@@ -224,8 +187,8 @@
                         </span>
                       </div>
                       <div class="bottom gd bg-info wrapper-lg">
-                        <span class="pull-right text-sm">101,400 <br>Followers</span>
-                        <span class="h2 font-thin">Soph Ashe</span>
+                        <span class="pull-right text-sm">黄老大 <br>戴老板</span>
+                        <span class="h2 font-thin">MOSAIC音乐平台</span>
                       </div>
                       <img class="img-full" src="images/m43.jpg" alt="...">
                     </div>
@@ -256,162 +219,27 @@
                 <section class="vbox">
                   <section class="scrollable hover">
                     <ul class="list-group list-group-lg no-bg auto m-b-none m-t-n-xxs">
+                    
+                    <c:forEach items="${hotSongList }" var="hotsong">
+                    
                       <li class="list-group-item clearfix">
                         <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
                           <i class="icon-control-play text"></i>
                           <i class="icon-control-pause text-active"></i>
                         </a>
                         <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/m0.jpg" alt="...">
+                          <img src="${pageContext.request.contextPath }${hotsong.imgurl }" alt="...">
                         </a>
                         <a class="clear" href="#">
-                          <span class="block text-ellipsis">Little Town</span>
-                          <small class="text-muted">by Soph Ashe</small>
+                          <span class="block text-ellipsis">${hotsong.name }</span>
+                          <small class="text-muted">by ${hotsong.artist }</small>
                         </a>
                       </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a1.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Get lacinia odio sem nec elit</span>
-                          <small class="text-muted">by Filex</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a2.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Donec sed odio du</span>
-                          <small class="text-muted">by Dan Doorack</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a3.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Curabitur blandit tempu</span>
-                          <small class="text-muted">by Foxes</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a4.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Urna mollis ornare vel eu leo</span>
-                          <small class="text-muted">by Chris Fox</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a5.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Faucibus dolor auctor</span>
-                          <small class="text-muted">by Lauren Taylor</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a6.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Praesent commodo cursus magn</span>
-                          <small class="text-muted">by Chris Fox</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a7.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Vestibulum id</span>
-                          <small class="text-muted">by Milian</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a8.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Blandit tempu</span>
-                          <small class="text-muted">by Amanda Conlan</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a9.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Vestibulum ullamcorpe quis malesuada augue mco rpe</span>
-                          <small class="text-muted">by Dan Doorack</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a10.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Natis ipsum ac feugiat</span>
-                          <small class="text-muted">by Hamburg</small>
-                        </a>
-                      </li>
-                      <li class="list-group-item clearfix">
-                        <a href="#" class="jp-play-me pull-right m-t-sm m-l text-md">
-                          <i class="icon-control-play text"></i>
-                          <i class="icon-control-pause text-active"></i>
-                        </a>
-                        <a href="#" class="pull-left thumb-sm m-r">
-                          <img src="images/a0.png" alt="...">
-                        </a>
-                        <a class="clear" href="#">
-                          <span class="block text-ellipsis">Sec condimentum au</span>
-                          <small class="text-muted">by Amanda Conlan</small>
-                        </a>
-                      </li>
+                    
+                    </c:forEach>
+
+
+           
                     </ul>
                   </section>
                 </section>
@@ -644,38 +472,57 @@
 });
 	</script>
 	<script type="text/javascript">
-        $(function(){
-         $("#word").keyup(function(){
-          // 局部刷新，想要获得商品名，显示到input下面添加新的列表
-          $.get(
-           "${pageContext.request.contextPath}/FindSongBySongNameServlet",
-           {
-            "word": $("#word").val()
-           },
-           function(data){
-            $("#list").empty();
-            for (var i = 0 ;i < data.length; i++) {
-             if ( i > 7) {
-              break;
-             }
-             $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>");
-            }
-            $("#list").css("display", "block");
-           },
-           "json"
-          );
-         });
-        });
-        function over(obj) {
-         $(obj).css("background-color", "gray");
-         }
-         function out(obj) {
-          $(obj).css("background-color", "white");
-         }
-         function go(obj) {
-          $("#word").val($(obj).html());
-          $("#list").css("display", "none");
-         }
-       </script>
+								$(function(){
+									$("#word").keyup(function(){
+										// 局部刷新，想要获得商品名，显示到input下面添加新的列表
+										$.get(
+											"${pageContext.request.contextPath}/FindSongBySongNameServlet",
+											{
+												"word": $("#word").val()
+											},
+											function(data){
+												$("#list").empty();
+												for (var i = 0 ;i < data.length; i++) {
+													if ( i > 7) {
+														break;
+													}
+													/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
+													$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
+												}
+												$("#list").css("display", "block");
+											},
+											"json"
+										);
+										$.get(
+												"${pageContext.request.contextPath}/FindSongBySongArtistNameServlet",
+												{
+													"word": $("#word").val()
+												},
+												function(data){
+													$("#list").empty();
+													for (var i = 0 ;i < data.length; i++) {
+														if ( i > 7) {
+															break;
+														}
+														$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
+														/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
+													}
+													$("#list").css("display", "block");
+												},
+												"json"
+											);
+									});
+								});
+								function over(obj) {
+									$(obj).css("background-color", "gray");
+									}
+									function out(obj) {
+										$(obj).css("background-color", "white");
+									}
+									function go(obj) {
+										$("#word").val($(obj).html());
+										$("#list").css("display", "none");
+									}
+							</script>
 </body>
 </html>

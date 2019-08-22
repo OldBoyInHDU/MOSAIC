@@ -102,7 +102,7 @@
 						</a></li>
 					</c:if>
 					<c:if test="${!empty user}">
-						<li class="hidden-xs"><a href="#"> <span>${user.username}</span>
+						<li class="hidden-xs"><a href="${pageContext.request.contextPath}/profile.jsp"> <span>${user.username}</span>
 						</a></li>
 						<li class="hidden-xs"><a href="#"> <span>欢迎您</span>
 						</a></li>
@@ -161,43 +161,6 @@
             
             <footer class="footer hidden-xs no-padder text-center-nav-xs">
               <div class="bg hidden-xs ">
-                  <div class="dropdown dropup wrapper-sm clearfix">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                      <span class="thumb-sm avatar pull-left m-l-xs">                        
-                        <img src="images/a3.png" class="dker" alt="...">
-                        <i class="on b-black"></i>
-                      </span>
-                      <span class="hidden-nav-xs clear">
-                        <span class="block m-l">
-                          <strong class="font-bold text-lt">John.Smith</strong> 
-                          <b class="caret"></b>
-                        </span>
-                        <span class="text-muted text-xs block m-l">Art Director</span>
-                      </span>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight aside text-left">                      
-                      <li>
-                        <span class="arrow bottom hidden-nav-xs"></span>
-                        <a href="#">Settings</a>
-                      </li>
-                      <li>
-                        <a href="profile.html">Profile</a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <span class="badge bg-danger pull-right">3</span>
-                          Notifications
-                        </a>
-                      </li>
-                      <li>
-                        <a href="docs.html">Help</a>
-                      </li>
-                      <li class="divider"></li>
-                      <li>
-                        <a href="modal.lockme.html" data-toggle="ajaxModal" >Logout</a>
-                      </li>
-                    </ul>
-                  </div>
                 </div>            </footer>
           </section>
         </aside>
@@ -217,10 +180,10 @@
                         </div>
                       </div>
                       <div class="bottom wrapper bg-info gd">
-                        <div class="m-t m-b"><a href="#" class="b-b b-danger h2 text-u-c text-lt font-bold">Teideal</a></div>
-                        <p class="hidden-xs">Morbi nec nunc condimentum, egestas dui nec, fermentum diam. Vivamus vel tincidunt libero, vitae elementum ligula</p>
+                        <div class="m-t m-b"><a href="#" class="b-b b-danger h2 text-u-c text-lt font-bold">《你给我听好》陈奕迅</a></div>
+                        <p class="hidden-xs">渺小的控诉就是你想要的生活情调</p>
                       </div>
-                      <a href="#"><img src="images/m20.jpg" alt="" class="img-full"></a>
+                      <a href="#"><img src="showimg/1.jpg" alt="" class="img-full"></a>
                     </div>
                     <div class="item">
                       <div class="item-overlay opacity animated fadeInDown wrapper bg-info">
@@ -230,10 +193,10 @@
                         </div>
                       </div>
                       <div class="bottom wrapper bg-info gd">
-                        <div class="m-t m-b"><a href="#" class="b-b b-warning h2 text-u-c text-lt font-bold">Tincidunt</a></div>
-                        <p class="hidden-xs">Gestas dui nec, fermentum diam. Vivamus vel tincidunt libero, vitae ligula elementum</p>
+                        <div class="m-t m-b"><a href="#" class="b-b b-warning h2 text-u-c text-lt font-bold">《裙下之臣》陈奕迅</a></div>
+                        <p class="hidden-xs">为那转啊转啊的裙，死我都庆幸</p>
                       </div>
-                      <a href="#"><img src="images/m22.jpg" alt="" class="img-full"></a>
+                      <a href="#"><img src="showimg/2.jpg" alt="" class="img-full" style="height:620px"></a>
                     </div>
                   </div>
                 </div>
@@ -246,17 +209,17 @@
                   </div>
                 </div>
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Tincidunt</a></div>
-                  <p class="hidden-xs">Vivamus vel tincidunt libero, lementum ligula vitae</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《一人有一个梦想》黎瑞恩</a></div>
+                  <p class="hidden-xs">一人有一个梦想，两人热爱渐迷惘，三人有三种爱找各自理想</p>
                 </div>
-                <a href="#"><img src="images/m31.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/3.jpg" alt="" class="img-full" style="height:620px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-warning h4 text-u-c text-lt font-bold">Duis</a></div>
-                  <p class="hidden-xs">Tincidunt libero vitae elementum</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-warning h4 text-u-c text-lt font-bold">《孙大剩》白亮/赵静</a></div>
+                  <p class="hidden-xs">从小你就想当一个盖世英雄，逢人便说长大后要大闹天宫，可长大后却发现自己是那么平庸</p>
                 </div>
-                <a href="#"><img src="images/m10.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/4.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="item-overlay active bg-primary dker wrapper text-center">
@@ -266,51 +229,51 @@
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Diam</a></div>
-                  <p class="hidden-xs">Con malesuada est, quis congue nibhs</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《分裂》周杰伦</a></div>
+                  <p class="hidden-xs">经过老伯的家，篮框变得好高</p>
                 </div>
-                <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/5.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="carousel carousel-fade bg-info slide auto" data-interval="6000">
                   <div class="carousel-inner">
                     <div class="item active">
                       <div class="item-overlay active dker wrapper text-center">
-                        <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Cosies</a></div>
-                        <p class="hidden-xs">Duis non malesuada est, quis congue nibh</p>
+                        <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《下一站茶山刘》房东的猫</a></div>
+                        <p class="hidden-xs">前路不需太重的行囊，和过去和解吧</p>
                       </div>
-                      <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+                      <a href="#"><img src="showimg/6.jpg" alt="" class="img-full" style="height:310px"></a>
                     </div>
                     <div class="item">
                       <div class="item-overlay active dk wrapper text-center">
-                        <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Malesuada</a></div>
-                        <p class="hidden-xs">Aliquam sollicitudin venenatis congue nibh</p>
+                        <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《青春大概》王上</a></div>
+                        <p class="hidden-xs">在遗忘中不舍，醉醒交错，青春大概如你所说</p>
                       </div>
-                      <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+                      <a href="#"><img src="showimg/7.jpg" alt="" class="img-full" style="height:310px"></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Vivamus</a></div>
-                  <p class="hidden-xs">Morbi id neque quam. Aliquam sollicitudin venenatis ipsum</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《花解语》亦舒</a></div>
+                  <p class="hidden-xs">算了，有期望，就活该失望</p>
                 </div>
-                <a href="#"><img src="images/m13.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/8.jpg" alt="" class="img-full"style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-warning h4 text-u-c text-lt font-bold">Libero</a></div>
-                  <p class="hidden-xs">Aliquam sollicitudin venenatis ipsum</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-warning h4 text-u-c text-lt font-bold">《记昨日书》伏仪</a></div>
+                  <p class="hidden-xs">你可知这百年爱人只能陪半途,你且信这世上至多好景可虚度</p>
                 </div>
-                <a href="#"><img src="images/m30.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/9.jpg" alt="" class="img-full" style="height:620px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">habitant</a></div>
-                  <p class="hidden-xs">Vel tincidunt libero, vitae ligula tristique</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《你在终点等我》王菲</a></div>
+                  <p class="hidden-xs">所以好想送你一湾河岸，洗涤腐蚀心灵的遗憾</p>
                 </div>
-                <a href="#"><img src="images/m19.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/10.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="item-overlay active bg-success dker wrapper text-center">
@@ -320,59 +283,59 @@
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Malesuada</a></div>
-                  <p class="hidden-xs">Pellentesque habitant morbi tristique sodales</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《父亲写的散文诗》许飞</a></div>
+                  <p class="hidden-xs">这是我父亲日记里的文字，这是他的青春留下留下来的散文诗</p>
                 </div>
-                <a href="#"><img src="images/m7.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/11.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Donec</a></div>
-                  <p class="hidden-xs">Vestibulum ullamcorper</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《喜欢》张悬</a></div>
+                  <p class="hidden-xs">那生活还过分激动，没什么我已经以为能够把握</p>
                 </div>
-                <a href="#"><img src="images/m18.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/12.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-primary h4 text-u-c text-lt font-bold">Eleifend</a></div>
-                  <p class="hidden-xs">Malesuada augue. Donec eleifend condimentum</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-primary h4 text-u-c text-lt font-bold">《沙龙》陈奕迅</a></div>
+                  <p class="hidden-xs">其实人生并非虚耗，何来尘埃飞舞</p>
                 </div>
-                <a href="#"><img src="images/m32.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/20.jpg" alt="" class="img-full" style="height:620px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Sollicitudin </a></div>
-                  <p class="hidden-xs">Mauris convallis mauris at pellentesque volutpat</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《喜欢上你时的内心活动》陈绮贞 </a></div>
+                  <p class="hidden-xs">你喜欢去哪，青海或三亚，冰岛或希腊，南美不去吗，沙漠你爱吗，我问太多了</p>
                 </div>
-                <a href="#"><img src="images/m40.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/17.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-warning h2 text-u-c text-lt font-bold">Senectus </a></div>
-                  <p class="hidden-xs">Fermentum diam. Vivamus vel tincidunt libero, vitae elementum ligula</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-warning h2 text-u-c text-lt font-bold">《听见下雨的声音》周杰伦 </a></div>
+                  <p class="hidden-xs">终于听见下雨的声音，于是我的世界被吵醒</p>
                 </div>
-                <a href="#"><img src="images/m21.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/15.jpg" alt="" class="img-full" style="height:620px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Phasellus</a></div>
-                  <p class="hidden-xs">Senectus et netus et malesuada fames</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《清风徐来》王菲</a></div>
+                  <p class="hidden-xs">可能完美和完整，不是一回事情</p>
                 </div>
-                <a href="#"><img src="images/m5.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/16.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-white h4 text-u-c text-lt font-bold">Neque</a></div>
-                  <p class="hidden-xs">Consectetur adipiscing elit. Morbi id neque quam</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-white h4 text-u-c text-lt font-bold">《一如少年》郑小辫儿</a></div>
+                  <p class="hidden-xs">还能一如少年，不惧路远漂泊</p>
                 </div>
-                <a href="#"><img src="images/a10.png" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/14.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Nisi ne</a></div>
-                  <p class="hidden-xs">Orbi tristique senectus et netus et malesuada</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《彩虹》布衣乐队</a></div>
+                  <p class="hidden-xs">端起了这碗酒，就映出了你眉头</p>
                 </div>
-                <a href="#"><img src="images/m4.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/18.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="item-overlay active bg-warning dker wrapper text-center">
@@ -382,10 +345,10 @@
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Congue</a></div>
-                  <p class="hidden-xs">Malesuada est, quis congue nibh</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《十万嬉皮》万能青年旅店</a></div>
+                  <p class="hidden-xs">四体不勤，五谷不分，文不能测字，武不能防身</p>
                 </div>
-                <a href="#"><img src="images/m6.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/19.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="item-overlay active bg-info lt wrapper text-center">
@@ -395,31 +358,31 @@
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Consectetur</a></div>
-                  <p class="hidden-xs">Adipiscing elit senectus et netus mal.</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《美好事物》房东的猫</a></div>
+                  <p class="hidden-xs">别忧愁聚散，又何惧放胆</p>
                 </div>
-                <a href="#"><img src="images/m42.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/13.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Morbi</a></div>
-                  <p class="hidden-xs">Dolor sit amet, consectetur adipiscing elit.</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《等你下课》周杰伦</a></div>
+                  <p class="hidden-xs">当你收到情书，也代表我已经走远</p>
                 </div>
-                <a href="#"><img src="images/m9.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/21.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Soesle</a></div>
-                  <p class="hidden-xs">Adipiscing elituis congue</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《任我行》陈奕迅</a></div>
+                  <p class="hidden-xs">那时其实尝尽真正自由，但又感到没趣</p>
                 </div>
-                <a href="#"><img src="images/a7.png" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/22.jpg" alt="" class="img-full" style="height:310px"></a>
               </div>
               <div class="item">
                 <div class="bottom gd bg-info wrapper">
-                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">Congue</a></div>
-                  <p class="hidden-xs">Malesuada est, congue nibh quis elituis</p>
+                  <div class="m-t m-b"><a href="#" class="b-b b-info h4 text-u-c text-lt font-bold">《陀飞轮》</a></div>
+                  <p class="hidden-xs">过去十八岁没戴表，不过有时间，够我没有后顾野性贪玩</p>
                 </div>
-                <a href="#"><img src="images/m12.jpg" alt="" class="img-full"></a>
+                <a href="#"><img src="showimg/23.jpg" alt="" class="img-full" style="height:310px"	></a>
               </div>
             </div>
           </section>
@@ -525,38 +488,57 @@
 });
 	</script>
 	<script type="text/javascript">
-        $(function(){
-         $("#word").keyup(function(){
-          // 局部刷新，想要获得商品名，显示到input下面添加新的列表
-          $.get(
-           "${pageContext.request.contextPath}/FindSongBySongNameServlet",
-           {
-            "word": $("#word").val()
-           },
-           function(data){
-            $("#list").empty();
-            for (var i = 0 ;i < data.length; i++) {
-             if ( i > 7) {
-              break;
-             }
-             $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>");
-            }
-            $("#list").css("display", "block");
-           },
-           "json"
-          );
-         });
-        });
-        function over(obj) {
-         $(obj).css("background-color", "gray");
-         }
-         function out(obj) {
-          $(obj).css("background-color", "white");
-         }
-         function go(obj) {
-          $("#word").val($(obj).html());
-          $("#list").css("display", "none");
-         }
-       </script>
+								$(function(){
+									$("#word").keyup(function(){
+										// 局部刷新，想要获得商品名，显示到input下面添加新的列表
+										$.get(
+											"${pageContext.request.contextPath}/FindSongBySongNameServlet",
+											{
+												"word": $("#word").val()
+											},
+											function(data){
+												$("#list").empty();
+												for (var i = 0 ;i < data.length; i++) {
+													if ( i > 7) {
+														break;
+													}
+													/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
+													$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
+												}
+												$("#list").css("display", "block");
+											},
+											"json"
+										);
+										$.get(
+												"${pageContext.request.contextPath}/FindSongBySongArtistNameServlet",
+												{
+													"word": $("#word").val()
+												},
+												function(data){
+													$("#list").empty();
+													for (var i = 0 ;i < data.length; i++) {
+														if ( i > 7) {
+															break;
+														}
+														$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
+														/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
+													}
+													$("#list").css("display", "block");
+												},
+												"json"
+											);
+									});
+								});
+								function over(obj) {
+									$(obj).css("background-color", "gray");
+									}
+									function out(obj) {
+										$(obj).css("background-color", "white");
+									}
+									function go(obj) {
+										$("#word").val($(obj).html());
+										$("#list").css("display", "none");
+									}
+							</script>
 </body>
 </html>

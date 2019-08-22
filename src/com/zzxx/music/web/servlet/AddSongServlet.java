@@ -23,7 +23,7 @@ public class AddSongServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String songid = request.getParameter("songid");
-		System.out.println(songid);
+//		System.out.println(songid);
 		
 		SongService ss = new SongServiceImpl();
 		Song thisSong = ss.findSongBySongId(songid);
@@ -66,16 +66,19 @@ public class AddSongServlet extends HttpServlet {
 		/*System.out.println(request.getContextPath());
 		System.out.println(thisSong.getSongurl());*/
 		
-		System.out.println(songList.toString());
+//		System.out.println(songList.toString());
 		
 		
 		Gson gson = new Gson();
 		String songJS = gson.toJson(songList);
 		
-		System.out.println("songJS:"+songJS);
+//		System.out.println("songJS:"+songJS);
 		request.getSession().setAttribute("songList", songJS);
-		
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		String referer = request.getHeader("referer");
+		String[] s = referer.split("/");
+		String path = s[s.length-1];
+		response.sendRedirect(request.getContextPath()+"/"+path);
+//		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
 		
 		
