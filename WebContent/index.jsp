@@ -378,12 +378,12 @@
 						<aside class="aside-md bg-light dk" id="sidebar">
 							<section class="vbox animated fadeInRight">
 								<section class="w-f-md scrollable hover">
-									<h4 class="font-thin m-l-md m-t">好友列表</h4>
+									<h4 class="font-thin m-l-md m-t">用户列表</h4>
 									<ul class="list-group no-bg no-borders auto m-t-n-xxs">
 									<c:if test="${empty user}">
 									<li class="list-group-item"><span
 											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
-												登陆后获得好友列表
+												登陆后获得用户列表
 										</span>
 										</li>
 								</c:if>
