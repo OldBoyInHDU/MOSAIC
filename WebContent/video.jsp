@@ -169,24 +169,23 @@
         <section id="content">
           <section class="vbox" id="bjax-el">
             <section class="scrollable padder-lg">
-              <h2 class="font-thin m-b">Video</h2>
+              <h2 class="font-thin m-b">热门MV</h2>
               <div class="row row-sm">
                 <div class="col-xs-12 col-sm-4">
                   <div class="item">
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzkzODUwMDM4MA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <div class="top">
-                        <span class="badge bg-dark m-l-sm m-t-sm">03:20</span>
+                      <div class="top">       
                       </div>
-                      <a href="video-detail.html"><img src="images/m40.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzkzODUwMDM4MA=="><img src="showimg/17.jpg" alt="" class="r r-2x img-full" style="height:270px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Tempered Song</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Miaow</a>
+                      <a href="http://player.youku.com/embed/XMzkzODUwMDM4MA==" class="text-ellipsis">缘起</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">鞠婧祎</a>
                     </div>
                   </div>
                 </div>
@@ -195,17 +194,16 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzY2NTU4NzU5Mg=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
                       <div class="top">
-                        <span class="badge bg-dark m-l-sm m-t-sm">02:10</span>
                       </div>
-                      <a href="video-detail.html"><img src="images/m41.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzY2NTU4NzU5Mg=="><img src="showimg/4.jpg" alt="" class="r r-2x img-full" style="height:270px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Morbi id neque quam</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Phasellus</a>
+                      <a href="http://player.youku.com/embed/XMzY2NTU4NzU5Mg==" class="text-ellipsis">落户成泥</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">周深深</a>
                     </div>
                   </div>
                 </div>
@@ -214,36 +212,35 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzg4MjAyNjA4OA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
                       <div class="top">
-                        <span class="badge bg-dark m-l-sm m-t-sm">05:40</span>
                       </div>
-                      <a href="video-detail.html"><img src="images/m42.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzg4MjAyNjA4OA=="><img src="showimg/5.jpg" alt="" class="r r-2x img-full" style="height:270px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Aliquam sollicitudin venenatis ipsum</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Malesuada</a>
+                      <a href="http://player.youku.com/embed/XMzg4MjAyNjA4OA==" class="text-ellipsis">无名之辈</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">汪苏泷</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <h3 class="font-thin m-b">Video List</h3>
+              <h3 class="font-thin m-b">MV列表</h3>
               <div class="row row-sm">
                 <div class="col-xs-6 col-sm-4 col-md-3">
                   <div class="item">
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzkzODUwMDM4MA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m40.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzkzODUwMDM4MA=="><img src="showimg/17.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Tempered Song</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Miaow</a>
+                      <a href="http://player.youku.com/embed/XMzkzODUwMDM4MA==" class="text-ellipsis">缘起</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">鞠婧祎</a>
                     </div>
                   </div>
                 </div>
@@ -252,14 +249,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzY2NTU4NzU5Mg=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m41.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzY2NTU4NzU5Mg=="><img src="showimg/4.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Morbi id neque quam</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Phasellus</a>
+                      <a href="http://player.youku.com/embed/XMzY2NTU4NzU5Mg==" class="text-ellipsis">落户成泥</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">周深深</a>
                     </div>
                   </div>
                 </div>
@@ -268,14 +265,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzg4MjAyNjA4OA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m42.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzg4MjAyNjA4OA=="><img src="showimg/5.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Aliquam sollicitudin venenatis ipsum</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Malesuada</a>
+                      <a href="http://player.youku.com/embed/XMzg4MjAyNjA4OA==" class="text-ellipsis">无名之辈</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">汪苏泷</a>
                     </div>
                   </div>
                 </div>
@@ -284,14 +281,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzc3ODUwMjgzMg=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m43.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzc3ODUwMjgzMg=="><img src="showimg/10.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Citudin venenatis ipsum ac</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Volutpat</a>
+                      <a href="http://player.youku.com/embed/XMzc3ODUwMjgzMg==" class="text-ellipsis">年少有为</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">李荣浩</a>
                     </div>
                   </div>
                 </div>
@@ -300,14 +297,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XNDEwNTcxOTQ0OA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m44.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XNDEwNTcxOTQ0OA=="><img src="showimg/12.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Vestibulum ullamcorper sodales nisi</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Mauris Qiaos</a>
+                      <a href="http://player.youku.com/embed/XNDEwNTcxOTQ0OA==" class="text-ellipsis">谁</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">小柯/老狼</a>
                     </div>
                   </div>
                 </div>
@@ -316,14 +313,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XNDA3NzA4MjY1Mg=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m40.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XNDA3NzA4MjY1Mg=="><img src="showimg/13.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Mauris convallis mauris at</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Neque</a>
+                      <a href="http://player.youku.com/embed/XNDA3NzA4MjY1Mg==" class="text-ellipsis">一半是我</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">陈立农</a>
                     </div>
                   </div>
                 </div>
@@ -332,14 +329,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XNDA2OTgxMTYyOA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m45.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XNDA2OTgxMTYyOA=="><img src="showimg/16.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Sodales nisi nec condimentum</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Augue</a>
+                      <a href="http://player.youku.com/embed/XNDA2OTgxMTYyOA==" class="text-ellipsis">刚好的伤口</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">林彦俊</a>
                     </div>
                   </div>
                 </div>
@@ -348,14 +345,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzk2OTkxMjM3Mg=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m44.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzk2OTkxMjM3Mg=="><img src="showimg/19.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Nisi nec condimentum</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Miaow</a>
+                      <a href="http://player.youku.com/embed/XMzk2OTkxMjM3Mg==" class="text-ellipsis">别再闹了</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">毛不易</a>
                     </div>
                   </div>
                 </div>
@@ -364,14 +361,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzg5MjgxMjM0MA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m43.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzg5MjgxMjM0MA=="><img src="showimg/22.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Phasellus at ultricies nequ</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Volutpat</a>
+                      <a href="http://player.youku.com/embed/XMzg5MjgxMjM0MA==" class="text-ellipsis">原来你也在这里</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">周笔畅</a>
                     </div>
                   </div>
                 </div>
@@ -380,14 +377,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XMzg2MzExODI0NA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m42.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XMzg2MzExODI0NA=="><img src="showimg/24.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Quis malesuada augue</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Feugiat</a>
+                      <a href="http://player.youku.com/embed/XMzg2MzExODI0NA==" class="text-ellipsis">最美的遇见</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">徐佳莹</a>
                     </div>
                   </div>
                 </div>
@@ -396,14 +393,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XNDAyMTg3Mjk4OA=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m41.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XNDAyMTg3Mjk4OA=="><img src="showimg/25.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Ipsum ac feugiat</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Quam AC</a>
+                      <a href="http://player.youku.com/embed/XNDAyMTg3Mjk4OA==" class="text-ellipsis">四海</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">陈粒</a>
                     </div>
                   </div>
                 </div>
@@ -412,14 +409,14 @@
                     <div class="pos-rlt">
                       <div class="item-overlay opacity r r-2x bg-black">
                         <div class="center text-center m-t-n">
-                          <a href="video-detail.html"><i class="fa fa-play-circle i-2x"></i></a>
+                          <a href="http://player.youku.com/embed/XNDExNTAwOTk1Mg=="><i class="fa fa-play-circle i-2x"></i></a>
                         </div>
                       </div>
-                      <a href="video-detail.html"><img src="images/m40.jpg" alt="" class="r r-2x img-full"></a>
+                      <a href="http://player.youku.com/embed/XNDExNTAwOTk1Mg=="><img src="showimg/27.jpg" alt="" class="r r-2x img-full" style="height:200px"></a>
                     </div>
                     <div class="padder-v">
-                      <a href="video-detail.html" class="text-ellipsis">Ullamcorper sodales nisi nec condimentu</a>
-                      <a href="video-detail.html" class="text-ellipsis text-xs text-muted">Convallis</a>
+                      <a href="http://player.youku.com/embed/XNDExNTAwOTk1Mg==" class="text-ellipsis">突然之间</a>
+                      <a href="#" class="text-ellipsis text-xs text-muted">邓紫棋</a>
                     </div>
                   </div>
                 </div>                
@@ -427,10 +424,6 @@
               <ul class="pagination pagination">
                 <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
                 <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
                 <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
               </ul>
             </section>

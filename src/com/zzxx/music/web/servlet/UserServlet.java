@@ -54,6 +54,9 @@ public class UserServlet extends BaseServlet {
 				User u = us.register(user);
 				System.out.println(u.toString());
 				request.getSession().setAttribute("user", u);
+				List<User> allUsers = us.findAllUser();
+				System.out.println(allUsers.toString());
+				request.getSession().setAttribute("AllUsers", allUsers);
 			}
 		} catch (IllegalAccessException e) {
 			e.printStackTrace();
