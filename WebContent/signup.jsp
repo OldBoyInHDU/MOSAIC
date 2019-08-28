@@ -72,6 +72,7 @@
   <script type="text/javascript" src="js/jPlayer/jquery.jplayer.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/add-on/jplayer.playlist.min.js"></script>
   <script type="text/javascript" src="js/jPlayer/demo.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
 <script type="text/javascript">
 		$(function() {
 			// 自定义校验规则
