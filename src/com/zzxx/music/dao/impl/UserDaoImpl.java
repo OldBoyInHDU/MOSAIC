@@ -14,9 +14,9 @@ public class UserDaoImpl implements UserDao {
 	private QueryRunner qu = new QueryRunner(DataSourceUtils.getDataSource());
 	@Override
 	public User addUser(User user) {
-		String sql = "insert into user values (?,?,?,?,?)";
+		String sql = "insert into user values (?,?,?,?)";
 		try {
-		qu.update(sql,user.getUuid(),user.getUsername(),user.getPassword(),user.getEmail(),user.getMobilenumber());
+		qu.update(sql,user.getUuid(),user.getUsername(),user.getPassword(),user.getEmail());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
