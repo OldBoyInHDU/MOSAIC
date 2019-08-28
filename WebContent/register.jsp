@@ -216,11 +216,6 @@
 						minlength : 3,
 						maxlength : 12
 					},
-					mobilenumber : {
-						required : true,
-						minlength : 6,
-						maxlength : 12
-					},
 					password : {
 						required : true,
 						minlength : 6,
@@ -238,11 +233,6 @@
 						required : "用户名不能为空",
 						minlength : "用户名长度不能小于3",
 						maxlength : "用户名长度不能大于12"
-					},
-					mobilenumber : {
-						required : "电话号码不能为空",
-						minlength : "电话号码长度不能小于6",
-						maxlength : "电话号码长度不能大于12"
 					},
 					password : {
 						required : "密码不能为空",

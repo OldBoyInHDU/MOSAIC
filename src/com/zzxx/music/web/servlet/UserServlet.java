@@ -19,15 +19,15 @@ import com.zzxx.music.utils.FactoryUtils;
 public class UserServlet extends BaseServlet {
 	UserService us = (UserService) FactoryUtils.getInstance("UserService");
 	public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = request.getParameter("username");
+		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		System.out.println(username);
+		System.out.println(email);
 		System.out.println(password);
 		try{
-			User user = us.login(username, password);
+			User user = us.login(email, password);
 			System.out.println(user.getEmail());
 			System.out.println(user.getPassword());
-			if(user.getEmail().equals(username) && user.getPassword().equals(password)){
+			if(user.getEmail().equals(email) && user.getPassword().equals(password)){
 				List<User> allUsers = us.findAllUser();
 				System.out.println(allUsers.toString());
 				request.getSession().setAttribute("AllUsers", allUsers);
