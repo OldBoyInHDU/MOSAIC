@@ -24,9 +24,11 @@ public class AddSongServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String songid = request.getParameter("songid");
 //		System.out.println(songid);
-		
+		System.out.println(songid);
 		SongService ss = new SongServiceImpl();
 		Song thisSong = ss.findSongBySongId(songid);
+		System.out.println(thisSong);
+		
 		
 //		int length = songList.size();
 //		boolean flag = false;
@@ -51,9 +53,12 @@ public class AddSongServlet extends HttpServlet {
 		sj.setArtist(thisSong.getArtist());
 		sj.setMp3("/MusicShare"+thisSong.getSongurl());
 		sj.setPoster("/MusicShare"+thisSong.getImgurl());
-		
-		songList.add(sj);
-		
+		System.out.println(sj);
+		System.out.println(songList);
+		if(!songList.contains(sj)) {
+			songList.add(sj);
+		}
+		System.out.println(songList);
 		Collections.reverse(songList);
 		
 		request.getSession().setAttribute("javaSongList", songList);

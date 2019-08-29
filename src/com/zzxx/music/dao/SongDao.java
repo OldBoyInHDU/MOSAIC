@@ -36,7 +36,7 @@ public interface SongDao {
 
     public List<Search> selectAllSource(String name);
     
-    Song getSongBySongId(int songid);
+    Song getSongBySongId(long songid);
     
     
 }

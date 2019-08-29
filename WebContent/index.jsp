@@ -206,9 +206,9 @@
 																	class="fa fa-star-o text-muted"></i>
 															</div>
 															<div class="center text-center m-t-n">
-																<a href="#" data-toggle="class" id="link">
-																<i class="icon-control-play i-2x text"></i>
-																<i class="icon-control-pause i-2x text-active"></i></a>
+																<a href="${pageContext.request.contextPath }/AddSongServlet?songid=${hotSong.song_id}" id="link">
+																<i class="icon-control-play i-2x text"></i><!-- 
+																<i class="icon-control-pause i-2x text-active"></i></a> -->
 															</div>
 															<div class="bottom padder m-b-sm" >
 																<a href="#" class="pull-right" data-toggle="class"> <i
@@ -245,7 +245,7 @@
 															<div class="pos-rlt">
 																<div class="item-overlay opacity r r-2x bg-black">
 																	<div class="center text-center m-t-n">
-																		<a href="${pageContext.request.contextPath }/AddSongServlet?songid=${newSong.songid}"><i class="fa fa-play-circle i-2x"></i></a>
+																		<a href="${pageContext.request.contextPath }/AddSongServlet?songid=${newSong.song_id}"><i class="fa fa-play-circle i-2x"></i></a>
 																	</div>
 																</div>
 																<a href="#"><img
@@ -555,7 +555,7 @@
 														break;
 													}
 													/* $("#list").append("<div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div>"); */
-													$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].songid+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
+													$("#list").append("<a href='${pageContext.request.contextPath }/AddSongServlet?songid="+data[i].song_id+"' ><div style='cursor:pointer' onmouseover='over(this)' onmouseout='out(this)' onclick='go(this)'>"+data[i].name+"</div></a>");
 												}
 												$("#list").css("display", "block");
 											},
@@ -615,7 +615,7 @@
 			});
 		});
 	</script> -->
-<script>
+<!-- <script>
 	if($(".link").hasClass("active")){
 		console.log($(".link").hasClass("active"));
 	}else{
@@ -625,7 +625,7 @@
 
 	
 	
-</script>
+</script> -->
 
 </body>
 </html>

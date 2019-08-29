@@ -219,7 +219,7 @@
 																<div class="item-overlay opacity r r-2x bg-black">
 																	<div class="center text-center m-t-n">
 																		<a
-																			href="${pageContext.request.contextPath }/AddSongServlet?songid=${song.songid}"><i
+																			href="${pageContext.request.contextPath }/AddSongServlet?songid=${song.song_id}"><i
 																			class="fa fa-play-circle i-2x"></i></a>
 																	</div>
 																</div>

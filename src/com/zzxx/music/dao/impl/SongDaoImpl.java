@@ -171,8 +171,8 @@ public class SongDaoImpl implements SongDao {
     }
 
 	@Override
-	public Song getSongBySongId(int songid) {
-		String sql = "select * from song where songid=?";
+	public Song getSongBySongId(long songid) {
+		String sql = "select * from song where song_id=?";
 		try {
 			return queryRunner.query(sql, new BeanHandler<Song>(Song.class),songid);
 		} catch (SQLException e) {

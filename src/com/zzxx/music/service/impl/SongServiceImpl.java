@@ -70,7 +70,7 @@ public class SongServiceImpl implements SongService {
 	 */
 	@Override
 	public Song findSongBySongId(String id) {
-		int songId = Integer.valueOf(id);
+		long songId = Long.valueOf(id);
 		Song song = sd.getSongBySongId(songId);
 		return song;
 	}
