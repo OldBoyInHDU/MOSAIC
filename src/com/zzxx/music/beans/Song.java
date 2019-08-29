@@ -1,7 +1,7 @@
 package com.zzxx.music.beans;
 
 public class Song {
-    private int songid;
+    private Long song_id;
     private String name;
     private String songurl;
     private String imgurl;
@@ -19,16 +19,17 @@ public class Song {
     public void setType(String type) {
         this.type = type;
     }
+    
 
-    public int getSongid() {
-        return songid;
-    }
+    public Long getSong_id() {
+		return song_id;
+	}
 
-    public void setSongid(int songid) {
-        this.songid = songid;
-    }
+	public void setSong_id(Long song_id) {
+		this.song_id = song_id;
+	}
 
-    public String getName() {
+	public String getName() {
         return name;
     }
 
@@ -68,16 +69,11 @@ public class Song {
         this.album = album;
     }
 
-    @Override
-    public String toString() {
-        return "Song{" +
-                "songid=" + songid +
-                ", name='" + name + '\'' +
-                ", songurl='" + songurl + '\'' +
-                ", imgurl='" + imgurl + '\'' +
-                ", artist='" + artist + '\'' +
-                ", album='" + album + '\'' +
-                ", type='" + type + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Song [song_id=" + song_id + ", name=" + name + ", songurl=" + songurl + ", imgurl=" + imgurl
+				+ ", artist=" + artist + ", album=" + album + ", type=" + type + "]";
+	}
+    
+    
 }

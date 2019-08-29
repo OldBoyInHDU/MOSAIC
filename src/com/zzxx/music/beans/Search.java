@@ -1,20 +1,26 @@
 package com.zzxx.music.beans;
 
 public class Search {
-    private int selectid;
+    private Long select_id;
     private String name;
     private String type;
-    public Search(){};
+    public Search(){
+    	
+    };
+    
+    public Long getSelect_id() {
+		return select_id;
+	}
 
-    public int getSelectid() {
-        return selectid;
-    }
 
-    public void setSelectid(int selectid) {
-        this.selectid = selectid;
-    }
 
-    public String getName() {
+	public void setSelect_id(Long select_id) {
+		this.select_id = select_id;
+	}
+
+
+
+	public String getName() {
         return name;
     }
 
@@ -30,12 +36,9 @@ public class Search {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Search{" +
-                "selectid=" + selectid +
-                ", name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "Search [select_id=" + select_id + ", name=" + name + ", type=" + type + "]";
+	}
+    
 }

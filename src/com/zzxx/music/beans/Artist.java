@@ -1,21 +1,24 @@
 package com.zzxx.music.beans;
 
 public class Artist {
-    private int artistid;
+    private Long artist_id;
     private String name;
     private String language;
     private String artisturl;
     public Artist(){};
 
-    public int getArtistid() {
-        return artistid;
-    }
 
-    public void setArtistid(int artistid) {
-        this.artistid = artistid;
-    }
+    public Long getArtist_id() {
+		return artist_id;
+	}
 
-    public String getName() {
+
+	public void setArtist_id(Long artist_id) {
+		this.artist_id = artist_id;
+	}
+
+
+	public String getName() {
         return name;
     }
 
@@ -39,13 +42,11 @@ public class Artist {
         this.artisturl = artisturl;
     }
 
-    @Override
-    public String toString() {
-        return "Artist{" +
-                "artistid=" + artistid +
-                ", name='" + name + '\'' +
-                ", language='" + language + '\'' +
-                ", artisturl='" + artisturl + '\'' +
-                '}';
-    }
+
+	@Override
+	public String toString() {
+		return "Artist [artist_id=" + artist_id + ", name=" + name + ", language=" + language + ", artisturl="
+				+ artisturl + "]";
+	}
+    
 }
