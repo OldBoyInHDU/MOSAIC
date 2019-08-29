@@ -5,7 +5,7 @@
 <html lang="en" class="app">
 <head>  
   <meta charset="utf-8" />
-  <title>MOSICA</title>
+  <title>MOSAIC</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -24,7 +24,7 @@
 <body class="bg-info dker">
   <section id="content" class="m-t-lg wrapper-md animated fadeInDown">
     <div class="container aside-xl">
-      <a class="navbar-brand block" href="index.jsp"><span class="h1 font-bold">MOSICA</span></a>
+      <a class="navbar-brand block" href="index.jsp"><span class="h1 font-bold">MOSAIC</span></a>
       <section class="m-b-lg">
         <header class="wrapper text-center">
           <strong>寻找一段有意思的音乐之旅吧</strong>
@@ -42,7 +42,7 @@
           </div>
           <div class="checkbox i-checks m-b">
             <label class="m-l">
-              <input type="checkbox" checked=""><i></i> 同意 <a href="#">MOSICA音乐协议</a>
+              <input type="checkbox" checked=""><i></i> 同意 <a href="#">MOSAIC音乐协议</a>
             </label>
           </div>
           <button type="submit" class="btn btn-lg btn-warning lt b-white b-2x btn-block btn-rounded"><i class="icon-arrow-right pull-right"></i><span class="m-r-n-lg">注册</span></button>
@@ -57,7 +57,7 @@
   <footer id="footer">
     <div class="text-center padder clearfix">
       <p>
-        <small>指针信息MOSICA制作小组<br>&copy; 2019</small>
+        <small>指针信息MOSAIC制作小组<br>&copy; 2019</small>
       </p>
     </div>
   </footer>

@@ -5,7 +5,7 @@
 <html lang="en" class="app">
 <head>  
   <meta charset="utf-8" />
-  <title>Musik | Web Application</title>
+  <title>MOSAIC</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -93,10 +93,10 @@
           </li>
           <c:if test="${empty user}">
 						<li class="hidden-xs"><a
-							href="${pageContext.request.contextPath}/register.jsp"> <span>登录</span>
+							href="${pageContext.request.contextPath}/signin.jsp"> <span>登录</span>
 						</a></li>
 						<li class="hidden-xs"><a
-							href="${pageContext.request.contextPath}/register.jsp"> <span>注册</span>
+							href="${pageContext.request.contextPath}/signup.jsp"> <span>注册</span>
 						</a></li>
 					</c:if>
 					<c:if test="${!empty user}">
@@ -276,7 +276,7 @@
                               <a href="#" class="clear">
                                 <small class="pull-right">3 minuts ago</small>
                                 <strong class="block">豆拉米</strong>
-                                <small>凯浩真帅！桥本环奈在等你~ </small>
+                                <small>这头发也太为难我了！ </small>
                               </a>
                             </li>
                             <li class="list-group-item">
@@ -317,7 +317,7 @@
                               <small class="block text-muted"><i class="fa fa-clock-o"></i> 2 minuts ago</small>
                           </li>
                           <li class="list-group-item">
-                              <p>感谢 <a href="#" class="text-info">@戴思颖</a>  在Service中间层的付出 </p>
+                              <p>感谢 <a href="#" class="text-info">@戴思颖</a>  在Service业务层的付出 </p>
                               <small class="block text-muted"><i class="fa fa-clock-o"></i> 1 hour ago</small>
                           </li>
                           <li class="list-group-item">                     

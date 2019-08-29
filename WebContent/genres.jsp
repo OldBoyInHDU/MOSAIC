@@ -5,7 +5,7 @@
 <html lang="en" class="app">
 <head>
 <meta charset="utf-8" />
-<title>Musik | Web Application</title>
+<title>MOSAIC</title>
 <meta name="description"
 	content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
 <meta name="viewport"
@@ -100,10 +100,10 @@
 						</section></li>
 					<c:if test="${empty user}">
 						<li class="hidden-xs"><a
-							href="${pageContext.request.contextPath}/register.jsp"> <span>登录</span>
+							href="${pageContext.request.contextPath}/signin.jsp"> <span>登录</span>
 						</a></li>
 						<li class="hidden-xs"><a
-							href="${pageContext.request.contextPath}/register.jsp"> <span>注册</span>
+							href="${pageContext.request.contextPath}/signup.jsp"> <span>注册</span>
 						</a></li>
 					</c:if>
 					<c:if test="${!empty user}">

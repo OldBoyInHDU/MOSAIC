@@ -5,7 +5,7 @@
 <html lang="en" class="app">
 <head>  
   <meta charset="utf-8" />
-  <title>MOSICA</title>
+  <title>MOSAIC</title>
   <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="js/jPlayer/jplayer.flat.css" type="text/css" />
@@ -24,7 +24,7 @@
 <body class="bg-info dker">
   <section id="content" class="m-t-lg wrapper-md animated fadeInUp">    
     <div class="container aside-xl">
-      <a class="navbar-brand block" href="index.jsp"><span class="h1 font-bold">MOSICA</span></a>
+      <a class="navbar-brand block" href="index.jsp"><span class="h1 font-bold">MOSAIC</span></a>
       <section class="m-b-lg">
         <header class="wrapper text-center">
           <strong>打开音乐之旅</strong>
@@ -50,7 +50,7 @@
   <footer id="footer">
     <div class="text-center padder">
       <p>
-        <small>指针信息MOSICA制作小组<br>&copy; 2019</small>
+        <small>指针信息MOSAIC制作小组<br>&copy; 2019</small>
       </p>
     </div>
   </footer>
