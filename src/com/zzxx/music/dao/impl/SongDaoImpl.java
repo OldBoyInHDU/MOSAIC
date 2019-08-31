@@ -12,6 +12,8 @@ import org.apache.commons.dbutils.handlers.ScalarHandler;
 import com.zzxx.music.beans.Artist;
 import com.zzxx.music.beans.Search;
 import com.zzxx.music.beans.Song;
+import com.zzxx.music.beans.User;
+import com.zzxx.music.beans.UserCollectList;
 import com.zzxx.music.dao.SongDao;
 import com.zzxx.music.utils.DataSourceUtils;
 
@@ -180,5 +182,25 @@ public class SongDaoImpl implements SongDao {
 		}
 		return null;
 	}
-
+	
+	@Override
+	public List<Song> getUserSongList(User user){
+	    String selectUser = "select * from usercollectlist  where collected_user_uuid = ?";
+	    List<UserCollectList> collectlists = new ArrayList<UserCollectList>();
+	    try {
+	        collectlists = queryRunner.query(selectUser, new BeanListHandler<UserCollectList>(UserCollectList.class),user.getUuid());
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    List<Song> list = new ArrayList<Song>();
+	    for (UserCollectList c : collectlists ){
+	        String sql = "select * from song where name = ?";
+	        try {
+				list.add(queryRunner.query(sql, new BeanHandler<Song>(Song.class),c.getCollectlist_name()));
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+	    }
+	    return list;
+	}
 }

@@ -6,7 +6,35 @@ public class User {
     private String email;
     private String password;
     private String mobilenumber;
-    public User(){
+    private String aboutme;
+    private String info;
+    private String location;
+    
+    public String getAboutme() {
+		return aboutme;
+	}
+
+	public void setAboutme(String aboutme) {
+		this.aboutme = aboutme;
+	}
+
+	public String getInfo() {
+		return info;
+	}
+
+	public void setInfo(String info) {
+		this.info = info;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public User(){
 
     }
 
@@ -51,14 +79,12 @@ public class User {
         this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "uuid='" + uuid + '\'' +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", mobilenumber='" + mobilenumber + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "User [uuid=" + uuid + ", username=" + username + ", email=" + email + ", password=" + password
+				+ ", mobilenumber=" + mobilenumber + ", aboutme=" + aboutme + ", info=" + info + ", location="
+				+ location + "]";
+	}
+
+    
 }

@@ -8,7 +8,17 @@ public class Song {
     private String artist;
     private String album;
     private String type;
-    public Song(){
+    private Long clickCount;
+    
+    public Long getClickCount() {
+		return clickCount;
+	}
+
+	public void setClickCount(Long clickCount) {
+		this.clickCount = clickCount;
+	}
+
+	public Song(){
 
     }
 
@@ -72,8 +82,9 @@ public class Song {
 	@Override
 	public String toString() {
 		return "Song [song_id=" + song_id + ", name=" + name + ", songurl=" + songurl + ", imgurl=" + imgurl
-				+ ", artist=" + artist + ", album=" + album + ", type=" + type + "]";
+				+ ", artist=" + artist + ", album=" + album + ", type=" + type + ", clickCount=" + clickCount + "]";
 	}
+
     
     
 }

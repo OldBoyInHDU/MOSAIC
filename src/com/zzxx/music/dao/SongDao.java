@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.zzxx.music.beans.Search;
 import com.zzxx.music.beans.Song;
+import com.zzxx.music.beans.User;
 
 public interface SongDao {
     Song addSong(Song song);
@@ -34,9 +35,15 @@ public interface SongDao {
     //
     int getCount(String type);
 
+    //
     public List<Search> selectAllSource(String name);
     
+    //
     Song getSongBySongId(long songid);
+    
+    //
+	List<Song> getUserSongList(User user);
+    
     
     
 }
