@@ -196,8 +196,8 @@
 									<div class="row row-sm" id="hotSong">
 										<!-- <span id="test"></span> -->
 										<c:forEach items="${hotSongList }" var="hotSong">
-											<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" >
-												<div class="item">
+											<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2" style="z-index: 1">
+												<div class="item">	
 													<div class="pos-rlt">
 														<div class="item-overlay opacity r r-2x bg-black">
 															<div class="text-info padder m-t-sm text-sm">
@@ -206,15 +206,15 @@
 																	class="fa fa-star-o text-muted"></i>
 															</div>
 															<div class="center text-center m-t-n">
-																<a href="${pageContext.request.contextPath }/AddSongServlet?songid=${hotSong.song_id}" id="link">
-																<i class="icon-control-play i-2x text"></i><!-- 
-																<i class="icon-control-pause i-2x text-active"></i></a> -->
+																<a href="${pageContext.request.contextPath }/AddSongServlet?songid=${hotSong.song_id}" id="link" >
+																<i class="icon-control-play i-2x text"></i>
+																<i class="icon-control-pause i-2x text-active"></i></a>
 															</div>
 															<div class="bottom padder m-b-sm" >
-																<a href="#" class="pull-right" data-toggle="class"> <i
+																<a href="${pageContext.request.contextPath }/AddSongToUserServlet?songid=${hotSong.song_id}&id=${user.uuid}" class="pull-right" > <i
 																	class="fa fa-heart-o text"></i>
 																	<i class="fa fa-heart text-active text-danger"></i>
-																</a> <a href="#" data-toggle="class"> <i class="fa fa-plus-circle text"></i>
+																</a> <a href="${pageContext.request.contextPath }/AddSongServlet?songid=${hotSong.song_id} " > <i class="fa fa-plus-circle text"></i>
 																<i class="fa fa-check-circle text-active text-info"></i>
 																
 																</a>
@@ -225,7 +225,7 @@
 															alt="" class="r r-2x img-full" style="height: 300px"></a>
 													</div>
 													<div class="padder-v">
-														<a href="#" class="text-ellipsis">${hotSong.name }</a> <a
+														<a href="${pageContext.request.contextPath }/AddSongServlet?songid=${hotSong.song_id}" class="text-ellipsis">${hotSong.name }</a> <a
 															href="#" class="text-ellipsis text-xs text-muted">${hotSong.artist }</a>
 													</div>
 
