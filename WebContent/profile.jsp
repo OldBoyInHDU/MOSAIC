@@ -230,8 +230,8 @@
                   <section class="vbox">
                     <header class="header bg-light lt">
                       <ul class="nav nav-tabs nav-white">
-                        <li class="active"><a href="#activity" data-toggle="tab">动态</a></li>
-                        <li class=""><a href="#events" data-toggle="tab">事件</a></li>
+                        <li class="active"><a href="#activity" data-toggle="tab">收藏歌曲</a></li>
+                        <li class=""><a href="#events" data-toggle="tab">留言板</a></li>
                         <li class=""><a href="#interaction" data-toggle="tab">交流</a></li>
                       </ul>
                     </header>
@@ -239,74 +239,69 @@
                       <div class="tab-content">
                         <div class="tab-pane active" id="activity">
                           <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                            
+                            <c:forEach items="${likeSongList }" var="likeSong">
                             <li class="list-group-item">
                               <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/huang.jpg" class="img-circle">
+                                <img src="${song.imgurl }" class="img-circle">
                               </a>
                               <a href="#" class="clear">
-                                <small class="pull-right">3 minuts ago</small>
-                                <strong class="block">文泽路小男孩</strong>
-                                <small>做前端真是太累了哇！！！ </small>
+                                <!-- <small class="pull-right">3 minuts ago</small> -->
+                                <strong class="block">${likeSong.name }</strong>
+                                <small>${likeSong.artist } </small>
                               </a>
                             </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/sun.jpg" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">3 minuts ago</small>
-                                <strong class="block">Hao。</strong>
-                                <small>黄桁好帅！</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/chen.jpg" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">3 minuts ago</small>
-                                <strong class="block">不知明日吹起何处之风</strong>
-                                <small>这个世界危在旦夕...</small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/dai.jpg" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">3 minuts ago</small>
-                                <strong class="block">豆拉米</strong>
-                                <small>这头发也太为难我了！ </small>
-                              </a>
-                            </li>
-                            <li class="list-group-item">
-                              <a href="#" class="thumb-sm pull-left m-r-sm">
-                                <img src="images/jiang.jpg" class="img-circle">
-                              </a>
-                              <a href="#" class="clear">
-                                <small class="pull-right">3 minuts ago</small>
-                                <strong class="block">Ssuuppeerr</strong>
-                                <small>前端牛逼！ </small>
-                              </a>
-                            </li>
+                            </c:forEach>
                             	
                           </ul>
                         </div>
                         <div class="tab-pane" id="events">
                           <div class="text-center wrapper">
-                            <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
+                            <!-- <i class="fa fa-spinner fa fa-spin fa fa-large"></i> -->
+                            <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                            
+                            <c:forEach items="${messages }" var="message">
+                            <li class="list-group-item">
+                              <a href="#" class="thumb-sm pull-left m-r-sm">
+                                <img src="images/zzxx.png" class="img-circle">
+                              </a>
+                              <a href="#" class="clear">
+                                <!-- <small class="pull-right">3 minuts ago</small> -->
+                                <strong class="block">${message.message_content }</strong>
+                                <%-- <small>${likeSong.artist } </small> --%>
+                              </a>
+                            </li>
+                            </c:forEach>
+                            	
+                          </ul>
                           </div>
                         </div>
                         <div class="tab-pane" id="interaction">
                           <div class="text-center wrapper">
-                            <i class="fa fa-spinner fa fa-spin fa fa-large"></i>
+                            <!-- <i class="fa fa-spinner fa fa-spin fa fa-large"></i> -->
+                            <ul class="list-group no-radius m-b-none m-t-n-xxs list-group-lg no-border">
+                            
+                            <c:forEach items="${tweets }" var="tweet">
+                            <li class="list-group-item">
+                              <a href="#" class="thumb-sm pull-left m-r-sm">
+                                <img src="images/zzxx.png" class="img-circle">
+                              </a>
+                              <a href="#" class="clear">
+                                <!-- <small class="pull-right">3 minuts ago</small> -->
+                                <strong class="block">${tweet.tweets }</strong>
+                                <%-- <small>${likeSong.artist } </small> --%>
+                              </a>
+                            </li>
+                            </c:forEach>
+                            	
+                          </ul>
                           </div>
                         </div>
                       </div>
                     </section>
                   </section>
                 </aside>
-                <aside class="col-lg-3 b-l">
+                <!-- <aside class="col-lg-3 b-l">
                   <section class="vbox">
                     <section class="scrollable padder-v">
                       <div class="panel">
@@ -340,7 +335,43 @@
                       </div>
                     </section>
                   </section>              
-                </aside>
+                </aside> -->
+                <!-- side content -->
+						<aside class="aside-md bg-light dk" id="sidebar">
+							<section class="vbox animated fadeInRight">
+								<section class="w-f-md scrollable hover">
+									<h4 class="font-thin m-l-md m-t">用户列表</h4>
+									<ul class="list-group no-bg no-borders auto m-t-n-xxs">
+									<c:if test="${empty user}">
+									<li class="list-group-item"><span
+											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+												登陆后获得用户列表
+										</span>
+										</li>
+								</c:if>
+								<c:if test="${!empty user}">
+								<c:forEach items="${AllUsers}" var="users">
+									
+										<li class="list-group-item"><span
+											class="pull-left thumb-xs m-t-xs avatar m-l-xs m-r-sm">
+												<img src="images/zzxx.png" alt="..."> <i
+												class="away b-light right sm"></i>
+										</span>
+											<div class="clear">
+												<div>
+													<a href="#">${users.username }</a>
+												</div>
+												<small class="text-muted">${users.email }</small>
+											</div></li>
+									
+									</c:forEach>
+									</c:if>		
+									</ul>
+								</section>
+								
+							</section>
+						</aside>
+						<!-- / side content -->
               </section>
             </section>
           </section>
