@@ -30,4 +30,9 @@ public interface UserService {
 	 */
 	List<User> findAllUser();
 	
+	/**
+	 * 根据id查找用户
+	 */
+	User findUserById(String id);
+	
 }
