@@ -19,7 +19,7 @@ public class SongServiceImpl implements SongService {
 	 * 获得12首热歌 
 	 */
 	public List<Song> listHotSong(){
-		List<Song> list = new ArrayList<Song>();
+		List<Song> list = sd.getSong12ByHot();
 		return list;
 	}
 	
@@ -27,7 +27,7 @@ public class SongServiceImpl implements SongService {
 	 * 获得8首新歌
 	 */
 	public List<Song> listNewSong(){
-		List<Song> list = new ArrayList<Song>();
+		List<Song> list = sd.getSong8ByDate();
 		return list;
 	}
 	
