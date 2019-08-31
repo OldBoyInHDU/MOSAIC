@@ -185,7 +185,7 @@ public class SongDaoImpl implements SongDao {
 	
 	@Override
 	public List<Song> getUserSongList(User user){
-	    String selectUser = "select * from usercollectlist  where collected_user_uuid = ?";
+	    String selectUser = "select * from usercollectlist  where usercollectlist_user_uuid = ?";
 	    List<UserCollectList> collectlists = new ArrayList<UserCollectList>();
 	    try {
 	        collectlists = queryRunner.query(selectUser, new BeanListHandler<UserCollectList>(UserCollectList.class),user.getUuid());
