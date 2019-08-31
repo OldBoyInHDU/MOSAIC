@@ -49,6 +49,9 @@ public interface SongDao {
 	
 	//
 	void deleteSongFromCollection(User user, Song song);
+	
+	//
+	List<Song> getSong12ByHot(Song song);
     
     
     

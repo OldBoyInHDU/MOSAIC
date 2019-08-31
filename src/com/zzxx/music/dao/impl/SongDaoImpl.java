@@ -223,4 +223,16 @@ public class SongDaoImpl implements SongDao {
 	        e.printStackTrace();
 	    }
 	}
+	
+	@Override
+	public List<Song> getSong12ByHot(Song song){
+	    String sql = "select * from song  order by clickCount desc limit 0,12";
+	    List<Song> list = null;
+	    try {
+			list = queryRunner.query(sql,new BeanListHandler<Song>(Song.class));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	    return list;
+	}
 }
