@@ -225,7 +225,7 @@ public class SongDaoImpl implements SongDao {
 	}
 	
 	@Override
-	public List<Song> getSong12ByHot(Song song){
+	public List<Song> getSong12ByHot(){
 	    String sql = "select * from song  order by clickCount desc limit 0,12";
 	    List<Song> list = null;
 	    try {
