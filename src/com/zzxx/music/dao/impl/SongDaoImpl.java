@@ -203,4 +203,24 @@ public class SongDaoImpl implements SongDao {
 	    }
 	    return list;
 	}
+	
+	@Override
+	public void addSongToCollection(User user,Song song) {
+	    String sql = "insert into userCollectList values(null,?,?)";
+	    try {
+	        queryRunner.update(sql,user.getUuid(),song.getName());
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	@Override
+	public void deleteSongFromCollection(User user,Song song){
+	    String sql = "delete from userCollectionlist where usercollectlist_user_uuid = ? and collectedlist_name = ?";
+	    try {
+	        queryRunner.update(sql,user.getUuid(),song.getName());
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	}
 }

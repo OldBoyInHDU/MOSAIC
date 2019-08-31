@@ -43,6 +43,12 @@ public interface SongDao {
     
     //
 	List<Song> getUserSongList(User user);
+	
+	//
+	void addSongToCollection(User user, Song song);
+	
+	//
+	void deleteSongFromCollection(User user, Song song);
     
     
     
