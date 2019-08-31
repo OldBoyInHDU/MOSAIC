@@ -52,6 +52,9 @@ public interface SongDao {
 	
 	//
 	List<Song> getSong12ByHot();
+	
+	//
+	List<Song> getSong8ByDate();
     
     
     

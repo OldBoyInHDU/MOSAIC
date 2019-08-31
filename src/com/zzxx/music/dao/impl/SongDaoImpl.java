@@ -235,4 +235,16 @@ public class SongDaoImpl implements SongDao {
 		}
 	    return list;
 	}
+	
+	@Override
+	public List<Song> getSong8ByDate(){
+	    String sql = "select * from song  order by add_time desc limit 0,8";
+	    List<Song> list = null;
+	    try {
+			list = queryRunner.query(sql,new BeanListHandler<Song>(Song.class));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	    return list;
+	}
 }
