@@ -2,8 +2,10 @@ package com.zzxx.music.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import com.zzxx.music.beans.Song;
+import com.zzxx.music.beans.User;
 import com.zzxx.music.dao.SongDao;
 import com.zzxx.music.service.SongService;
 import com.zzxx.music.utils.FactoryUtils;
@@ -17,11 +19,7 @@ public class SongServiceImpl implements SongService {
 	 * 获得12首热歌 
 	 */
 	public List<Song> listHotSong(){
-		List<Song> allSong = sd.findAllSongs();
 		List<Song> list = new ArrayList<Song>();
-		for(int i = 0; i < 12; i++) {
-			list.add(allSong.get(i));
-		}
 		return list;
 	}
 	
@@ -29,11 +27,7 @@ public class SongServiceImpl implements SongService {
 	 * 获得8首新歌
 	 */
 	public List<Song> listNewSong(){
-		List<Song> allSong = sd.findAllSongs();
 		List<Song> list = new ArrayList<Song>();
-		for(int i = allSong.size()-1; i > allSong.size()-9; i--) {
-			list.add(allSong.get(i));
-		}
 		return list;
 	}
 	
@@ -95,15 +89,34 @@ public class SongServiceImpl implements SongService {
 
 	@Override
 	/**
-	 * 判断歌是否存在在播放列表中
-	 * 若不存在，则加入歌单
+	 * 将歌曲加入播放列表中
 	 */
-	public List<Song> AddSongToPlayerList(List<Song> list, String id) {
+	public Set<Song> AddSongToPlayerSet(Set<Song> set, String id) {
 		int songId = Integer.valueOf(id);
 		Song song = sd.getSongBySongId(songId);
-		if(!list.contains(song)) {
-			list.add(song);
+		set.add(song);
+		return set;
+	}
+
+	/**
+	 * 若歌已存在收藏歌单中，则移除
+	 * 若不存在，则加入
+	 */
+	public List<Song> findUserSongCollection(User user, Song song) {
+		List<Song> list = sd.getUserSongList(user);
+		if(list.contains(song)) {
+			sd.deleteSongFromCollection(user, song);
+		}else {
+			sd.addSongToCollection(user, song);
 		}
+		return list;
+	}
+
+	/**
+	 * 获得用户收藏歌单
+	 */
+	public List<Song> findUserSongCollection(User user) {
+		List<Song> list = sd.getUserSongList(user);
 		return list;
 	}
 }

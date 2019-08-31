@@ -53,4 +53,27 @@ public interface SongService {
 	 */
 	List<Song> findUserSongCollection(User user);
 	
+	/**
+	 * 
+	 */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

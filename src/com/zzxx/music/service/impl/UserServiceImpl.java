@@ -3,6 +3,8 @@ package com.zzxx.music.service.impl;
 import java.util.List;
 import java.util.UUID;
 
+import com.zzxx.music.beans.Message;
+import com.zzxx.music.beans.Tweet;
 import com.zzxx.music.beans.User;
 import com.zzxx.music.dao.UserDao;
 import com.zzxx.music.service.UserService;
@@ -55,10 +57,50 @@ public class UserServiceImpl implements UserService {
 	/**
 	 * 查找所有的用户
 	 */
-	@Override
 	public List<User> findAllUser() {
 		List<User> allUser = ud.getAllUsers();
 		return allUser;
+	}
+
+	/**
+	 * 根据id查找用户
+	 */
+	public User findUserById(String id) {
+		User user = ud.findUserById(id);
+		return user;
+	}
+
+	/**
+	 * 通过用户id
+	 * 返回用户留言list
+	 */
+	public List<Message> findUserMessage(User user) {
+		// List<Message> list = ud.getUserMessage(user);
+		// return list;
+		return null;
+	}
+
+	/**
+	 * 根据用户id找到用户动态
+	 */
+	public List<Tweet> findUserTweet(User user) {
+		// List<Tweet> list = ud.getUserTweet(user);
+		// return list;
+		return null;
+	}
+
+	/**
+	 * 存用户动态
+	 */
+	public void saveUserTweet(User user, Tweet tweet) {
+		// ud.addTweet(user, tweet);	
+	}
+
+	/**
+	 * 存用户留言
+	 */
+	public void saveUserMessage(User user, Message message) {
+		// ud.addMessage(user, message);
 	}
 	
 	
