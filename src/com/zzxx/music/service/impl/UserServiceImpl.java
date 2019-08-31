@@ -11,12 +11,12 @@ import com.zzxx.music.utils.FactoryUtils;
 public class UserServiceImpl implements UserService {
 	UserDao ud = (UserDao)FactoryUtils.getInstance("UserDao");
 
+	/**
+	 * 通过邮箱查找用户是否存在
+	 * 若存在，返回true
+	 * 若不存在，返回false
+	 */
 	public boolean checkUserIsExists(String email) {
-		/**
-		 * 通过邮箱查找用户是否存在
-		 * 若存在，返回true
-		 * 若不存在，返回false
-		 */
 		User user = ud.findUserByEmail(email);
 		if(user == null) {
 			return false;
@@ -52,10 +52,10 @@ public class UserServiceImpl implements UserService {
 		return u;
 	}
 
-	@Override
 	/**
 	 * 查找所有的用户
 	 */
+	@Override
 	public List<User> findAllUser() {
 		List<User> allUser = ud.getAllUsers();
 		return allUser;
